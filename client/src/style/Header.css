@@ -1,0 +1,22 @@
+.nav-bg {
+    width: 100%;
+    height: 55px;
+    border-bottom: solid 1px #80808038;
+    position: relative;
+}
+
+.site-title {
+    margin-left: 15px;
+    color: #d42903;
+}
+
+.menu-icon {
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}

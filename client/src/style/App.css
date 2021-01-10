@@ -1,0 +1,200 @@
+.router-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.predict-body {
+    padding: 20px;
+}
+
+.my-versus {
+    font-weight: 600;
+}
+
+.my-ETH {
+    font-weight: 600;
+}
+
+.profit-href {
+    text-decoration: none;
+}
+
+.how-to-profit {
+    background-color: #4c668b;
+    color: white;
+    width: 115px;
+    margin-top: 22px;
+    padding: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.market-header {
+    margin: 0 auto;
+    /* position: relative; */
+    text-align: center;
+    border-bottom: solid 3px;
+    width: 50%;
+    margin-top: 50px;
+}
+
+.each-market {
+    position: relative;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 700px;
+    height: 157px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
+}
+
+.market-name {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.market-target {
+    position: absolute;
+    right: 21px;
+    top: 10px;
+}
+
+.target-price {
+    font-weight: bold;
+}
+
+.prediction-status {
+    width: 100%;
+    height: 65px;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.user-winning {
+    width: 100%;
+    height: 65px;
+    background-color: #43bf8c;
+}
+
+.user-losing {
+    width: 100%;
+    height: 65px;
+    background-color: #ff8b7f;
+}
+
+.p-s-text {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 30%;
+    cursor: default;
+}
+
+.market-expired {
+    background-color: #4c668b;
+    width: 50px;
+    padding: 6px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+.predict-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+}
+
+.short-box {
+    width: 50%;
+    height: 111px;
+    display: inline-block;
+    background-color: #ff8b7f;
+}
+
+.predict-input {
+    margin-left: 10px;
+    width: 80%;
+    height: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: solid 1px;
+    color: #ff8b7f;
+}
+
+#short-input {
+    color: #8a3a32;
+}
+
+#long-input {
+    color: #174e37;
+}
+
+.short-button {
+    position: relative;
+    background-color: #4c668b;
+    color: white;
+    width: 100px;
+    text-align: center;
+    padding: 6px;
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.long-box {
+    width: 50%;
+    height: 111px;
+    display: inline-block;
+    background-color: #43bf8c;
+}
+
+.long-button {
+
+}
+
+.ETH-pooled {
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 10px;
+    font-size: 21px;
+    color: white;
+    font-weight: bold;
+}
+
+.enter-versus {
+    border-radius: 3px;
+    width: 70%;
+    max-width: 700px;
+    height: 90px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 70px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
+}
+
+.more-info {
+    background-color: #e26130;
+    width: 140px;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
