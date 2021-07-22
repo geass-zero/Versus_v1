@@ -39,15 +39,19 @@ contract LibraryLock is LibraryLockDataLayout {
 contract DataLayout is LibraryLock {
     address public owner;
     address public versusToken;
-    uint256 _tokenId;
+    uint256 _tokenIds;
     
     struct details {
-        string name;
+        uint32 monsterID;
         uint32 NFTLevel;
-        uint32 bonus;
+        uint32[] stats;
+        uint256 blockChecked;
+        uint32 yieldBoost;
         bool isStaked;
     }
-    mapping(uint256 => details) nftDetails; 
+    mapping(uint256 => details) public NFTDetails;
+    mapping(uint256 => mapping(uint32 => uint32[])) public NFTStatsHistory;
+    mapping(address => bool) whitelistedContracts; 
 } 
 
 contract VersusNFT is BEP721, DataLayout, Proxiable {
@@ -74,6 +78,9 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
         owner = _owner;
     }
 
+    function whiteListContract(address _contract, bool _direction) public _onlyOwner {
+        whitelistedContracts[_contract] = _direction;
+    }
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
         //use tokenId to determine NFT level
@@ -88,15 +95,16 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
     
     /** @notice Creates a new Versus NFT.
       * @param _claimer Address of the claiming user.
-      * @param _level Name of the NFT tier.
+      * @param _monsterID Name of the NFT tier.
       */
-    function createNFT(address _claimer, uint256 _level) public delegatedOnly returns(bool) {
-        require(msg.sender == versusToken);
+    function createNFT(address _claimer, uint256 _monsterID) public delegatedOnly returns(uint256) {
+        require(whitelistedContracts[_contract]);
         uint256 newItemId = _tokenIds.add(1);
         _tokenIds = _tokenIds.add(1);
         _mint(_claimer, newItemId);
-        nftDetails[newItemId].level = _level;
-        //add bonus
+        NFTDetails[newItemId].monsterID = _monsterID;
+        // NFTDetails[newItemId].stats = //get base stats from monsterList
+        //add yield boost, get fom monsterList
         //is staked
         
         return newItemId;

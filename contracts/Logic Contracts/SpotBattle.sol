@@ -96,10 +96,11 @@ contract SpotBattle is DataLayout, Proxiable{
     }
     
     function addMarket(address token) public {
+        require(msg.sender == owner);
         markets.push(token);
         marketData[token].round = 1;
         marketData[token].targetPrice = 0; // get price from Link
-        marketData[token].roundEnd = 0;//block.number + 5 mins in blocks
+        marketData[token].roundEnd = marketData[token].roundEnd.add(5 minutes);//block.number + 5 mins in blocks(or use timestamp?)
 
         marketData[token].targetHistory.push(marketData[token].targetPrice);
 
@@ -108,6 +109,7 @@ contract SpotBattle is DataLayout, Proxiable{
     function nextRoundPrediction(address token, uint32 index, bool isLonging, bool freePrediction) public payable {
         require(markets[index] == token);
         //check if user has placed prediction in market
+        //dont't loop, save something in user mapping instead
         bool hasPosition;
         for (uint256 i; i < marketData[token].nextEntrants.length; i++) {
             if (marketData[token].nextEntrants[i] == msg.sender) {
@@ -119,7 +121,10 @@ contract SpotBattle is DataLayout, Proxiable{
         if (freePrediction) {
             require(msg.value == 0);
             //check if user has staked long enough for a free prediction
-            msg.value = VersusToken(versusToken).hasFreePrediction(msg.sender);
+            uint256 contractBNB = address(this).balance;
+            VersusToken(versusToken).hasFreePrediction(msg.sender);
+            msg.value = address(this).balance.sub(contractBNB);
+            
         }
         require (msg.value > 0);
         uint256 BNBAmount = msg.value;
@@ -142,7 +147,7 @@ contract SpotBattle is DataLayout, Proxiable{
 
     function expireRound(address token, uint32 index) public {
         require(markets[index] == token);
-        require(block.number >= marketData[token].roundEnd);
+        require(block.timestamp >= marketData[token].roundEnd);
         marketData[token].longHistory.push(marketData[msg.sender].longBNB);
         marketData[token].shortHistory.push(marketData[msg.sender].shortBNB);
         uint256 closingPrice; //get current closing price
@@ -202,10 +207,10 @@ contract SpotBattle is DataLayout, Proxiable{
 
             //send winnings to user after free prediction check and fees
             if (userHistory[user].isFreePrediction[userIndex]) {
-                //send 90% to token contract
-                VersusToken(versusToken).returnFreeBNB(){value: winnings.mul(90).div(100)};
-                //reduce winnings by 90%
-                winnings = winnings.sub(winnings.mul(90).div(100));
+                //send 99% to token contract
+                VersusToken(versusToken).returnFreeBNB(user){value: winnings.mul(99).div(100)};
+                //reduce winnings by 99%
+                winnings = winnings.sub(winnings.mul(99).div(100));
             }
             msg.sender.call{value: winnings}("");
 
@@ -223,7 +228,7 @@ contract SpotBattle is DataLayout, Proxiable{
 interface VersusToken {
     function hasFreePrediction(address user) external returns(uint256);
     function returnPredictionFees() external;
-    function returnFreeBNB() external;
+    function returnFreeBNB(address user) external;
     function updateStats(address user, uint256 volume) external;
     function updateUserWins(address _user, bool _isWin) external;
 }
