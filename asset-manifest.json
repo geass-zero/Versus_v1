@@ -1,22 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.5bc380db.chunk.css",
-    "main.js": "/static/js/main.c0ad70e7.chunk.js",
-    "main.js.map": "/static/js/main.c0ad70e7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9632a159.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9632a159.js.map",
-    "static/js/2.9b6c8d45.chunk.js": "/static/js/2.9b6c8d45.chunk.js",
-    "static/js/2.9b6c8d45.chunk.js.map": "/static/js/2.9b6c8d45.chunk.js.map",
-    "static/js/3.9c0a84aa.chunk.js": "/static/js/3.9c0a84aa.chunk.js",
-    "static/js/3.9c0a84aa.chunk.js.map": "/static/js/3.9c0a84aa.chunk.js.map",
+    "main.css": "/static/css/main.0d5b7ac1.chunk.css",
+    "main.js": "/static/js/main.9c31d653.chunk.js",
+    "main.js.map": "/static/js/main.9c31d653.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ec70b6d5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ec70b6d5.js.map",
+    "static/js/2.3737f066.chunk.js": "/static/js/2.3737f066.chunk.js",
+    "static/js/2.3737f066.chunk.js.map": "/static/js/2.3737f066.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.5bc380db.chunk.css.map": "/static/css/main.5bc380db.chunk.css.map",
-    "static/js/2.9b6c8d45.chunk.js.LICENSE.txt": "/static/js/2.9b6c8d45.chunk.js.LICENSE.txt"
+    "static/css/main.0d5b7ac1.chunk.css.map": "/static/css/main.0d5b7ac1.chunk.css.map",
+    "static/js/2.3737f066.chunk.js.LICENSE.txt": "/static/js/2.3737f066.chunk.js.LICENSE.txt",
+    "static/media/Montserrat-ExtraBold.3a9432ab.ttf": "/static/media/Montserrat-ExtraBold.3a9432ab.ttf",
+    "static/media/Montserrat-Medium.e2d60bc4.ttf": "/static/media/Montserrat-Medium.e2d60bc4.ttf",
+    "static/media/Montserrat-SemiBold.164d6389.ttf": "/static/media/Montserrat-SemiBold.164d6389.ttf",
+    "static/media/bitcoin.e5849ce5.svg": "/static/media/bitcoin.e5849ce5.svg",
+    "static/media/gitbookLogo.741a6b03.svg": "/static/media/gitbookLogo.741a6b03.svg",
+    "static/media/telegramLogo.d8aae7e7.svg": "/static/media/telegramLogo.d8aae7e7.svg",
+    "static/media/twitterLogo.16d505d4.svg": "/static/media/twitterLogo.16d505d4.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9632a159.js",
-    "static/js/2.9b6c8d45.chunk.js",
-    "static/css/main.5bc380db.chunk.css",
-    "static/js/main.c0ad70e7.chunk.js"
+    "static/js/runtime-main.ec70b6d5.js",
+    "static/js/2.3737f066.chunk.js",
+    "static/css/main.0d5b7ac1.chunk.css",
+    "static/js/main.9c31d653.chunk.js"
   ]
 }
