@@ -189,11 +189,14 @@ contract DataLayout is LibraryLock {
     struct userStruct {
         uint256 amountStaked; //deprecated?
         uint256 timeChecked; //timestamp
-        uint128 winStreak;
+        uint128 wins;
         bool usingFreePrediction;
         uint256 totalVolume;
         uint32 currentLevel;
-        uint32[] NFTsUnlocked;
+        uint256 NFTID1;
+        uint256 NFTID2;
+        uint256 NFTID3;
+        bool hasClaimedStarter;
     }
     mapping(address => userStruct) public userData; 
 
@@ -232,6 +235,7 @@ contract Versus is BEP20, DataLayout, Proxiable {
         owner = msg.sender;
         wBNB = 0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c;
         IUniswapV2Router02 uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E);
+        //mint supply
         tokenStorage = address(new ERCStorage());
         constructor1("Versus.cx", "Versus");
         initialize();
@@ -245,10 +249,6 @@ contract Versus is BEP20, DataLayout, Proxiable {
         updateCodeAddress(newCode);
     }
     
-    function setLevels(uint32[] memory requirements) public {
-        require(msg.sender == owner);
-        levelStreakRequirements = requirements;
-    }
 
     function transfer(address recipient, uint256 amount) public override {
         uint256 fee = amount.mul(10).div(100);
@@ -284,6 +284,7 @@ contract Versus is BEP20, DataLayout, Proxiable {
     }
 
     function hasFreePrediction(address user) public returns(uint256) {
+        require(whitelistedContracts[msg.sender], "Unauthorized contract");
         require(userData[msg.sender].timeChecked >= block.timestamp, "No free prediction yet");
         require(!userData[msg.sender].usingFreePrediction, "Already using free prediction");
         uint256 userStack = address(this).balanceOf(user);
@@ -313,23 +314,26 @@ contract Versus is BEP20, DataLayout, Proxiable {
         totalBNBVolume = totalBNBVolume.add(volume);
     }
 
-    function updateUserWins(address _user, uint32[] wins) public {
+    function updateUserWins(address _user) public {
         require(whitelistedContracts[msg.sender]);
-        
-        for (uint i; i < wins.length; i++) {
-            userData[_user].winStreak = userData[_user].winStreak.add(wins[i]);
-            if (levelStreakRequirements[userData[_user].userLevel] < userData[_user].winStreak) {
-                userData[_user].winStreak = userData[_user].winStreak.sub(levelStreakRequirements[userData[_user].userLevel]);
-                userData[_user].userLevel = userData[_user].userLevel.add(1);
-                userData[_user].NFTsUnlocked.push(userData[_user].userLevel);
-
-                //need to deal with streak rollover
-            }
+        //check if user has a monster equipped
+        //if so, call NFT update function
+        if (userData[_user].NFTID1 != 0) {
+            
         }
+        //update user wins
+        userData[_user].wins = userData[_user].wins+1;
     }
 
-    function mintNFT(address _user) public {
-        
+    function claimFirstMonster(uint starter) public {
+        require(!userData[user].hasClaimedStarter, "Starter already claimed");
+        require(starter == 1 || 2 || 3, "Must choose valid starter");
+        mintNFT(msg.sender, starter);
+        userData[msg.sender].hasClaimedStarter = true;
+    }
+
+    function mintNFT(address user, uint monsterID) internal {
+        VersusNFT(NFTContract).createNFT(user, monsterID);
     
     }
 

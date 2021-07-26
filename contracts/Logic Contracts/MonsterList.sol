@@ -46,7 +46,7 @@ contract DataLayout is LibraryLock {
         uint32 evolvesInto;
         string rarity;
         string imageLink;
-
+        uint32 yieldBoost;
     }
     mapping(uint32 => monsterStruct) public monster;
     uint32 public topIndex;
@@ -82,7 +82,8 @@ contract MonsterList is DataLayout, Proxiable {
         uint32 evolutionLevel,
         uint32 evolvesInto,
         string rarity,
-        string imageLink
+        string imageLink,
+        uint32 yieldBoost
     ) public _onlyOwner delegatedOnly {
         monster[topIndex+1].name = name;
         monster[topIndex+1].monsterType = monsterType;
@@ -92,6 +93,7 @@ contract MonsterList is DataLayout, Proxiable {
         monster[topIndex+1].evolvesInto = evolvesInto;
         monster[topIndex+1].rarity = rarity;
         monster[topIndex+1].imageLink = imageLink;
+        monster[topIndex+1].yieldBoost = yieldBoost;
         topIndex = topIndex+1;
     }
 
@@ -151,6 +153,13 @@ contract MonsterList is DataLayout, Proxiable {
         monster[index].imageLink = imageLink;
     }
 
+    function editYieldBoost(
+        uint32 index,
+        uint32 yieldBoost
+    ) public _onlyOwner delegatedOnly {
+        monster[index].yieldBoost = yieldBoost;
+    }
+
     function getName(uint32 index) public returns(string memory) {
         return monster[index].name;
     }
@@ -181,6 +190,10 @@ contract MonsterList is DataLayout, Proxiable {
 
     function getImageLink(uint32 index) public returns(string memory) {
         return monster[index].imageLink;
+    }
+
+    function getYieldBoost(uint32 index) public returns(uint32) {
+        return monster[index].yieldBoost;
     }
 
 

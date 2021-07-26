@@ -78,7 +78,7 @@ contract SpotBattle is DataLayout, Proxiable{
     using SafeMath for uint256;
 
     constructor() public {
-        owner = msg.sender;
+        
     }
 
     function updateCode(address newCode) public _onlyOwner delegatedOnly  {

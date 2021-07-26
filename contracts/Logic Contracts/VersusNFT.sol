@@ -44,9 +44,9 @@ contract DataLayout is LibraryLock {
     struct details {
         uint32 monsterID;
         uint32 NFTLevel;
+        uint32 levelWins;
         uint32[] stats;
         uint256 blockChecked;
-        uint32 yieldBoost;
         bool isStaked;
     }
     mapping(uint256 => details) public NFTDetails;
@@ -115,6 +115,14 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
                nftDetails[id].bonus, 
                nftDetails[id].isStaked,
                tokenURI(id));
+    }
+
+    function growMonster(uint256 id) public delegatedOnly {
+        //only whitelisted contracts
+        //increase monster level wins
+        //check if monster's wins meet or exceed requirements to level up
+        //if so, increase each monster stat with random number generator
+        
     }
 
     //stake
