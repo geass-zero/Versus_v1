@@ -12,9 +12,9 @@ export const Routes = {
         exact: true,
     },
     HomePage: {
-        key: 'spotBattle',
-        name: 'spotBattle',
-        path: '/versus',
+        key: 'versus',
+        name: 'versus',
+        path: '/versus/:typeId?',
         component: HomePage,
         exact: true,
     },

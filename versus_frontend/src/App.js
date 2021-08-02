@@ -7,10 +7,7 @@ import {
 import Router from "./routes/Router";
 import { BrowserRouter } from "react-router-dom";
 import { montserrat, montserratSemiBold, montserratBold } from "./Theme";
-import History from "./History/History";
-import LandPage from "./Pages/LandPage/LandPage";
-import Card from "./Pages/Card/Card";
-import Header from "./Header/Header";
+
 
 const customTheme = createMuiTheme({
   overrides: {

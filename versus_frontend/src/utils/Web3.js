@@ -4,7 +4,7 @@ import Web3 from "web3";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { setGlobal, getGlobal } from 'reactn';
-import { Contracts } from './index';
+//import { Contracts } from './index';
 
  /**
   * Check to see if there's a web3 instance to use
@@ -28,7 +28,7 @@ const createInstance = async() => {
     const web3 = new Web3(provider);
     const accounts = await web3.eth.getAccounts().catch((e) => { console.log(e); });
     setGlobals(web3, accounts, web3Modal);
-    setApprovals();
+    //setApprovals();
   
     return web3;
 }
@@ -79,16 +79,16 @@ const setGlobals = (web3, accounts, web3Modal) => {
   });
 }
 
-const setApprovals = async() => {
-  // we use the direct call to avoid any duplication because we are still in the construction of the web3instance.
-  let nyanApproved = await Contracts.getMyNyanApproved();
-  let nipUniApproved = await Contracts.getMyNipUniApproved();
+// const setApprovals = async() => {
+//   // we use the direct call to avoid any duplication because we are still in the construction of the web3instance.
+//   let nyanApproved = await Contracts.getMyNyanApproved();
+//   let nipUniApproved = await Contracts.getMyNipUniApproved();
   
-  setGlobal({
-      nyanApproved: nyanApproved,
-      nipUniApproved: nipUniApproved
-  })
-}
+//   setGlobal({
+//       nyanApproved: nyanApproved,
+//       nipUniApproved: nipUniApproved
+//   })
+// }
 
 
 // Export each function

@@ -1,6 +1,7 @@
 /** All interations with the contracts */
 import Web3 from "web3";
 import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider";
 import VersusToken from "../ABIs/Versus.json";
 import VersusNFT from "../ABIs/VersusNFT.json";
 import SpotBattle from "../ABIs/SpotBattle.json";
@@ -171,17 +172,17 @@ async function expireSpotBattle(token, index) {
     }
 }
 
-//claim spot battle win or should claims be automatic
+// claim spot battle win or should claims be automatic
 
-//enter token battle
+// enter token battle
 
-//expire token battle round
+// expire token battle round
 
-//claim token battle win
+// claim token battle win
 
 
 
- // Export each function
+//  Export each function
  export {
     connectWallet,
     getVersusBalance,

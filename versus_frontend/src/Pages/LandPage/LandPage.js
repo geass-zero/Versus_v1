@@ -14,6 +14,8 @@ import CardNormal from "../../Components/Cards/CardNormal";
 import CardSmall from "../../Components/Cards/CardSmall";
 import CardBig from "../../Components/Cards/CardBig";
 
+import { createInstance } from "../../utils/Web3";
+
 
 const classStyle = makeStyles((theme) => ({
   mainDiv: {
@@ -340,7 +342,7 @@ const LandPage = () => {
         <div className={classes.divVersusLogo}>
           <Typography className={classes.title}>versus</Typography>
         </div>
-        <div className={`${classes.divConnect} ${classes.iconHover}`}>
+        <div className={`${classes.divConnect} ${classes.iconHover}`} onClick={() => createInstance()}>
           <Typography className={classes.textConnect}>Connect</Typography>
         </div>
       </div>
