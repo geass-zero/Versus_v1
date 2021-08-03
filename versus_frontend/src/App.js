@@ -2,14 +2,14 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import {
   ThemeProvider,
   makeStyles,
-  createMuiTheme,
+  createTheme,
 } from "@material-ui/core/styles";
 import Router from "./routes/Router";
-import { BrowserRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { montserrat, montserratSemiBold, montserratBold } from "./Theme";
+import { useEffect } from "react";
 
-
-const customTheme = createMuiTheme({
+const customTheme = createTheme({
   overrides: {
     typography: {
       fontFamily: ["Montserrat, MontserratSemiBold, MontserratBold"].join(","),
@@ -55,7 +55,12 @@ const classStyle = makeStyles((theme) => ({
 }));
 
 const App = () => {
-  const classes = classStyle();
+  const history = useHistory();
+
+
+  useEffect(() => {
+    history.push("/");
+  }, []);
 
   return (
     <ThemeProvider theme={customTheme}>
@@ -69,9 +74,7 @@ const App = () => {
             position: "relative",
           }}
         >
-          <BrowserRouter>
-            <Router />
-          </BrowserRouter>
+          <Router />
         </div>
       </CssBaseline>
     </ThemeProvider>

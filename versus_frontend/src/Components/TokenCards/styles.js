@@ -74,7 +74,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     backgroundColor: "white",
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-    marginLeft: 50,
   },
   frontCard: {
     width: 279,
@@ -84,8 +83,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     backgroundColor: "white",
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-    marginLeft: 50,
-  }
+  },
+  
 }));
 
 export { useStyles };
