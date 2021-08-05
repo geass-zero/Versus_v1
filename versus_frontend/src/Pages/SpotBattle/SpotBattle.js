@@ -11,10 +11,10 @@ import { ReactComponent as Graph } from "../../img/Graph.svg";
 import clock from "../../img/clock.png";
 import claim from "../../img/claim.png";
 import History from "../../Components/History/History";
-import ExpiredCard from "../../Components/SpotCards/ExpiredCard";
-import LiveCard from "../../Components/SpotCards/LiveCard";
-import OpenCard from "../../Components/SpotCards/OpenCard";
-import NextCard from "../../Components/SpotCards/NextCard";
+import ExpiredCard from "../../Components/SpotCards/Cards/ExpiredCard";
+import LiveCard from "../../Components/SpotCards/Cards/LiveCard";
+import OpenCard from "../../Components/SpotCards/Cards/OpenCard";
+import NextCard from "../../Components/SpotCards/Cards/NextCard";
 import GraphView from "../../Components/GraphView/GraphView";
 
 const SpotBattle = ({openHistory, setOpenHistory}) => {

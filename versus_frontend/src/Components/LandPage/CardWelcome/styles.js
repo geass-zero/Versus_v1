@@ -4,6 +4,9 @@ const useStyles = makeStyles((theme) => ({
   welcomeCard: {
     marginTop: 100,
     width: 1070,
+    [theme.breakpoints.down("lg")]: {
+      width: "90%",
+    },
     minHeight: 1450,
     display: "flex",
     flexDirection: "column",
@@ -12,45 +15,26 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
     textAlign: "center",
   },
-  typeCard: {
-    marginTop: 100,
-    width: 340,
-    minHeight: 430,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    backgroundColor: "white",
-    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-    textAlign: "center",
-  },
-  cardTitleTypeStyle: {
-    boxShadow: "inset 0px -4px 4px rgba(0, 0, 0, 0.16)",
-    borderRadius: "0px 0px 32px 32px",
-    background: "#FCAC37",
-    minWidth: 257,
-    height: 49,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-  },
-  cardTitleType: {
-    fontFamily: "Montserrat",
-    fontWeight: 800,
-    fontSize: 24,
-    color: "white",
-  },
   cardTitle: {
     fontFamily: "Montserrat",
     fontWeight: 800,
     fontSize: 36,
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 30,
+    },
     color: "#828282",
   },
   cardTitleStyle: {
     boxShadow: "inset 0px -4px 4px rgba(0, 0, 0, 0.16)",
     borderRadius: "0px 0px 32px 32px",
     background: "#FCAC37",
-    minWidth: 655,
+    [theme.breakpoints.up("lg")]: {
+      minWidth: "655px",
+    },
+
+    [theme.breakpoints.down("lg")]: {
+      minWidth: "450px",
+    },
     height: 75,
     display: "flex",
     justifyContent: "center",
@@ -74,14 +58,21 @@ const useStyles = makeStyles((theme) => ({
   },
   firstContainer: {
     display: "flex",
+    flexDirection: "row",
     justifyContent: "space-evenly",
+    alignItems: "center",
     textAlign: "center",
     background: "#F2F2F2",
     borderRadius: 32,
     width: "90%",
+    [theme.breakpoints.between("xs", "sm")]: {
+      justifyContent: "center",
+      flexDirection: "column",
+    },
   },
   secondContainer: {
     marginTop: 40,
+    marginBottom: 40,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -101,6 +92,17 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 50,
     marginBottom: 50,
   },
+  containerLevel:{
+    display: "flex",
+    alignItems: 'center',
+    justifyContent: "space-evenly",
+    [theme.breakpoints.between("sm", "md")]: {
+      justifyContent: "center",
+      flexDirection: "column",
+    },
+    width: "100%",
+
+  },
   textLevel: {
     fontFamily: "Montserrat",
     fontWeight: 800,
@@ -119,19 +121,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 800,
     fontSize: 24,
     color: "rgba(36, 41, 55, 1)",
-  },
-  containerTypes: {
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  typeText: {
-    marginTop: 15,
-    fontFamily: "Montserrat",
-    fontWeight: 600,
-    fontSize: 20,
-    color: "rgba(0, 0, 0, 0.9)",
   },
 }));
 

@@ -15,8 +15,7 @@ const useStyle = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-    paddingTop: "3%",
-    marginBottom: "3%",
+    padding: "3%",
     zIndex: 5,
   },
   title: {
@@ -25,25 +24,13 @@ const useStyle = makeStyles((theme) => ({
     fontSize: 20,
     color: "rgba(79, 79, 79, 1)",
   },
-  divVersusLogo: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: "6%",
-  },
-  divButtonsHeader: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginRight: "6%",
-  },
   divPlayNow: {
     marginRight: 30,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: 177,
-    height: 58,
+    width: 140,
+    height: 52,
     background: "white",
     boxShadow: "box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)",
     borderRadius: 16,
@@ -55,8 +42,8 @@ const useStyle = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: 177,
-    height: 58,
+    width: 140,
+    height: 52,
     background: "linear-gradient(180deg, #FFC979 0%, #FCAC37 100%)",
     boxShadow: "box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)",
     borderRadius: 16,
@@ -67,13 +54,13 @@ const useStyle = makeStyles((theme) => ({
   textPlayNow: {
     fontFamily: "Montserrat",
     fontWeight: 800,
-    fontSize: 20,
+    fontSize: 18,
     color: "rgba(79, 79, 79, 1)",
   },
   textConnect: {
     fontFamily: "Montserrat",
     fontWeight: 800,
-    fontSize: 20,
+    fontSize: 18,
     color: "white",
   },
   iconHover: {
@@ -88,18 +75,18 @@ const useStyle = makeStyles((theme) => ({
     marginTop: 15,
   },
   divVersusTitle: {
-    display:' flex',
-    justifyContent: 'center',
+    display: " flex",
+    justifyContent: "center",
     textAlign: "center",
     marginTop: "1%",
   },
   divVersusTitleSub: {
-    display:' flex',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    alignItems:'center',
+    display: " flex",
+    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center",
     textAlign: "center",
-    marginTop: "1%",
+    marginTop: 20,
   },
   subText: {
     fontFamily: "Montserrat",
@@ -139,75 +126,69 @@ const useStyle = makeStyles((theme) => ({
     border: "2px solid #EBB438",
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
   },
-  containerNews:{
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent:'center',
-    alignItems:'center',
-    marginTop: 100
+  containerNews: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: 'center',
+    marginTop: 100,
   },
   divNews: {
-    display: 'flex',
-    justifyContent:'space-evenly',
-    alignItems:'center',
-    [theme.breakpoints.down('sm')]:{
-      flexDirection: 'column',
-      justifyContent:'center',
-    },
-    marginTop: 50
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 50,
   },
-  news:{
-    display: 'flex',
-    flexDirection:'column',
-    justifyContent:'flex-start',
-    alignItems:'center',
-    background: 'rgba(0, 0, 0, 0.05)',
+  news: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign:'center',
+    background: "rgba(0, 0, 0, 0.05)",
     borderRadius: 32,
-    width: 516,
-    minHeight: 750,
-    padding: 20
+    width: '100%',
+    minHeight: 650,
+    padding: 20,
   },
-  textTitle:{
+  textTitle: {
     fontFamily: "Montserrat",
     fontWeight: 800,
-    fontSize: 30,
+    fontSize: 28,
     color: "white",
   },
-  textSub:{
+  textSub: {
     fontFamily: "Montserrat",
     fontWeight: 600,
-    fontSize: 22,
+    fontSize: 16,
     color: "white",
   },
-  newsText:{
-    display: 'flex',
-    flexDirection:'column',
-    justifyContent:'center',
-    alignItems:'flex-start',
-    width: '90%',
-    marginBottom: 30
-    
+  newsText: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "90%",
+    marginBottom: 30,
   },
-  join:{
+  join: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent:'center',
-    width: '90%',
-    textAlign:'center',
+    justifyContent: "center",
+    width: "90%",
+    textAlign: "center",
     marginTop: 100,
   },
-  containerTypes:{
+  containerTypes: {
     display: "flex",
-    justifyContent: "space-evenly",
+    flexDirection: "column",
+    justifyContent: "center",
     alignItems: "center",
-    [theme.breakpoints.down('sm')]:{
-      flexDirection: 'column',
-      justifyContent:'center',
-    },
     width: "100%",
-  }
-  
+  },
 }));
 
 export { useStyle };

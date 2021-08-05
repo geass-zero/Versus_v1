@@ -3,20 +3,25 @@ import Container from "@material-ui/core/Container";
 import SuperEllipse, { Preset } from "react-superellipse";
 import { useStyles } from "./styles";
 import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import shibachu from "../../img/shibachu.gif";
-import calfire from "../../img/calfire.gif";
+import shibachu from "../../../img/shibachu.gif";
+import calfire from "../../../img/calfire.gif"
 import Card from "react-animated-3d-card";
-import level1 from "../../img/level1.png";
-import level2 from "../../img/level2.png";
-import level3 from "../../img/level3.png";
+import level1 from "../../../img/level1.png";
+import level2 from "../../../img/level2.png";
+import level3 from "../../../img/level3.png";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 
 const WelcomeCard = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("lg"));
+  const matchesMd = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   return (
     <SuperEllipse r1={0.01} r2={0.1} className={classes.welcomeCard}>
-      <div className={classes.cardTitleStyle} style={{ background: "#FCAC37" }}>
+      <div className={classes.cardTitleStyle}>
         <Typography className={classes.cardTitle} style={{ color: "white" }}>
           WELCOME TO VERSUS
         </Typography>
@@ -30,8 +35,8 @@ const WelcomeCard = () => {
       <Container className={classes.firstContainer}>
         <Card
           style={{
-            width: 420,
-            height: 458,
+            width: matches ? 420 : 350,
+            height: matches ? 458 : 400,
             borderRadius: 32,
             marginTop: 50,
             marginBottom: 50,
@@ -42,14 +47,14 @@ const WelcomeCard = () => {
             background: "white",
           }}
         >
-          <img src={calfire} alt="" width={500} />
+          <img src={calfire} alt="" height={matches ? 500 : 400} />
         </Card>
         <Card
           style={{
-            width: 420,
-            height: 458,
+            width: matches ? 420 : 350,
+            height: matches ? 458 : 400,
             borderRadius: 32,
-            marginTop: 50,
+            marginTop: matches? 50 : 20,
             marginBottom: 50,
             display: "flex",
             justifyContent: "center",
@@ -58,7 +63,7 @@ const WelcomeCard = () => {
             background: "white",
           }}
         >
-          <img src={shibachu} alt="" width={500} />
+          <img src={shibachu} alt="" height={matches ? 500 : 400} />
         </Card>
       </Container>
       <Container className={classes.secondContainer}>
@@ -69,16 +74,11 @@ const WelcomeCard = () => {
           </Typography>
         </div>
         <div
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            width: "100%",
-          }}
+         className={classes.containerLevel}
         >
           <Card
-            
             style={{
-              width: 280,
+              width: matchesMd ? 350: 280,
               borderRadius: 32,
               height: 342,
               marginTop: 30,
@@ -88,6 +88,7 @@ const WelcomeCard = () => {
               flexDirection: 'column',
               alignItems: "center",
               backgroundColor: "white",
+              padding:10
             }}
           >
             <img src={level1} alt="" height={200} />
@@ -96,7 +97,7 @@ const WelcomeCard = () => {
           </Card>
           <Card
             style={{
-              width: 280,
+              width: matchesMd ? 350: 280,
               borderRadius: 32,
               height: 342,
               marginTop: 30,
@@ -106,6 +107,7 @@ const WelcomeCard = () => {
               flexDirection: 'column',
               alignItems: "center",
               background: "white",
+              padding:10
             }}
           >
             <img src={level2} alt="" height={200} />
@@ -113,7 +115,7 @@ const WelcomeCard = () => {
           </Card>
           <Card
             style={{
-              width: 280,
+              width: matchesMd ? 350: 280,
               borderRadius: 32,
               height: 342,
               marginTop: 30,
@@ -123,6 +125,7 @@ const WelcomeCard = () => {
               flexDirection: 'column',
               alignItems: "center",
               background: "white",
+              padding:10
             }}
           >
             <img src={level3} alt="" height={200} />
