@@ -185,9 +185,10 @@ contract DataLayout is LibraryLock {
     address public wBNB;
     IUniswapV2Router02 public uniswapV2Router;
     address public tokenStorage;
+    address public statsTracker;
+    uint feePerc = 10;
 
     struct userStruct {
-        uint256 amountStaked; //deprecated?
         uint256 timeChecked; //timestamp
         uint128 wins;
         bool usingFreePrediction;
@@ -195,7 +196,6 @@ contract DataLayout is LibraryLock {
         uint32 currentLevel;
         uint256 NFTID1;
         uint256 NFTID2;
-        uint256 NFTID3;
         bool hasClaimedStarter;
     }
     mapping(address => userStruct) public userData; 
@@ -203,7 +203,6 @@ contract DataLayout is LibraryLock {
     uint32[] public levelStreakRequirements;
 
     uint256 public totalBNB;
-    uint256 public totalBNBVolume;
     uint256 public freeBNBReturned;
     uint256 public predictionFees;
 
@@ -230,6 +229,11 @@ contract Versus is BEP20, DataLayout, Proxiable {
         
     }
 
+    modifier onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
+
     function versusConstructor() public {
         require(!initialized);
         owner = msg.sender;
@@ -245,13 +249,21 @@ contract Versus is BEP20, DataLayout, Proxiable {
         
     }
 
-    function updateCode(address newCode) public _onlyOwner delegatedOnly  {
+    function setStatsTracker(address _contract) public onlyOwner delegatedOnly {
+        statsTracker = _contract;
+    }
+
+    function setFeePerc(uint fee) public onlyOwner delegatedOnly {
+        feePerc = fee;
+    }
+
+    function updateCode(address newCode) public onlyOwner delegatedOnly  {
         updateCodeAddress(newCode);
     }
     
 
     function transfer(address recipient, uint256 amount) public override {
-        uint256 fee = amount.mul(10).div(100);
+        uint256 fee = amount.mul(feePerc).div(100);
         switchToBNB(fee);
         super.transfer(recipient, amount.sub(fee));
         userData[msg.sender].timeChecked = userData[msg.sender].timeChecked.add(30 minutes);
@@ -275,7 +287,7 @@ contract Versus is BEP20, DataLayout, Proxiable {
             block.timestamp
         ) {
             //log new BNB
-            uint256 newBNB = address(this).balance(contractBNB);
+            uint256 newBNB = address(this).balance.sub(contractBNB);
             totalBNB = totalBNB.add(newBNB);
 
         } catch (bytes memory failErr) {
@@ -289,6 +301,9 @@ contract Versus is BEP20, DataLayout, Proxiable {
         require(!userData[msg.sender].usingFreePrediction, "Already using free prediction");
         uint256 userStack = address(this).balanceOf(user);
         uint256 bnbAllowed = userStack.mul(totalBNB).div(totalSupply);
+        //set max bnbAllowed
+
+
         userData[msg.sender].usingFreePrediction = true;
         return bnbAllowed;
     }
@@ -311,7 +326,7 @@ contract Versus is BEP20, DataLayout, Proxiable {
         require(whitelistedContracts[msg.sender]);
         userData[user].totalVolume = userData[user].totalVolume.add(1);
         //increase total Versus volume
-        totalBNBVolume = totalBNBVolume.add(volume);
+        StatsTracker(statsTracker).updateVolume(volume);
     }
 
     function updateUserWins(address _user) public {
@@ -323,6 +338,8 @@ contract Versus is BEP20, DataLayout, Proxiable {
         }
         //update user wins
         userData[_user].wins = userData[_user].wins+1;
+        StatsTracker(statsTracker).adjustMontlyLeaders(_user, userData[_user].wins);
+        StatsTracker(statsTracker).adjustAllTimeLeaders(_user, userData[_user].wins);
     }
 
     function claimFirstMonster(uint starter) public {
@@ -337,6 +354,33 @@ contract Versus is BEP20, DataLayout, Proxiable {
     
     }
 
+    function equipSlot1(uint256 id) public {
+        if (userData[msg.sender].NFTID1 != 0) {
+            Versus(NFTContract).unequipMonster(id, msg.sender);
+        }
+        Versus(NFTContract).equipMonster(id, msg.sender);
+        userData[msg.sender].NFTID1 = id;
+    }
+
+    function equipSlot2(uint256 id) public {
+        if (userData[msg.sender].NFTID2 != address(0)) {
+            Versus(NFTContract).unequipMonster(id, msg.sender);
+        }
+        Versus(NFTContract).equipMonster(id, msg.sender);
+        userData[msg.sender].NFTID2 = id;
+    }
+
+    function unequip(uint slot, uint256 id) public {
+        if (slot == 1) {
+            Versus(NFTContract).unequipMonster(id, msg.sender);
+            userData[msg.sender].NFTID1 = 0;
+        }
+        if (slot == 2) {
+            Versus(NFTContract).unequipMonster(id, msg.sender);
+            userData[msg.sender].NFTID2 = 0;
+        }
+    }
+
     function whiteListContract(address _contract, bool _direction) public {
         require(msg.sender == owner);
         whitelistedContracts[_contract] = _direction;
@@ -346,4 +390,16 @@ contract Versus is BEP20, DataLayout, Proxiable {
 
 interface NyanDev {
     
+}
+
+interface VersusNFT {
+    function createNFT(address _claimer, uint256 _monsterID) external returns(uint256);
+    function equipMonster(uint256 id, address _owner) external;
+    function unEquipMonster(uint256 id, address _owner) external;
+}
+
+interface StatsTracker {
+    function updateVolume(uint256 _volume) external;
+    function adjustMontlyLeaders(address user, uint256 wins) external;
+    function adjustAllTimeLeaders(address user, uint256 wins) external;
 }

@@ -43,16 +43,26 @@ contract DataLayout is LibraryLock {
     uint256 public totalBNBVolume;
 
     address[] public topMonthly;
-    uint256[] public monthlyVolume;
+    uint256[] public monthlyWins;
 
     address[] public topAllTime;
-    uint256[] public topAllTimeVolume;
+    uint256[] public topAllTimeWins;
 }
 
 contract VersusStats is DataLayout, Proxiable {
     
     using SafeERC20 for IBEP20;
     using SafeMath for uint256;
+
+    modifier onlyVersus() {
+        require(msg.sender == versusToken);
+        _;
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
 
     constructor() public {
         
@@ -63,48 +73,74 @@ contract VersusStats is DataLayout, Proxiable {
         owner = msg.sender;
         initialize();
     }
+
+    function setAddresses(address _versusToken) public onlyOwner {
+        versusToken = _versusToken;
+    }
     
-    function updateCode(address newCode) public _onlyOwner delegatedOnly  {
+    function updateCode(address newCode) public onlyOwner delegatedOnly  {
         updateCodeAddress(newCode);
     }
     
     function getStats() public view returns(uint256, address[] memory, uint256[] memory, address[] memory, uint256[] memory) {
-        
+        return(
+            totalBNBVolume,
+            topMonthly,
+            monthlyWins,
+            topAllTime,
+            topAllTimeWins
+        );
     }
 
-    function adjustMontlyLeaders(address user, uint256 volume) public {
-        //require call come from Nyan token
-        //if (monthlyVolumeLeaders[monthlyVolumeLeaders.length-1].volume >= volume) return false;
+    function updateVolume(uint256 _volume) public onlyVersus {
+        totalBNBVolume = totalBNBVolume.add(_volume);
+    }
 
-        bool volumePlaced;
-        for (uint256 i; i < topMonthly.length; i++) {
-            require(!volumePlaced);
-            if (volume > monthlyVolume[i]) {
-                address tempUser;
-                uint256 tempVolume;
+    function adjustMontlyLeaders(address user, uint256 wins) public onlyVersus {
 
-                tempUser = topMonthly[i];
-                tempVolume = monthlyVolume[i];
-
-                topMonthly[i] = user;
-                monthlyVolume[i] = volume;
-                volumePlaced = true;
-
-                //shift other users down
-                for (uint j = i+1; j < topMonthly.length; j++) {
-                    
+        if (topMonthly.length < 10) {
+            monthlyWins.push(volume);
+            topMonthly.push(user);
+            return;
+        } else {
+            uint lowestIndex;
+            uint256 lowestWins;
+            for (uint256 i; i < topMonthly.length; i++) {
+                if (lowestWins == 0) {
+                    lowestIndex = i;
+                    lowestWins = monthlyWins[i]; 
+                } else if (monthlyWins[i] < lowestWins) {
+                    lowestIndex = i;
+                    lowestWins = i;
                 }
             }
-
-
+            topMonthly[lowestIndex] = user;
+            monthlyWins[lowestIndex] = wins;
         }
 
-        
     }
 
-    function adjustAllTimeLeaders(address user, uint256 volume) public {
-        //require call come from Nyan token
-        
+    function adjustAllTimeLeaders(address user, uint256 wins) public onlyVersus {
+
+        if (topAllTime.length < 10) {
+            topAllTimeWins.push(wins);
+            topAllTime.push(user);
+            return;
+        } else {
+            uint lowestIndex;
+            uint256 lowestWins;
+            for (uint256 i; i < topAllTime.length; i++) {
+                if (lowestWins == 0) {
+                    lowestIndex = i;
+                    lowestWins = topAllTimeWins[i]; 
+                } else if (topAllTimeWins[i] < lowestWins) {
+                    lowestIndex = i;
+                    lowestWins = i;
+                }
+            }
+            topAllTime[lowestIndex] = user;
+            topAllTimeWins[lowestIndex] = wins;
+        }
     }
     
 }

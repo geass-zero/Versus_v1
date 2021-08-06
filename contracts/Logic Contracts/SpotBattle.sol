@@ -2,6 +2,29 @@ pragma solidity ^0.6.6;
 
 import "./BEP20.sol";
 
+// pragma solidity >=0.6.2;
+
+interface IUniswapV2Router01 {
+    function factory() external pure returns (address);
+    function WETH() external pure returns (address);
+
+   
+
+    function quote(uint amountA, uint reserveA, uint reserveB) external pure returns (uint amountB);
+    function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) external pure returns (uint amountOut);
+    function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) external pure returns (uint amountIn);
+    function getAmountsOut(uint amountIn, address[] calldata path) external view returns (uint[] memory amounts);
+    function getAmountsIn(uint amountOut, address[] calldata path) external view returns (uint[] memory amounts);
+}
+
+
+
+// pragma solidity >=0.6.2;
+
+interface IUniswapV2Router02 is IUniswapV2Router01 {
+    
+}
+
 contract Proxiable {
     // Code position in storage is keccak256("PROXIABLE") = "0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7"
 
@@ -40,6 +63,7 @@ contract DataLayout is LibraryLock {
     address[] public markets;
     address public owner;
     address public versusToken;
+    address public usdcAddress;
 
     struct marketStruct {
         uint256 round;
@@ -57,6 +81,7 @@ contract DataLayout is LibraryLock {
         uint256[] closingHistory;
     }
     mapping(address => marketStruct) public marketData; 
+    mapping(address => mapping(uint256 => mapping(address => bool))) public entrantData;
 
     struct userStruct {
         address[] tokenHistory;
@@ -71,6 +96,8 @@ contract DataLayout is LibraryLock {
     }
     mapping(address => userStruct) public userHistory;
 }
+
+
 
 contract SpotBattle is DataLayout, Proxiable{
 
@@ -94,13 +121,21 @@ contract SpotBattle is DataLayout, Proxiable{
         owner = msg.sender;
         initialize();
     }
+
+    function getUSDCPrice(address token) public returns(address[] memory) {
+        address[] path = new address[](2);
+        path[0] = token;
+        path[1] = usdcAddress;
+        address[] memory amountsOut = getAmountsOut(1 ** IBEP20(token).decimals(), path);
+        return amountsOut[amountsOut.length-1];
+    }
     
     function addMarket(address token) public {
         require(msg.sender == owner);
         markets.push(token);
         marketData[token].round = 1;
-        marketData[token].targetPrice = 0; // get price from Link
-        marketData[token].roundEnd = marketData[token].roundEnd.add(5 minutes);//block.number + 5 mins in blocks(or use timestamp?)
+        marketData[token].targetPrice = getUSDCPrice(token); // get price from usdc quote
+        marketData[token].roundEnd = block.timestamp.add(5 minutes);//block.timestamp + 5 mins in blocks
 
         marketData[token].targetHistory.push(marketData[token].targetPrice);
 
@@ -110,24 +145,23 @@ contract SpotBattle is DataLayout, Proxiable{
         require(markets[index] == token);
         //check if user has placed prediction in market
         //dont't loop, save something in user mapping instead
-        bool hasPosition;
-        for (uint256 i; i < marketData[token].nextEntrants.length; i++) {
-            if (marketData[token].nextEntrants[i] == msg.sender) {
-                hasPosition = true;
-            }
-        }
+        bool hasPosition = entrantData[token][marketData[token].round+1][msg.sender];
         require(!hasPosition);
-        
+        uint256 BNBAmount;
+
         if (freePrediction) {
             require(msg.value == 0);
             //check if user has staked long enough for a free prediction
             uint256 contractBNB = address(this).balance;
             VersusToken(versusToken).hasFreePrediction(msg.sender);
-            msg.value = address(this).balance.sub(contractBNB);
-            
+            BNBAmount = address(this).balance.sub(contractBNB);
         }
-        require (msg.value > 0);
-        uint256 BNBAmount = msg.value;
+
+        if (!freePrediction) {
+            require (msg.value > 0);
+            BNBAmount = msg.value;
+        }
+        
         //send 3% of value to token contract as fees
         uint256 fees = BNBAmount.mul(3).div(100);
         VersusToken(versusToken).returnPredictionFees(){value: fees};
@@ -140,8 +174,8 @@ contract SpotBattle is DataLayout, Proxiable{
         userHistory[msg.sender].isFreePrediction.push(freePrediction);
         userHistory[msg.sender].currentIndex = userHistory[msg.sender].currentIndex.add(1);
 
-        marketData[token].nextEntrants.push(msg.sender);
-
+        entrantData[token][marketData[token].round+1][msg.sender];
+        claim(msg.sender);
         VersusToken(versusToken).updateStats(msg.sender, BNBAmount.sub(fees));
     }
 
@@ -150,18 +184,18 @@ contract SpotBattle is DataLayout, Proxiable{
         require(block.timestamp >= marketData[token].roundEnd);
         marketData[token].longHistory.push(marketData[msg.sender].longBNB);
         marketData[token].shortHistory.push(marketData[msg.sender].shortBNB);
-        uint256 closingPrice; //get current closing price
+        uint256 closingPrice = getUSDCPrice(token); //get current closing price
         marketData[token].closingHistory.push(closingPrice);
 
         marketData[token].longBNB = marketData[msg.sender].nextRoundLong;
         marketData[token].nextRoundLong = 0;
         marketData[token].shortBNB = marketData[msg.sender].nextRoundShort;
         marketData[token].nextRoundShort = 0;
-        marketData[token].currentEntrants = marketData[token].nextEntrants;
-        marketData[token].nextEntrants = [];
+        // marketData[token].currentEntrants = marketData[token].nextEntrants;
+        // marketData[token].nextEntrants = [];
 
         marketData[token].round = marketData[token].round + 1;
-        marketData[token].roundEnd = 0;//block.number + 5 mins in blocks
+        marketData[token].roundEnd = marketData[token].roundEnd.add(5 minutes);//block.number + 5 mins in blocks
         //reward function caller with amount of versus
 
     }
@@ -176,17 +210,18 @@ contract SpotBattle is DataLayout, Proxiable{
         );
     }
 
-    function claim(address user) public {
-        uint32 userIndex = userHistory[user].currentIndex-1;
+    function claim(address user, uint256 userIndex) public {
         address token = userHistory[user].tokenHistory[userIndex];
         uint32 round = userHistory[user].round[userIndex];
 
+        // make sure user has not claimed index yet
         if (!userHistory[user].isChecked[userIndex]) {
             bool longWon = marketData[token].targetHistory[round-1] > marketData[token].closingHistory[round-1];
-        
+
+            //if user guessed wrong
             if (userHistory[user].isLonging[userIndex] != longWon) {
                 userHistory[user].isChecked[userIndex] = true;
-                VersusToken(versusToken).updateUserWins(user, false);
+                // VersusToken(versusToken).updateUserWins(user, false);
                 return false;
             }
             

@@ -39,15 +39,21 @@ contract LibraryLock is LibraryLockDataLayout {
 contract DataLayout is LibraryLock {
     address public owner;
     address public versusToken;
+    address public monsterList;
     uint256 _tokenIds;
     
     struct details {
         uint32 monsterID;
         uint32 NFTLevel;
-        uint32 levelWins;
+        uint32 totalWins;
         uint32[] stats;
+        address equippedTo;
         uint256 blockChecked;
-        bool isStaked;
+        uint256 versusStaked;
+        uint32 move1;
+        uint32 move2;
+        uint32 move3;
+        uint32 move4;
     }
     mapping(uint256 => details) public NFTDetails;
     mapping(uint256 => mapping(uint32 => uint32[])) public NFTStatsHistory;
@@ -57,6 +63,10 @@ contract DataLayout is LibraryLock {
 contract VersusNFT is BEP721, DataLayout, Proxiable {
     using SafeMath for uint256;
     
+    modifier onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
 
     constructor() public payable BEP721("Versusmon", "VMON") {
         
@@ -66,19 +76,27 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
         require(!initialized);
         owner = msg.sender;
         versusToken = _versusToken;
-        constructor1("Versusmon", "VMON");
+        constructor1("Versus.cx Creature", "VMON");
         initialize();
     }
 
-    function updateCode(address newCode) public _onlyOwner delegatedOnly  {
+    function setVersusToken(address _versusToken) public onlyOwner delegatedOnly {
+        versusToken = _versusToken;
+    }
+
+    function setMonsterList(address _monsterList) public onlyOwner delegatedOnly {
+        monsterList = _monsterList;
+    }
+
+    function updateCode(address newCode) public onlyOwner delegatedOnly  {
         updateCodeAddress(newCode);
     }
 
-    function setOwner(address _owner) public _onlyOwner delegatedOnly {
+    function setOwner(address _owner) public onlyOwner delegatedOnly {
         owner = _owner;
     }
 
-    function whiteListContract(address _contract, bool _direction) public _onlyOwner {
+    function whiteListContract(address _contract, bool _direction) public onlyOwner {
         whitelistedContracts[_contract] = _direction;
     }
 
@@ -104,22 +122,40 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
         _mint(_claimer, newItemId);
         NFTDetails[newItemId].monsterID = _monsterID;
         // NFTDetails[newItemId].stats = //get base stats from monsterList
-        //add yield boost, get fom monsterList
-        //is staked
+        MonsterList(monsterList).getStatRanges(_monsterID);
         
         return newItemId;
     }
+
     
     function getNFTDetails(uint256 id) public view delegatedOnly returns(uint32, uint32, bool, string memory) {
-        return(nftDetails[id].level, 
-               nftDetails[id].bonus, 
-               nftDetails[id].isStaked,
+        return(NFTDetails[id].level, 
+               NFTDetails[id].bonus, 
+               NFTDetails[id].isStaked,
                tokenURI(id));
+    }
+
+    function equipMonster(uint256 id, address _owner) public delegatedOnly {
+        //only whitelisted contracts
+        require(whitelistedContracts[_contract]);
+        //check that owner owns NFT with that id
+        //set to owner
+        NFTDetails[id].equippedTo =  _owner;
+    }
+
+    function unEquipMonster(uint256 id, address _owner) public delegatedOnly {
+        //only whitelisted contracts
+        require(whitelistedContracts[_contract]);
+        //check that owner owns NFT with that id
+        //set to owner
+        NFTDetails[id].equippedTo =  address(0);
     }
 
     function growMonster(uint256 id) public delegatedOnly {
         //only whitelisted contracts
+        require(whitelistedContracts[_contract]);
         //increase monster level wins
+        NFTDetails[id].totalWins = NFTDetails[id].totalWins + 1;
         //check if monster's wins meet or exceed requirements to level up
         //if so, increase each monster stat with random number generator
         
@@ -139,3 +175,7 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
     
     
 }
+
+interface MonsterList {
+    function getStatRanges(uint32 index) external returns(uint[] memory);
+} 

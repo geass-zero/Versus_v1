@@ -111,9 +111,10 @@ contract TokenBattle is DataLayout, Proxiable{
         updateCodeAddress(newCode);
     }
 
+
     //add initial tokens(max 10)
     function initialiseBattle(address[] memory tokens, address[] memory pairs) public {
-        require(isAdmin[msg.sender]);
+        require(isAdmin[msg.sender]); //centralize admins at versus token
         require(tokens.length <= 10);
         futureTokenList = tokens;
         futureTokenPairs = pairs;
