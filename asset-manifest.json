@@ -1,27 +1,43 @@
 {
   "files": {
     "main.css": "/Versus/static/css/main.0d5b7ac1.chunk.css",
-    "main.js": "/Versus/static/js/main.746aab06.chunk.js",
-    "main.js.map": "/Versus/static/js/main.746aab06.chunk.js.map",
+    "main.js": "/Versus/static/js/main.de77730e.chunk.js",
+    "main.js.map": "/Versus/static/js/main.de77730e.chunk.js.map",
     "runtime-main.js": "/Versus/static/js/runtime-main.78932cc8.js",
     "runtime-main.js.map": "/Versus/static/js/runtime-main.78932cc8.js.map",
-    "static/js/2.7cbd1a98.chunk.js": "/Versus/static/js/2.7cbd1a98.chunk.js",
-    "static/js/2.7cbd1a98.chunk.js.map": "/Versus/static/js/2.7cbd1a98.chunk.js.map",
+    "static/js/2.d8ac15d8.chunk.js": "/Versus/static/js/2.d8ac15d8.chunk.js",
+    "static/js/2.d8ac15d8.chunk.js.map": "/Versus/static/js/2.d8ac15d8.chunk.js.map",
     "index.html": "/Versus/index.html",
     "static/css/main.0d5b7ac1.chunk.css.map": "/Versus/static/css/main.0d5b7ac1.chunk.css.map",
-    "static/js/2.7cbd1a98.chunk.js.LICENSE.txt": "/Versus/static/js/2.7cbd1a98.chunk.js.LICENSE.txt",
+    "static/js/2.d8ac15d8.chunk.js.LICENSE.txt": "/Versus/static/js/2.d8ac15d8.chunk.js.LICENSE.txt",
+    "static/media/BackArrow.64a52a44.svg": "/Versus/static/media/BackArrow.64a52a44.svg",
+    "static/media/Coolicon.0dfa7754.svg": "/Versus/static/media/Coolicon.0dfa7754.svg",
+    "static/media/Graph.371eb09a.svg": "/Versus/static/media/Graph.371eb09a.svg",
     "static/media/Montserrat-ExtraBold.3a9432ab.ttf": "/Versus/static/media/Montserrat-ExtraBold.3a9432ab.ttf",
     "static/media/Montserrat-Medium.e2d60bc4.ttf": "/Versus/static/media/Montserrat-Medium.e2d60bc4.ttf",
     "static/media/Montserrat-SemiBold.164d6389.ttf": "/Versus/static/media/Montserrat-SemiBold.164d6389.ttf",
-    "static/media/bitcoin.e5849ce5.svg": "/Versus/static/media/bitcoin.e5849ce5.svg",
+    "static/media/NextArrow.9c4e6ba8.svg": "/Versus/static/media/NextArrow.9c4e6ba8.svg",
+    "static/media/calfire.79c46326.gif": "/Versus/static/media/calfire.79c46326.gif",
+    "static/media/claim.163e078a.png": "/Versus/static/media/claim.163e078a.png",
+    "static/media/clock.9664ff26.png": "/Versus/static/media/clock.9664ff26.png",
+    "static/media/coin.eb2c02a2.png": "/Versus/static/media/coin.eb2c02a2.png",
     "static/media/gitbookLogo.741a6b03.svg": "/Versus/static/media/gitbookLogo.741a6b03.svg",
-    "static/media/telegramLogo.d8aae7e7.svg": "/Versus/static/media/telegramLogo.d8aae7e7.svg",
-    "static/media/twitterLogo.16d505d4.svg": "/Versus/static/media/twitterLogo.16d505d4.svg"
+    "static/media/level1.07dc3fab.png": "/Versus/static/media/level1.07dc3fab.png",
+    "static/media/level2.805596cf.png": "/Versus/static/media/level2.805596cf.png",
+    "static/media/level3.afe8d843.png": "/Versus/static/media/level3.afe8d843.png",
+    "static/media/shiba.14f7ac90.png": "/Versus/static/media/shiba.14f7ac90.png",
+    "static/media/shibaHardcore.a3344b47.png": "/Versus/static/media/shibaHardcore.a3344b47.png",
+    "static/media/shibachu.f071d31a.gif": "/Versus/static/media/shibachu.f071d31a.gif",
+    "static/media/telegramLogo.c088c13e.svg": "/Versus/static/media/telegramLogo.c088c13e.svg",
+    "static/media/tokens.f3f731af.png": "/Versus/static/media/tokens.f3f731af.png",
+    "static/media/treasure.b8d15d46.png": "/Versus/static/media/treasure.b8d15d46.png",
+    "static/media/twitterLogo.8745893a.svg": "/Versus/static/media/twitterLogo.8745893a.svg",
+    "static/media/versusTitle.8676d5ed.png": "/Versus/static/media/versusTitle.8676d5ed.png"
   },
   "entrypoints": [
     "static/js/runtime-main.78932cc8.js",
-    "static/js/2.7cbd1a98.chunk.js",
+    "static/js/2.d8ac15d8.chunk.js",
     "static/css/main.0d5b7ac1.chunk.css",
-    "static/js/main.746aab06.chunk.js"
+    "static/js/main.de77730e.chunk.js"
   ]
 }
