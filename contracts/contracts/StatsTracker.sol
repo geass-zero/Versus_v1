@@ -1,4 +1,4 @@
-pragma solidity ^0.6.6;
+pragma solidity ^0.8.0;
 
 import "./BEP20.sol";
 
@@ -51,7 +51,6 @@ contract DataLayout is LibraryLock {
 
 contract VersusStats is DataLayout, Proxiable {
     
-    using SafeERC20 for IBEP20;
     using SafeMath for uint256;
 
     modifier onlyVersus() {
@@ -99,7 +98,7 @@ contract VersusStats is DataLayout, Proxiable {
     function adjustMontlyLeaders(address user, uint256 wins) public onlyVersus {
 
         if (topMonthly.length < 10) {
-            monthlyWins.push(volume);
+            monthlyWins.push(wins);
             topMonthly.push(user);
             return;
         } else {

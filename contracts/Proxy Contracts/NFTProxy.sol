@@ -1,4 +1,4 @@
-pragma solidity ^0.6.6;
+pragma solidity ^0.8.0;
 
 contract VersusNFTProxy {
     event myEvent(bytes);
@@ -9,8 +9,8 @@ contract VersusNFTProxy {
         assembly { // solium-disable-line
             sstore(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7, contractLogic)
         }
-        (bool success, bytes memory _ ) = contractLogic.delegatecall(constructData); // solium-disable-line
-        emit myEvent(_);
+        (bool success, bytes memory __ ) = contractLogic.delegatecall(constructData); // solium-disable-line
+        emit myEvent(__);
         require(success, "Construction failed");
     }
 

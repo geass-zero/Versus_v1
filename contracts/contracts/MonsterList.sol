@@ -1,6 +1,6 @@
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
-import "./BEP721.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 contract Proxiable {
     // Code position in storage is keccak256("PROXIABLE") = "0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7"
@@ -37,6 +37,8 @@ contract LibraryLock is LibraryLockDataLayout {
 }
 
 contract DataLayout is LibraryLock {
+    address public owner;
+    address public versusNFT;
     struct monsterStruct {
         string name;
         string monsterType;
@@ -55,14 +57,19 @@ contract DataLayout is LibraryLock {
 contract MonsterList is DataLayout, Proxiable {
     using SafeMath for uint256;
     
+    modifier _onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
 
     constructor() public {
         
     }
 
-    function MonsterConstructor() public payable {
+    function MonsterConstructor(address _versusNFT) public payable {
         require(!initialized);
         owner = msg.sender;
+        versusNFT = _versusNFT;
         initialize();
     }
 
@@ -75,19 +82,19 @@ contract MonsterList is DataLayout, Proxiable {
     }
 
     function createMonster(
-        string name,
-        string monsterType,
-        uint[] levelRequirements,
-        uint[] statRanges,
+        string memory name,
+        string memory monsterType,
+        uint[] memory levelRequirements,
+        uint32[] memory statRanges,
         uint32 evolutionLevel,
         uint32 evolvesInto,
-        string rarity,
-        string imageLink,
+        string memory rarity,
+        string memory imageLink,
         uint32 yieldBoost
     ) public _onlyOwner delegatedOnly {
         monster[topIndex+1].name = name;
         monster[topIndex+1].monsterType = monsterType;
-        monster[topIndex+1].levelRequirements = levelRequirements;
+        monster[topIndex+1].levelUpRequirements = levelRequirements;
         monster[topIndex+1].statRanges = statRanges;
         monster[topIndex+1].evolutionLevel = evolutionLevel;
         monster[topIndex+1].evolvesInto = evolvesInto;
@@ -99,28 +106,28 @@ contract MonsterList is DataLayout, Proxiable {
 
     function editName(
         uint32 index,
-        string name
+        string memory name
     ) public _onlyOwner delegatedOnly {
         monster[index].name = name;
     }
 
     function editType(
         uint32 index,
-        string monsterType
+        string memory monsterType
     ) public _onlyOwner delegatedOnly {
         monster[index].monsterType = monsterType;
     }
 
     function editLevelRequirements(
         uint32 index,
-        uint[] levelRequirements
+        uint[] memory levelRequirements
     ) public _onlyOwner delegatedOnly {
-        monster[index].levelRequirements = levelRequirements;
+        monster[index].levelUpRequirements = levelRequirements;
     }
 
     function editStatRanges(
         uint32 index,
-        uint[] statRanges
+        uint32[] memory statRanges
     ) public _onlyOwner delegatedOnly {
         monster[index].statRanges = statRanges;
     }
@@ -141,14 +148,14 @@ contract MonsterList is DataLayout, Proxiable {
 
     function editRarity(
         uint32 index,
-        string rarity
+        string memory rarity
     ) public _onlyOwner delegatedOnly {
         monster[index].rarity = rarity;
     }
 
     function editImageLink(
         uint32 index,
-        string imageLink
+        string memory imageLink
     ) public _onlyOwner delegatedOnly {
         monster[index].imageLink = imageLink;
     }
@@ -169,10 +176,10 @@ contract MonsterList is DataLayout, Proxiable {
     }
 
     function getLevelRequirements(uint32 index) public returns(uint[] memory) {
-        return monster[index].levelRequirements;
+        return monster[index].levelUpRequirements;
     }
     
-    function getStatRanges(uint32 index) public returns(uint[] memory) {
+    function getStatRanges(uint32 index) public returns(uint32[] memory) {
         return monster[index].statRanges;
     }
 

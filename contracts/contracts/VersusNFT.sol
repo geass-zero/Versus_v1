@@ -1,4 +1,4 @@
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
 import "./BEP721.sol";
 
@@ -68,7 +68,7 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
         _;
     }
 
-    constructor() public payable BEP721("Versusmon", "VMON") {
+    constructor() public {
         
     }
 
@@ -102,7 +102,7 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
         //use tokenId to determine NFT level
-        uint256 tokenLevel = nftDetails[tokenId].NFTLevel;
+        uint256 tokenLevel = NFTDetails[tokenId].NFTLevel;
         return super.tokenURI(tokenLevel);
     }
 
@@ -115,8 +115,8 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
       * @param _claimer Address of the claiming user.
       * @param _monsterID Name of the NFT tier.
       */
-    function createNFT(address _claimer, uint256 _monsterID) public delegatedOnly returns(uint256) {
-        require(whitelistedContracts[_contract]);
+    function createNFT(address _claimer, uint32 _monsterID) public delegatedOnly returns(uint256) {
+        require(whitelistedContracts[msg.sender]);
         uint256 newItemId = _tokenIds.add(1);
         _tokenIds = _tokenIds.add(1);
         _mint(_claimer, newItemId);
@@ -128,16 +128,15 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
     }
 
     
-    function getNFTDetails(uint256 id) public view delegatedOnly returns(uint32, uint32, bool, string memory) {
-        return(NFTDetails[id].level, 
-               NFTDetails[id].bonus, 
-               NFTDetails[id].isStaked,
+    function getNFTDetails(uint256 id) public view delegatedOnly returns(uint32, uint256, string memory) {
+        return(NFTDetails[id].NFTLevel,
+               NFTDetails[id].versusStaked,
                tokenURI(id));
     }
 
     function equipMonster(uint256 id, address _owner) public delegatedOnly {
         //only whitelisted contracts
-        require(whitelistedContracts[_contract]);
+        require(whitelistedContracts[msg.sender]);
         //check that owner owns NFT with that id
         //set to owner
         NFTDetails[id].equippedTo =  _owner;
@@ -145,7 +144,7 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
 
     function unEquipMonster(uint256 id, address _owner) public delegatedOnly {
         //only whitelisted contracts
-        require(whitelistedContracts[_contract]);
+        require(whitelistedContracts[msg.sender]);
         //check that owner owns NFT with that id
         //set to owner
         NFTDetails[id].equippedTo =  address(0);
@@ -153,7 +152,7 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
 
     function growMonster(uint256 id) public delegatedOnly {
         //only whitelisted contracts
-        require(whitelistedContracts[_contract]);
+        require(whitelistedContracts[msg.sender]);
         //increase monster level wins
         NFTDetails[id].totalWins = NFTDetails[id].totalWins + 1;
         //check if monster's wins meet or exceed requirements to level up
@@ -162,12 +161,12 @@ contract VersusNFT is BEP721, DataLayout, Proxiable {
     }
 
     //stake
-    function stakeNFT() {
+    function stakeNFT() public {
 
     }
 
     //unstake
-    function unstakeNFT() {
+    function unstakeNFT() public {
 
     }
     

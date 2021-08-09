@@ -1,4 +1,4 @@
-pragma solidity ^0.6.6;
+pragma solidity ^0.8.0;
 
 import "./BEP20.sol";
 
@@ -64,6 +64,7 @@ contract DataLayout is LibraryLock {
     address public owner;
     address public versusToken;
     address public usdcAddress;
+    address public router;
 
     struct marketStruct {
         uint256 round;
@@ -101,8 +102,13 @@ contract DataLayout is LibraryLock {
 
 contract SpotBattle is DataLayout, Proxiable{
 
-    using SafeERC20 for IBEP20;
+ 
     using SafeMath for uint256;
+
+    modifier _onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
 
     constructor() public {
         
@@ -122,11 +128,11 @@ contract SpotBattle is DataLayout, Proxiable{
         initialize();
     }
 
-    function getUSDCPrice(address token) public returns(address[] memory) {
-        address[] path = new address[](2);
+    function getUSDCPrice(address token) public returns(uint256) {
+        address[] memory path = new address[](2);
         path[0] = token;
         path[1] = usdcAddress;
-        address[] memory amountsOut = getAmountsOut(1 ** IBEP20(token).decimals(), path);
+        uint256[] memory amountsOut = IUniswapV2Router02(router).getAmountsOut(1 ** IBEP20(token).decimals(), path);
         return amountsOut[amountsOut.length-1];
     }
     
@@ -164,18 +170,18 @@ contract SpotBattle is DataLayout, Proxiable{
         
         //send 3% of value to token contract as fees
         uint256 fees = BNBAmount.mul(3).div(100);
-        VersusToken(versusToken).returnPredictionFees(){value: fees};
+        VersusToken(versusToken).returnPredictionFees{value: fees}();
 
         userHistory[msg.sender].tokenHistory.push(token);
         userHistory[msg.sender].round.push(marketData[token].round + 1);
         userHistory[msg.sender].BNBAmount.push(BNBAmount.sub(fees));
         userHistory[msg.sender].isLonging.push(isLonging);
-        userHistory[msg.sender].isChecked.push(false);
+        userHistory[msg.sender].winClaimed.push(false);
         userHistory[msg.sender].isFreePrediction.push(freePrediction);
         userHistory[msg.sender].currentIndex = userHistory[msg.sender].currentIndex.add(1);
 
         entrantData[token][marketData[token].round+1][msg.sender];
-        claim(msg.sender);
+        // claim(msg.sender);
         VersusToken(versusToken).updateStats(msg.sender, BNBAmount.sub(fees));
     }
 
@@ -200,29 +206,29 @@ contract SpotBattle is DataLayout, Proxiable{
 
     }
 
-    function getUserMarketHistory(address user) public view returns(address[],uint256[],uint256[],bool[],bool[]) {
+    function getUserMarketHistory(address user) public view returns(address[] memory,uint256[] memory,uint256[] memory,bool[] memory,bool[] memory) {
         return(
             userHistory[user].tokenHistory,
             userHistory[user].round,
             userHistory[user].BNBAmount,
             userHistory[user].isLonging,
-            userHistory[user].isChecked
+            userHistory[user].winClaimed
         );
     }
 
     function claim(address user, uint256 userIndex) public {
         address token = userHistory[user].tokenHistory[userIndex];
-        uint32 round = userHistory[user].round[userIndex];
+        uint256 round = userHistory[user].round[userIndex];
 
         // make sure user has not claimed index yet
-        if (!userHistory[user].isChecked[userIndex]) {
+        if (!userHistory[user].winClaimed[userIndex]) {
             bool longWon = marketData[token].targetHistory[round-1] > marketData[token].closingHistory[round-1];
 
             //if user guessed wrong
             if (userHistory[user].isLonging[userIndex] != longWon) {
-                userHistory[user].isChecked[userIndex] = true;
+                userHistory[user].winClaimed[userIndex] = true;
                 // VersusToken(versusToken).updateUserWins(user, false);
-                return false;
+                return;
             }
             
             uint256 BNBUsed = userHistory[user].BNBAmount[userIndex];
@@ -243,7 +249,7 @@ contract SpotBattle is DataLayout, Proxiable{
             //send winnings to user after free prediction check and fees
             if (userHistory[user].isFreePrediction[userIndex]) {
                 //send 99% to token contract
-                VersusToken(versusToken).returnFreeBNB(user){value: winnings.mul(99).div(100)};
+                VersusToken(versusToken).returnFreeBNB{value: winnings.mul(99).div(100)}(user);
                 //reduce winnings by 99%
                 winnings = winnings.sub(winnings.mul(99).div(100));
             }
@@ -251,9 +257,9 @@ contract SpotBattle is DataLayout, Proxiable{
 
             //send user Versus as reward, if not free prediction, how much though?
 
-            userHistory[user].isChecked[userIndex] = true;
+            userHistory[user].winClaimed[userIndex] = true;
             VersusToken(versusToken).updateUserWins(user, true);
-            return true;
+            return;
         } 
 
     }
@@ -262,8 +268,8 @@ contract SpotBattle is DataLayout, Proxiable{
 
 interface VersusToken {
     function hasFreePrediction(address user) external returns(uint256);
-    function returnPredictionFees() external;
-    function returnFreeBNB(address user) external;
+    function returnPredictionFees() payable external;
+    function returnFreeBNB(address user) payable external;
     function updateStats(address user, uint256 volume) external;
     function updateUserWins(address _user, bool _isWin) external;
 }

@@ -1,4 +1,4 @@
-pragma solidity ^0.6.6;
+pragma solidity ^0.8.0;
 
 import "./BEP20.sol";
 import "./CakeInterface.sol";
@@ -89,9 +89,12 @@ contract DataLayout is LibraryLock {
 
 contract TokenBattle is DataLayout, Proxiable{
     
-    using SafeERC20 for IBEP20;
     using SafeMath for uint256;
 
+    modifier _onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
 
     constructor() public {
         
@@ -101,9 +104,10 @@ contract TokenBattle is DataLayout, Proxiable{
         
     }
 
-    function battleConstructor() public {
+    function battleConstructor(address _versusToken) public {
         require(!initialized, "Contract is already initialized");
         owner = msg.sender;
+        versusToken = _versusToken;
         initialize();
     }
 
@@ -150,15 +154,15 @@ contract TokenBattle is DataLayout, Proxiable{
         uint256 highestBNBChange;
         address leastLossToken;
         uint256 leastLoss;
-        uint32 currentRound = battleData[address(this)].round;
-        for (uint i; i < tokens.length; i++) {
+        uint256 currentRound = battleData[address(this)].round;
+        for (uint i; i < markets.length; i++) {
             uint256 startBalance = battleData[address(this)].startBalance[i]; 
-            uint256 tokenBalance = IBEP20(battleData[address(this)].pairs[i]).balanceOf(tokens[i]);
+            uint256 tokenBalance = IBEP20(battleData[address(this)].pairs[i]).balanceOf(markets[i]);
 
             //set battleHistory data for the round
-            battleHistory[currentRound].tokens.push(tokens[i]);
+            battleHistory[currentRound].tokens.push(markets[i]);
             battleHistory[currentRound].startBalance.push(startBalance);
-            battleHistory[currentRound].endBalance.push(endBalance);
+            battleHistory[currentRound].endBalance.push(tokenBalance);
             battleHistory[currentRound].roundStart.push(battleData[address(this)].roundStart);
             battleHistory[currentRound].roundEnd.push(block.number);
             battleHistory[currentRound].BNBWaged.push(battleData[address(this)].BNBWaged[i]);
@@ -167,27 +171,27 @@ contract TokenBattle is DataLayout, Proxiable{
             if (tokenBalance < startBalance) {
                 if (leastLoss == 0) {
                     leastLoss = startBalance.sub(tokenBalance);
-                    leastLossToken = token[i];
+                    leastLossToken = markets[i];
                 } else if (startBalance.sub(tokenBalance) < leastLoss) {
                     leastLoss = startBalance.sub(tokenBalance);
-                    leastLossToken = token[i];
+                    leastLossToken = markets[i];
                 }
             }
 
             if (tokenBalance > startBalance) {
                 if (highestBNBChange == 0) {
                     highestBNBChange = tokenBalance.sub(startBalance);
-                    winningToken = tokens[i];
+                    winningToken = markets[i];
                 } else if (highestBNBChange < tokenBalance.sub(startBalance)) {
                     highestBNBChange = tokenBalance.sub(startBalance);
-                    winningToken = tokens[i];
+                    winningToken = markets[i];
                 }
             }
 
             //set endBalance in history
-            battleData[address(this)].endBalance[i] = IBEP20(pairs[i]).balanceOf(tokens[i]);
+            battleHistory[currentRound].endBalance[i] = IBEP20(battleData[address(this)].pairs[i]).balanceOf(markets[i]);
 
-            battleData[address(this)].startBalance[i] = IBEP20(pairs[i]).balanceOf(tokens[i]);//set start Balance
+            battleData[address(this)].startBalance[i] = IBEP20(battleData[address(this)].pairs[i]).balanceOf(battleData[address(this)].pairs[i]);//set start Balance
             battleData[address(this)].BNBWaged.push(0);
 
             //update tokens to futuretokens
@@ -201,9 +205,9 @@ contract TokenBattle is DataLayout, Proxiable{
         //save info in marketHistory
         //update tokens for next round
         if (winningToken != address(0)) {
-            battleHistory[address(this)].winningToken = winningToken;
+            battleHistory[currentRound].winningToken = winningToken;
         } else if (leastLossToken != address(0)) {
-            battleHistory[address(this)].winningToken = leastLossToken;
+            battleHistory[currentRound].winningToken = leastLossToken;
         } 
         
         //load in next round
@@ -216,23 +220,25 @@ contract TokenBattle is DataLayout, Proxiable{
 
     //enter a round(free prediction usable)
     function enterBattle(address _token, uint tokenIndex, bool isFreePrediction) payable public {
-        require(tokens[tokenIndex] == _token);
+        require(markets[tokenIndex] == _token);
 
         //check if user has placed prediction in next round
         uint256[] memory userRound = userHistory[msg.sender].round;
         require(userRound[userRound.length-1] < battleData[address(this)].round+1);
-
+        uint256 currentValue;
         if (isFreePrediction) {
             require(msg.value == 0);
             //check if user has staked long enough for a free prediction
-            msg.value = VersusToken(versusToken).hasFreePrediction(msg.sender);
+            currentValue = VersusToken(versusToken).hasFreePrediction(msg.sender);
+        } else {
+            require (msg.value > 0);
+            currentValue = msg.value;
         }
 
-        require (msg.value > 0);
-        uint256 BNBAmount = msg.value;
+        uint256 BNBAmount = currentValue;
         //send 3% of value to token contract as fees
         uint256 fees = BNBAmount.mul(3).div(100);
-        VersusToken(versusToken).returnPredictionFees(){value: fees};
+        VersusToken(versusToken).returnPredictionFees{value: fees}();
 
         battleData[address(this)].BNBWaged[tokenIndex] = battleData[address(this)].BNBWaged[tokenIndex].add(msg.value);
         userHistory[msg.sender].tokenHistory.push(_token);
@@ -244,15 +250,15 @@ contract TokenBattle is DataLayout, Proxiable{
 
     //claim wins
     function claimWins(uint32 index) public {
-        require(!battleHistory[msg.sender].isChecked, "Entry has been finalized");
+        require(!userHistory[msg.sender].isChecked[index], "Entry has been finalized");
         //use BNB waged to determine user payout, if winner, else 0
         //if winner, check if prediction was free
         //if winner, update user wins
         uint256 round = userHistory[msg.sender].round[index];
         if(battleHistory[round].winningToken == userHistory[msg.sender].tokenHistory[index]) {
-            uint256 userPayout = userHistory[msg.sender].BNBAmount[index].mul(100).div(battleHistory[round].BNBWaged);
-            msg.sender.transfer(userPayout);
-            battleHistory[msg.sender].isChecked = true;
+            uint256 userPayout = (userHistory[msg.sender].BNBAmount[index] * 100) / battleHistory[round].BNBWaged[index];
+            payable(msg.sender).transfer(userPayout);
+            userHistory[msg.sender].isChecked[index] = true;
         }
        
         //update the lastCheckedIndex
@@ -262,8 +268,8 @@ contract TokenBattle is DataLayout, Proxiable{
 
 interface VersusToken {
     function hasFreePrediction(address user) external returns(uint256);
-    function returnPredictionFees() external;
-    function returnFreeBNB() external;
+    function returnPredictionFees() payable external;
+    function returnFreeBNB() payable external;
     function updateStats(address user, uint256 volume) external;
     function updateUserWins(address _user, bool _isWin) external;
 }
