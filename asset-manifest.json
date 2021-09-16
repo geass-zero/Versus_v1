@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Versus/static/css/main.0d5b7ac1.chunk.css",
-    "main.js": "/Versus/static/js/main.de77730e.chunk.js",
-    "main.js.map": "/Versus/static/js/main.de77730e.chunk.js.map",
+    "main.js": "/Versus/static/js/main.7154d555.chunk.js",
+    "main.js.map": "/Versus/static/js/main.7154d555.chunk.js.map",
     "runtime-main.js": "/Versus/static/js/runtime-main.78932cc8.js",
     "runtime-main.js.map": "/Versus/static/js/runtime-main.78932cc8.js.map",
-    "static/js/2.d8ac15d8.chunk.js": "/Versus/static/js/2.d8ac15d8.chunk.js",
-    "static/js/2.d8ac15d8.chunk.js.map": "/Versus/static/js/2.d8ac15d8.chunk.js.map",
+    "static/js/2.120a0d51.chunk.js": "/Versus/static/js/2.120a0d51.chunk.js",
+    "static/js/2.120a0d51.chunk.js.map": "/Versus/static/js/2.120a0d51.chunk.js.map",
     "index.html": "/Versus/index.html",
     "static/css/main.0d5b7ac1.chunk.css.map": "/Versus/static/css/main.0d5b7ac1.chunk.css.map",
-    "static/js/2.d8ac15d8.chunk.js.LICENSE.txt": "/Versus/static/js/2.d8ac15d8.chunk.js.LICENSE.txt",
+    "static/js/2.120a0d51.chunk.js.LICENSE.txt": "/Versus/static/js/2.120a0d51.chunk.js.LICENSE.txt",
     "static/media/BackArrow.64a52a44.svg": "/Versus/static/media/BackArrow.64a52a44.svg",
     "static/media/Coolicon.0dfa7754.svg": "/Versus/static/media/Coolicon.0dfa7754.svg",
     "static/media/Graph.371eb09a.svg": "/Versus/static/media/Graph.371eb09a.svg",
@@ -36,8 +36,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.78932cc8.js",
-    "static/js/2.d8ac15d8.chunk.js",
+    "static/js/2.120a0d51.chunk.js",
     "static/css/main.0d5b7ac1.chunk.css",
-    "static/js/main.de77730e.chunk.js"
+    "static/js/main.7154d555.chunk.js"
   ]
 }
