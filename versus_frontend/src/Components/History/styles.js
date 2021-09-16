@@ -44,6 +44,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(0, 0, 0, 0.05)",
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
     padding: 10,
+    marginBottom: 10,
+    marginTop: 10
   }
 }));
 

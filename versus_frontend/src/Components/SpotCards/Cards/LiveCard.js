@@ -1,12 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import Container from "@material-ui/core/Container";
 import SuperEllipse, { Preset } from "react-superellipse";
 import { useStyles } from "./styles";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 
+import { getSpotBattleData } from "../../../utils/Contracts";
+
 const LiveCard = () => {
   const classes = useStyles();
+  const [currentPrice, setCurrentPrice] = useState(0);
+  const [targetPrice, setTargetPrice] = useState(0);
+  
+
+  // let price = data['targetPrice'].toString();
+  // price = price.slice(0, -3);
+  // data['targetPrice'] = parseInt(price);
+
+  let currentInfo = {
+    longBNB: 0,
+    shortBNB: 0,
+    roundEnd: 100,
+    round: 0,
+    targetPrice: 100
+  }
+
+  async function getMarketData() {
+      let data = await getSpotBattleData('0x5741306c21795FdCBb9b265Ea0255F499DFe515C');
+      console.log(data);
+      // currentInfo['longBNB'] = Number(data[0][0]);
+      // currentInfo['shortBNB'] = Number(data[0][1]);
+      // currentInfo['roundEnd'] = Number(data[0][2]);
+      // currentInfo['round'] = Number(data[0][3]);
+      
+      console.log(currentInfo['targetPrice']);
+      
+      setTargetPrice(Number(data[0][4]));
+      // setIsEntered(await getEntryStatus());
+  }   
+  useEffect(() => {
+          
+      async function load() {
+        await getMarketData();
+      }
+      
+      load()
+  }, []);
 
   return (
     <SuperEllipse r1={0.05} r2={0.2} className={classes.liveCard}>
@@ -32,7 +72,7 @@ const LiveCard = () => {
             className={classes.globalMidText}
             style={{ fontSize: 12, color: "#393E49" }}
           >
-            LAST PRICE
+            CURRENT PRICE
           </Typography>
           <div
             style={{
@@ -45,7 +85,7 @@ const LiveCard = () => {
               className={classes.globalMidText}
               style={{ fontSize: 28, color: "#40CFAA" }}
             >
-              $4564.564
+              ${currentPrice}
             </Typography>
             <div
               style={{
@@ -62,7 +102,7 @@ const LiveCard = () => {
                 className={classes.globalMidText}
                 style={{ fontSize: 14, color: "white" }}
               >
-                $4564.564
+                $-
               </Typography>
             </div>
           </div>
@@ -78,7 +118,7 @@ const LiveCard = () => {
               className={classes.globalMidText}
               style={{ color: "#828282" }}
             >
-              $4564.564
+              ${targetPrice}
             </Typography>
           </div>
         </Container>

@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     border: "2px solid #E0AB30",
     borderRadius: "50%",
     marginLeft: 20,
+    cursor: "pointer"
   },
   divArrows: {
     display: "flex",
@@ -82,9 +83,10 @@ const useStyles = makeStyles((theme) => ({
     color: "rgba(79, 79, 79, 1)",
     fontFamily: "Montserrat",
     fontWeight: 800,
-    fontSize: 30,
+    fontSize: 20,
     position: "absolute",
     left: 0,
+    cursor: "pointer",
     marginLeft: 30,
     marginTop: 15,
   },

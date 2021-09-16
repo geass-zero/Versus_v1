@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { React, useState, useEffect } from 'react';
+import {connectWallet} from '../../../src/utils/Contracts';
 
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -15,6 +16,9 @@ import Drawer from "@material-ui/core/Drawer";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 
+import { getUserData } from '../../../src/utils/Contracts';
+import StarterClaim from '../StarterClaim/StarterClaim';
+
 const CustomList = ({ toggleDrawer, setSelectedPage, setOpen, history }) => {
   const classes = useStyles();
 
@@ -23,6 +27,7 @@ const CustomList = ({ toggleDrawer, setSelectedPage, setOpen, history }) => {
     setOpen(false);
   
   };
+
 
   return (
     <div
@@ -61,9 +66,9 @@ const CustomList = ({ toggleDrawer, setSelectedPage, setOpen, history }) => {
       </List>
       <Divider />
       <List>
-        <ListItem button key="badges"  onClick={() => handleChange("badges")}>
+        <ListItem button key="mynfts"  onClick={() => handleChange("mynfts")}>
           <ListItemText>
-            <Typography className={classes.itemMenu}>My Badges</Typography>
+            <Typography className={classes.itemMenu}>My NFTs</Typography>
           </ListItemText>
         </ListItem>
       </List>
@@ -80,10 +85,20 @@ function Header() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("md"));
   const [selectedPage, setSelectedPage] = useState("spotBattle");
+  const [userWallet, setUserWallet] = useState(0);
+  const [hasClaimedStarter, setHasClaimedStarter] = useState(true);
 
   const handleChange = (type) => {
     history.push(`/versus/${type}`);
   };
+
+  async function connectAddress() {
+    let accounts = await connectWallet();
+    setUserWallet(accounts);  
+    let userData = await getUserData();
+    setHasClaimedStarter(userData['hasClaimedStarter']);
+    console.log(userData);
+  }
 
   const toggleDrawer = (event) => {
     if (
@@ -98,6 +113,11 @@ function Header() {
 
   return (
     <div className={classes.root}>
+      {hasClaimedStarter ?
+        null 
+        :
+        <StarterClaim>x</StarterClaim>
+      }
       <AppBar
         position="static"
         style={{ background: "transparent", paddingTop: 20 }}
@@ -146,19 +166,25 @@ function Header() {
                 Leaderboard
               </Typography>
               <Typography
-                onClick={() => handleChange("badges")}
+                onClick={() => handleChange("mynfts")}
                 style={{
-                  color: typeId === "badges" ? "" : "rgba(255, 255, 255, 0.6)",
+                  color: typeId === "mynfts" ? "" : "rgba(255, 255, 255, 0.6)",
                 }}
                 className={classes.subtitle}
               >
-                My badges
+                My NFTs
               </Typography>
             </Container>
           )}
-          <div className={`${classes.divConnect} ${classes.iconHover}`}>
-            <Typography className={classes.textConnect}>Connect</Typography>
-          </div>
+
+          {userWallet && userWallet.length > 0 ?
+              <button >...{userWallet[0].substr(userWallet[0].length - 8)}</button>
+              :
+              <div onClick={() => connectAddress()} className={`${classes.divConnect} ${classes.iconHover}`}>
+                <Typography className={classes.textConnect}>Connect</Typography>
+              </div>
+          }
+          
         </Toolbar>
       </AppBar>
       {open && (

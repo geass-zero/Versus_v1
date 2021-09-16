@@ -202,7 +202,5 @@ contract MonsterList is DataLayout, Proxiable {
     function getYieldBoost(uint32 index) public returns(uint32) {
         return monster[index].yieldBoost;
     }
-
-
     
 }

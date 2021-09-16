@@ -886,8 +886,7 @@ contract DataLayout is LibraryLock {
         bool usingFreePrediction;
         uint256 totalVolume;
         uint32 currentLevel;
-        uint256 NFTID1;
-        uint256 NFTID2;
+        uint256 NFTID;
         bool hasClaimedStarter;
     }
     mapping(address => userStruct) public userData; 
@@ -902,7 +901,8 @@ contract DataLayout is LibraryLock {
 } 
 
 contract ERCStorage {
-    address versus;
+    address public versus;
+    address public owner;
     constructor () {
         versus = msg.sender;
     }
@@ -916,23 +916,24 @@ contract ERCStorage {
 
 contract Versus is BEP20, DataLayout, Proxiable {
     using SafeMath for uint256;
-    
+    address public _owner;
     constructor() public {
         
     }
 
-    // modifier onlyOwner() {
-    //     require(msg.sender == owner);
-    //     _;
-    // }
+    modifier _onlyOwner() {
+        require(msg.sender == _owner);
+        _;
+    }
     
 
     function versusConstructor(address statsTracker) public {
         require(!initialized);
-        // owner = msg.sender;
+        _owner = msg.sender;
         wBNB = 0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c;
         IUniswapV2Router02 uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E);
         //mint supply
+        _mint(_owner, 70000000 * 10**18);
         tokenStorage = address(new ERCStorage());
         constructor1("Versus.cx", "Versus");
         initialize();
@@ -942,19 +943,19 @@ contract Versus is BEP20, DataLayout, Proxiable {
         
     }
 
-    function setNFTContract(address _contract) public onlyOwner delegatedOnly {
+    function setNFTContract(address _contract) public _onlyOwner delegatedOnly {
         NFTContract = _contract;
     }
 
-    function setStatsTracker(address _contract) public onlyOwner delegatedOnly {
+    function setStatsTracker(address _contract) public _onlyOwner delegatedOnly {
         statsTracker = _contract;
     }
 
-    function setFeePerc(uint fee) public onlyOwner delegatedOnly {
+    function setFeePerc(uint fee) public _onlyOwner delegatedOnly {
         feePerc = fee;
     }
 
-    function updateCode(address newCode) public onlyOwner delegatedOnly  {
+    function updateCode(address newCode) public _onlyOwner delegatedOnly  {
         updateCodeAddress(newCode);
     }
     
@@ -966,6 +967,8 @@ contract Versus is BEP20, DataLayout, Proxiable {
         userData[msg.sender].timeChecked = userData[msg.sender].timeChecked.add(30 minutes);
         return true;
     }
+
+    //transferFrom override
 
     function switchToBNB(uint256 amount) internal {
         uint256 contractBNB = address(this).balance;
@@ -1031,8 +1034,8 @@ contract Versus is BEP20, DataLayout, Proxiable {
         require(whitelistedContracts[msg.sender]);
         //check if user has a monster equipped
         //if so, call NFT update function
-        if (userData[_user].NFTID1 != 0) {
-            
+        if (userData[_user].NFTID != 0) {
+            VersusNFT(NFTContract).growMonster(userData[_user].NFTID);
         }
         //update user wins
         userData[_user].wins = userData[_user].wins+1;
@@ -1048,38 +1051,19 @@ contract Versus is BEP20, DataLayout, Proxiable {
     }
 
     function mintNFT(address user, uint monsterID) internal {
-        VersusNFT(NFTContract).createNFT(user, monsterID);
-    
+        userData[msg.sender].NFTID = VersusNFT(NFTContract).createNFT(user, monsterID);
     }
 
-    function equipSlot1(uint256 id) public {
-        if (userData[msg.sender].NFTID1 != 0) {
-            VersusNFT(NFTContract).unEquipMonster(id, msg.sender);
-        }
+    function equipNFT(uint256 id) public {
         VersusNFT(NFTContract).equipMonster(id, msg.sender);
-        userData[msg.sender].NFTID1 = id;
+        userData[msg.sender].NFTID = id;
     }
 
-    function equipSlot2(uint256 id) public {
-        if (userData[msg.sender].NFTID2 != 0) {
-            VersusNFT(NFTContract).unEquipMonster(id, msg.sender);
-        }
-        VersusNFT(NFTContract).equipMonster(id, msg.sender);
-        userData[msg.sender].NFTID2 = id;
+    function unequip(uint256 id) public {
+        userData[msg.sender].NFTID = 0;
     }
 
-    function unequip(uint slot, uint256 id) public {
-        if (slot == 1) {
-            VersusNFT(NFTContract).unEquipMonster(id, msg.sender);
-            userData[msg.sender].NFTID1 = 0;
-        }
-        if (slot == 2) {
-            VersusNFT(NFTContract).unEquipMonster(id, msg.sender);
-            userData[msg.sender].NFTID2 = 0;
-        }
-    }
-
-    function whiteListContract(address _contract, bool _direction) public onlyOwner {
+    function whiteListContract(address _contract, bool _direction) public _onlyOwner {
         whitelistedContracts[_contract] = _direction;
     }
     
@@ -1089,7 +1073,7 @@ contract Versus is BEP20, DataLayout, Proxiable {
 interface VersusNFT {
     function createNFT(address _claimer, uint256 _monsterID) external returns(uint256);
     function equipMonster(uint256 id, address _owner) external;
-    function unEquipMonster(uint256 id, address _owner) external;
+    function growMonster(uint256 id) external;
 }
 
 interface StatsTracker {

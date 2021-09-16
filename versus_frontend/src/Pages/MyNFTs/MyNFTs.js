@@ -5,13 +5,13 @@ import PokeCard from "../../Components/PokeCards/PokeCard";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 
-const Badges = () => {
+const MyNFTs = () => {
   const classes = useStyles();
 
   return (
     <>
       <div className={classes.mainDiv}>
-        <Typography className={classes.title}>My Badges</Typography>
+        <Typography className={classes.title}>My NFTs</Typography>
       </div>
       <div style={{ display: "flex", width: "100%", justifyContent: "center" }}>
         <ImageList
@@ -79,4 +79,4 @@ const Badges = () => {
   );
 };
 
-export default Badges;
+export default MyNFTs;
