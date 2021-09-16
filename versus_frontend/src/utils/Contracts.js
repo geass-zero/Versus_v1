@@ -150,16 +150,25 @@ async function claimStarter(index) {
 }
 
 //holds retrieved spot battle data
-let spotInfoData = {};
+let spotInfoData = {0:[],1:[],2:[],3:[],4:[]};
 
 async function getSpotBattleData(token) {
-    if (!spotInfoData[0]) {
+    if (spotInfoData[0].length == 0) {
         const web3 = new Web3("https://data-seed-prebsc-1-s1.binance.org:8545/");
         let userAddress = await web3.eth.getAccounts();
         userAddress = token;
         const spotContract = new web3.eth.Contract(SpotBattle.abi, spotBattleAddress);
         let data = await spotContract.methods.getSpotInfo(token, userAddress).call();
-        spotInfoData = data;
+        spotInfoData[0] = [...data[0]];
+        spotInfoData[0][0] = web3.utils.fromWei(spotInfoData[0][0].toString());
+        spotInfoData[0][1] = web3.utils.fromWei(spotInfoData[0][1].toString());
+        spotInfoData[1] = [...data[1]];
+        spotInfoData[1][0] = web3.utils.fromWei(spotInfoData[1][0].toString());
+        spotInfoData[1][1] = web3.utils.fromWei(spotInfoData[1][1].toString());
+        spotInfoData[2] = [...data[2]];
+        spotInfoData[3] = [...data[3]];
+        spotInfoData[4] = [...data[4]];
+        
         console.log(spotInfoData);
         // data[] = current round,
         // data[] = current targetPrice,
@@ -206,7 +215,8 @@ async function enterSpotBattle(token, index, isLonging, isFreePrediction) {
         let userAddress = await myWeb3.eth.getAccounts();
         const spotContract = new myWeb3.eth.Contract(SpotBattle.abi, spotBattleAddress);
         let data = await spotContract.methods.nextRoundPrediction(token, index, isLonging, isFreePrediction).send({
-            from: userAddress[0]
+            from: userAddress[0],
+            value: myWeb3.utils.toWei(String(0.01))
         });
         return data;
     }
@@ -226,7 +236,7 @@ async function expireSpotBattle(token, index) {
 
 // claim spot battle win or should claims be automatic
 
-// enter token battle
+
 
 // expire token battle round
 

@@ -17,6 +17,18 @@ const ExpiredCard = () => {
     shortBNB: 0,
   }
 
+  function determinePayout(isLong) {
+    if (isLong) {
+      if (!longBNB || !shortBNB) {
+        return 0;
+      } else {return (shortBNB/longBNB) || 0;}
+    } else {
+      if (!longBNB || !shortBNB) {
+        return 0;
+      } else {return (longBNB/shortBNB) || 0;}
+    }
+  }
+
   async function getMarketData() {
       let data = await getSpotBattleData('0x5741306c21795FdCBb9b265Ea0255F499DFe515C');
       console.log(data);
@@ -24,6 +36,8 @@ const ExpiredCard = () => {
       pastInfo['shortBNB'] = Number(data[2][1]);
       setClosingPrice(Number(data[2][2]));
       setTargetPrice(0);
+      setLongBNB(Number(data[2][0]));
+      setShortBNB(Number(data[2][1]));
       // setIsEntered(await getEntryStatus());
   }   
   useEffect(() => {
@@ -42,7 +56,7 @@ const ExpiredCard = () => {
       </div>
       <div className={classes.divUp}>
         <Typography className={classes.cardTitle}>UP</Typography>
-        <Typography className={classes.payoutText}>payout</Typography>
+        <Typography className={classes.payoutText}>{determinePayout(true)}x payout</Typography>
       </div>
       <div className={classes.divMid}>
         <Container
@@ -83,7 +97,7 @@ const ExpiredCard = () => {
         </Container>
       </div>
       <div className={classes.divDown}>
-        <Typography className={classes.payoutText}>payout</Typography>
+        <Typography className={classes.payoutText}>{determinePayout(false)}x payout</Typography>
         <Typography className={classes.cardTitle}>DOWN</Typography>
       </div>
     </SuperEllipse>

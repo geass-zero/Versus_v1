@@ -89,7 +89,7 @@ function Header() {
   const [hasClaimedStarter, setHasClaimedStarter] = useState(true);
 
   const handleChange = (type) => {
-    history.push(`/versus/${type}`);
+    history.push(`/Versus/${type}`);
   };
 
   async function connectAddress() {
@@ -116,7 +116,7 @@ function Header() {
       {hasClaimedStarter ?
         null 
         :
-        <StarterClaim>x</StarterClaim>
+        <StarterClaim></StarterClaim>
       }
       <AppBar
         position="static"

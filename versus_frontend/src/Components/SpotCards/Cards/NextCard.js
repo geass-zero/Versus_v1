@@ -13,6 +13,7 @@ const NextCard = () => {
   const classes = useStyles();
   const [currentPrice, setCurrentPrice] = useState(10000);
   const [targetPrice, setTargetPrice] = useState(0);
+  const [currentPool, setCurrentPool] = useState(1);
 
   // let price = data['targetPrice'].toString();
   // price = price.slice(0, -3);
@@ -33,6 +34,7 @@ const NextCard = () => {
       
       console.log(currentInfo['targetPrice']);
       setTargetPrice(Number(data[0][4]));
+      setCurrentPool(data[1][0] + data[1][1]);
       // setIsEntered(await getEntryStatus());
   }   
   useEffect(() => {

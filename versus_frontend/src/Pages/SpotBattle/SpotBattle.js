@@ -108,8 +108,8 @@ const SpotBattle = ({openHistory, setOpenHistory}) => {
               >
                 <ExpiredCard />
                 <LiveCard data={currentInfo} />
-                {/* <OpenCard /> */}
-                <NextCard />
+                <OpenCard />
+                {/* <NextCard /> */}
               </div>
               :
               null

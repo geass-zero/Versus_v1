@@ -12,6 +12,8 @@ const LiveCard = () => {
   const classes = useStyles();
   const [currentPrice, setCurrentPrice] = useState(0);
   const [targetPrice, setTargetPrice] = useState(0);
+  const [longBNB, setLongBNB] = useState(0);
+  const [shortBNB, setShortBNB] = useState(0);
   
 
   // let price = data['targetPrice'].toString();
@@ -37,8 +39,23 @@ const LiveCard = () => {
       console.log(currentInfo['targetPrice']);
       
       setTargetPrice(Number(data[0][4]));
+      setLongBNB(Number(data[0][0]));
+      setShortBNB(Number(data[0][1]));
       // setIsEntered(await getEntryStatus());
   }   
+
+  function determinePayout(isLong) {
+    if (isLong) {
+      if (!longBNB || !shortBNB) {
+        return 0;
+      } else {return (shortBNB/longBNB) || 0;}
+    } else {
+      if (!longBNB || !shortBNB) {
+        return 0;
+      } else {return (longBNB/shortBNB) || 0;}
+    }
+  }
+
   useEffect(() => {
           
       async function load() {
@@ -60,7 +77,7 @@ const LiveCard = () => {
           UP
         </Typography>
         <Typography className={classes.payoutText} style={{ color: "white" }}>
-          payout
+          {determinePayout(true)}x payout
         </Typography>
       </div>
       <div className={classes.divMid}>
@@ -124,7 +141,7 @@ const LiveCard = () => {
         </Container>
       </div>
       <div className={classes.divDown}>
-        <Typography className={classes.payoutText}>payout</Typography>
+        <Typography className={classes.payoutText}>{determinePayout(true)}x payout</Typography>
         <Typography className={classes.cardTitle} style={{ color: "#F8574C" }}>
           DOWN
         </Typography>

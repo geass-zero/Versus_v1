@@ -97,9 +97,9 @@
         {
             "inputs": [
                 {
-                    "internalType": "uint256",
+                    "internalType": "uint32",
                     "name": "starter",
-                    "type": "uint256"
+                    "type": "uint32"
                 }
             ],
             "name": "claimFirstMonster",
@@ -320,8 +320,9 @@
             "type": "function"
         },
         {
-            "stateMutability": "payable",
-            "type": "receive"
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
         },
         {
             "inputs": [
@@ -419,9 +420,8 @@
             "type": "function"
         },
         {
-            "inputs": [],
-            "stateMutability": "nonpayable",
-            "type": "constructor"
+            "stateMutability": "payable",
+            "type": "receive"
         },
         {
             "inputs": [],
