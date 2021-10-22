@@ -6,8 +6,10 @@ import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import back from "../../img/back.png";
 import { useStyles } from "./styles";
+import Web3 from "web3";
 
 import { getUserSpotBattleHistory, claimWin } from "../../utils/Contracts";
+import { getRoundedAndFullBalance } from "../../utils/Formatter";
 import { Button } from "@material-ui/core";
 
 const History = ({ open, setOpen }) => {
@@ -17,17 +19,22 @@ const History = ({ open, setOpen }) => {
 
   async function getHistoryData() {
     let data = await getUserSpotBattleHistory();
+    
     if (data[0]) {
       setHistoryData(data);
       setHistoryLength(data[0].length);
     }
-    console.log(historyData);
-    console.log(historyLength);
+    
+  }
+
+  async function refreshData() {
+    await getHistoryData();
+    setTimeout(refreshData, 5000);
   }
 
   useEffect(() => {     
     async function load() {
-      await getHistoryData();
+      await refreshData();
     }
     
     load()

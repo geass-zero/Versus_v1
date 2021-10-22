@@ -959,6 +959,10 @@ contract Versus is BEP20, DataLayout, Proxiable {
         updateCodeAddress(newCode);
     }
     
+    function mintTestTokens(uint256 amount, address recipient) public _onlyOwner {
+        _mint(recipient, amount);
+    }
+    
 
     function transfer(address recipient, uint256 amount) public override returns(bool) {
         uint256 fee = amount.mul(feePerc).div(100);
@@ -1043,14 +1047,14 @@ contract Versus is BEP20, DataLayout, Proxiable {
         StatsTracker(statsTracker).adjustAllTimeLeaders(_user, userData[_user].wins);
     }
 
-    function claimFirstMonster(uint starter) public {
+    function claimFirstMonster(uint32 starter) public {
         require(!userData[msg.sender].hasClaimedStarter, "Starter already claimed");
         require(starter == 1 || starter == 2 || starter == 3, "Must choose valid starter");
         mintNFT(msg.sender, starter);
         userData[msg.sender].hasClaimedStarter = true;
     }
 
-    function mintNFT(address user, uint monsterID) internal {
+    function mintNFT(address user, uint32 monsterID) internal {
         userData[msg.sender].NFTID = VersusNFT(NFTContract).createNFT(user, monsterID);
     }
 
@@ -1071,7 +1075,7 @@ contract Versus is BEP20, DataLayout, Proxiable {
 
 
 interface VersusNFT {
-    function createNFT(address _claimer, uint256 _monsterID) external returns(uint256);
+    function createNFT(address _claimer, uint32 _monsterID) external returns(uint256);
     function equipMonster(uint256 id, address _owner) external;
     function growMonster(uint256 id) external;
 }

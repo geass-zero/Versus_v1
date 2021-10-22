@@ -1,5 +1,95 @@
 pragma solidity ^0.8.0;
 
+interface IBEP20 {
+  /**
+   * @dev Returns the amount of tokens in existence.
+   */
+  function totalSupply() external view returns (uint256);
+
+  /**
+   * @dev Returns the token decimals.
+   */
+  function decimals() external view returns (uint8);
+
+  /**
+   * @dev Returns the token symbol.
+   */
+  function symbol() external view returns (string memory);
+
+  /**
+  * @dev Returns the token name.
+  */
+  function name() external view returns (string memory);
+
+  /**
+   * @dev Returns the bep token owner.
+   */
+  function getOwner() external view returns (address);
+
+  /**
+   * @dev Returns the amount of tokens owned by `account`.
+   */
+  function balanceOf(address account) external view returns (uint256);
+
+  /**
+   * @dev Moves `amount` tokens from the caller's account to `recipient`.
+   *
+   * Returns a boolean value indicating whether the operation succeeded.
+   *
+   * Emits a {Transfer} event.
+   */
+  function transfer(address recipient, uint256 amount) external returns (bool);
+
+  /**
+   * @dev Returns the remaining number of tokens that `spender` will be
+   * allowed to spend on behalf of `owner` through {transferFrom}. This is
+   * zero by default.
+   *
+   * This value changes when {approve} or {transferFrom} are called.
+   */
+  function allowance(address _owner, address spender) external view returns (uint256);
+
+  /**
+   * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.
+   *
+   * Returns a boolean value indicating whether the operation succeeded.
+   *
+   * IMPORTANT: Beware that changing an allowance with this method brings the risk
+   * that someone may use both the old and the new allowance by unfortunate
+   * transaction ordering. One possible solution to mitigate this race
+   * condition is to first reduce the spender's allowance to 0 and set the
+   * desired value afterwards:
+   * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
+   *
+   * Emits an {Approval} event.
+   */
+  function approve(address spender, uint256 amount) external returns (bool);
+
+  /**
+   * @dev Moves `amount` tokens from `sender` to `recipient` using the
+   * allowance mechanism. `amount` is then deducted from the caller's
+   * allowance.
+   *
+   * Returns a boolean value indicating whether the operation succeeded.
+   *
+   * Emits a {Transfer} event.
+   */
+  function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
+
+  /**
+   * @dev Emitted when `value` tokens are moved from one account (`from`) to
+   * another (`to`).
+   *
+   * Note that `value` may be zero.
+   */
+  event Transfer(address indexed from, address indexed to, uint256 value);
+
+  /**
+   * @dev Emitted when the allowance of a `spender` for an `owner` is set by
+   * a call to {approve}. `value` is the new allowance.
+   */
+  event Approval(address indexed owner, address indexed spender, uint256 value);
+}
 
 // File: @openzeppelin/contracts/utils/math/SafeMath.sol
 
@@ -1637,16 +1727,16 @@ contract DataLayout is LibraryLock {
         uint32 totalWins;
         uint32[] stats;
         address equippedTo;
-        uint256 blockChecked;
+        uint256 timeChecked;
         uint256 versusStaked;
-        uint32 move1;
-        uint32 move2;
-        uint32 move3;
-        uint32 move4;
+        uint256 versusRewards;
     }
     mapping(uint256 => details) public NFTDetails;
     mapping(uint256 => mapping(uint32 => uint32[])) public NFTStatsHistory;
     mapping(address => bool) whitelistedContracts; 
+    
+    uint256 public stakingAPY; //10 == 1%
+    uint256 public secondsPerYear = 86400 * 365;
 } 
 
 contract VersusNFT is ERC721Enumerable, DataLayout, Proxiable {
@@ -1655,6 +1745,20 @@ contract VersusNFT is ERC721Enumerable, DataLayout, Proxiable {
     modifier onlyOwner() {
         require(msg.sender == owner);
         _;
+    }
+    
+    modifier updateRewards(id) {
+        address idOwner = ownerOf(id);
+        require(msg.sender == idOwner, "Invalid holder");
+        uint256 timeElapsed = block.timestamp.sub(NFTDetails[id].timeChecked);
+        if (timeElapsed > 0) {
+            uint256 yearly = NFTDetails[id].versusStaked.mul(stakingAPY).div(1000);
+            uint256 perSecond = yearly.div(secondsPerYear);
+            uint256 rewards = perSecond.mul(timeElapsed);
+            NFTDetails[id].versusRewards = NFTDetails[id].versusRewards.add(rewards); 
+            NFTDetails[id].timeChecked = block.timestamp;
+        }
+        
     }
 
     constructor() ERC721("Versus Creature", "VMON") {
@@ -1727,9 +1831,11 @@ contract VersusNFT is ERC721Enumerable, DataLayout, Proxiable {
         return uint32(randomResult+1); 
     }
     
-    function getNFTDetails(uint256 id) public view delegatedOnly returns(uint32, uint256, string memory) {
+    function getNFTDetails(uint256 id) public view delegatedOnly returns(uint32, string memory, uint256, uint32[] memory, string memory) {
         return(NFTDetails[id].NFTLevel,
+               MonsterList(monsterList).getName(NFTDetails[id].monsterID),
                NFTDetails[id].versusStaked,
+               NFTDetails[id].stats,
                tokenURI(id));
     }
 
@@ -1765,25 +1871,35 @@ contract VersusNFT is ERC721Enumerable, DataLayout, Proxiable {
         
     }
 
-    function stakeNFT() public {
-
-    }
-
-    function unstakeNFT() public {
-
-    }
+    function stakeVersus(uint256 id, uint256 amount) public updateRewards(id) {
+        IBEP20(versusToken).transferFrom(msg.sender, address(this), amount);
+        NFTDetails[id].versusStaked = NFTDetails[id].versusStaked.add(amount);
     
-    function claim() public {
+    }
+
+    function unstakeVersus(uint256 id, uint256 amount) public updateRewards(id) {
+        address idOwner = ownerOf(id);
+        require(msg.sender == idOwner, "Invalid holder");
+        require(amount <= NFTDetails[id].versusStaked, "insufficient balance");
+        IBEP20(versusToken).transfer(msg.sender, amount);
+        NFTDetails[id].versusStaked = NFTDetails[id].versusStaked.sub(amount);
         
     }
     
-    //super transfer(unstake on transfer)
+    function claim(uint256 id) public updateRewards(id) {
+        //mint amount with call to Versus
+        
+        NFTDetails[id].rewards = 0;
+        
+    }
+    
     
     
 }
 
 interface MonsterList {
     function getLevelRequirements(uint32 index) external view returns(uint[] memory);
+    function getName(uint32 index) external view returns(string memory);
     function getStatRanges(uint32 index) external returns(uint32[] memory);
     function getImageLink(uint32 index) external view returns(string memory);
 } 

@@ -8,7 +8,7 @@ import { getSpotBattleData } from "../../../utils/Contracts";
 
 const ExpiredCard = () => {
   const classes = useStyles();
-  const [closingPrice, setClosingPrice] = useState(0);
+  const [closingPrice, setClosingPrice] = useState('0');
   const [targetPrice, setTargetPrice] = useState(0);
   const [longBNB, setLongBNB] = useState(0);
   const [shortBNB, setShortBNB] = useState(0);
@@ -20,21 +20,38 @@ const ExpiredCard = () => {
   function determinePayout(isLong) {
     if (isLong) {
       if (!longBNB || !shortBNB) {
-        return 0;
-      } else {return (shortBNB/longBNB) || 0;}
+        return 1;
+      } else {return (shortBNB/longBNB).toFixed(2) || 1;}
     } else {
       if (!longBNB || !shortBNB) {
-        return 0;
-      } else {return (longBNB/shortBNB) || 0;}
+        return 1;
+      } else {return (longBNB/shortBNB).toFixed(2) || 1;}
     }
+  }
+
+  function numberWithCommas(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+  }
+  
+  
+  function addDecimal(x) {
+    return x.substring(0, x.length - 2) + '.' + x.substring(x.length - 2);
+  }
+
+  function trimPrice(x) {
+    return x.substring(0, x.length - 6)
   }
 
   async function getMarketData() {
       let data = await getSpotBattleData('0x5741306c21795FdCBb9b265Ea0255F499DFe515C');
-      console.log(data);
+  
       pastInfo['longBNB'] = Number(data[2][0]);
       pastInfo['shortBNB'] = Number(data[2][1]);
-      setClosingPrice(Number(data[2][2]));
+      let cPrice = addDecimal(trimPrice(data[2][2]));
+   
+      setClosingPrice(numberWithCommas(cPrice));
       setTargetPrice(0);
       setLongBNB(Number(data[2][0]));
       setShortBNB(Number(data[2][1]));
@@ -56,7 +73,7 @@ const ExpiredCard = () => {
       </div>
       <div className={classes.divUp}>
         <Typography className={classes.cardTitle}>UP</Typography>
-        <Typography className={classes.payoutText}>{determinePayout(true)}x payout</Typography>
+        <Typography className={classes.payoutText} style={{ color: "#828282" }}>{determinePayout(true)}x payout</Typography>
       </div>
       <div className={classes.divMid}>
         <Container
@@ -73,11 +90,7 @@ const ExpiredCard = () => {
             className={classes.globalMidText}
             style={{ fontSize: 28, color: "#828282" }}
           >
-            {closingPrice > 0 ? 
-              <div>{closingPrice}</div>
-              :
-              null
-            }
+            <div>${closingPrice}</div>
           </Typography>
           <Divider style={{ marginTop: 5, marginBottom: 5 }} />
           <div className={classes.divMidContainer}>
@@ -97,7 +110,7 @@ const ExpiredCard = () => {
         </Container>
       </div>
       <div className={classes.divDown}>
-        <Typography className={classes.payoutText}>{determinePayout(false)}x payout</Typography>
+        <Typography className={classes.payoutText} style={{ color: "#828282" }}>{determinePayout(false)}x payout</Typography>
         <Typography className={classes.cardTitle}>DOWN</Typography>
       </div>
     </SuperEllipse>

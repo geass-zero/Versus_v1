@@ -49,14 +49,14 @@ const CustomList = ({ toggleDrawer, setSelectedPage, setOpen, history }) => {
         </ListItem>
       </List>
       <Divider />
-      <List>
+      {/* <List>
         <ListItem button key="token"  onClick={() => handleChange("tokenBattle")}>
           <ListItemText>
             <Typography className={classes.itemMenu}>Token Battle</Typography>
           </ListItemText>
         </ListItem>
       </List>
-      <Divider />
+      <Divider /> */}
       <List>
         <ListItem button key="leaderboard"  onClick={() => handleChange("leaderboard")}>
           <ListItemText>
@@ -97,7 +97,7 @@ function Header() {
     setUserWallet(accounts);  
     let userData = await getUserData();
     setHasClaimedStarter(userData['hasClaimedStarter']);
-    console.log(userData);
+  
   }
 
   const toggleDrawer = (event) => {
@@ -145,7 +145,7 @@ function Header() {
               >
                 Spot Battle
               </Typography>
-              <Typography
+              {/* <Typography
                 onClick={() => handleChange("tokenBattle")}
                 style={{
                   color:
@@ -154,7 +154,7 @@ function Header() {
                 className={classes.subtitle}
               >
                 Token Battle
-              </Typography>
+              </Typography> */}
               <Typography
                 onClick={() => handleChange("leaderboard")}
                 style={{

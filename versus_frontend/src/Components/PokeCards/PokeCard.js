@@ -15,10 +15,10 @@ const PokeCard = () => {
     <Card>
       <SuperEllipse r1={0.05} r2={0.2} className={classes.pokeCard}>
         <div className={classes.cardTitleStyle}>
-          <Typography className={classes.cardTitle}>POKEMON</Typography>
+          <Typography className={classes.cardTitle}>VERSUSMON</Typography>
         </div>
         <div>
-          <img src={shibachu} alt="" width={280} height={280} />
+          {/* <img src={shibachu} alt="" width={280} height={280} /> */}
         </div>
       </SuperEllipse>
     </Card>

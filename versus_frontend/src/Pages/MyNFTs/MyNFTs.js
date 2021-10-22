@@ -4,6 +4,7 @@ import { Typography } from "@material-ui/core";
 import PokeCard from "../../Components/PokeCards/PokeCard";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
+import { getUserData, getEquippedInfo } from "../../utils/Contracts";
 
 const MyNFTs = () => {
   const classes = useStyles();
@@ -26,53 +27,14 @@ const MyNFTs = () => {
           }}
         >
           <ImageListItem
-            key={"pokemon"}
+            key={"Versusmon"}
             style={{ width: "auto", height: "auto" }}
             cols={1}
             rows={1}
           >
             <PokeCard />
           </ImageListItem>
-          <ImageListItem
-            key={"pokemon1"}
-            style={{ width: "auto", height: "auto" }}
-            cols={1}
-            rows={1}
-          >
-            <PokeCard />
-          </ImageListItem>
-          <ImageListItem
-            key={"pokemon2"}
-            style={{ width: "auto", height: "auto" }}
-            cols={1}
-            rows={1}
-          >
-            <PokeCard />
-          </ImageListItem>
-          <ImageListItem
-            key={"pokemon3"}
-            style={{ width: "auto", height: "auto" }}
-            cols={1}
-            rows={1}
-          >
-            <PokeCard />
-          </ImageListItem>
-          <ImageListItem
-            key={"pokemon3"}
-            style={{ width: "auto", height: "auto" }}
-            cols={1}
-            rows={1}
-          >
-            <PokeCard />
-          </ImageListItem>
-          <ImageListItem
-            key={"pokemon3"}
-            style={{ width: "auto", height: "auto" }}
-            cols={1}
-            rows={1}
-          >
-            <PokeCard />
-          </ImageListItem>
+          
         </ImageList>
       </div>
     </>

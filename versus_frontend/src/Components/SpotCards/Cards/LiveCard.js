@@ -6,12 +6,12 @@ import { useStyles } from "./styles";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 
-import { getSpotBattleData } from "../../../utils/Contracts";
+import { getSpotBattleData, getTokenPrice } from "../../../utils/Contracts";
 
 const LiveCard = () => {
   const classes = useStyles();
   const [currentPrice, setCurrentPrice] = useState(0);
-  const [targetPrice, setTargetPrice] = useState(0);
+  const [targetPrice, setTargetPrice] = useState('0');
   const [longBNB, setLongBNB] = useState(0);
   const [shortBNB, setShortBNB] = useState(0);
   
@@ -28,17 +28,40 @@ const LiveCard = () => {
     targetPrice: 100
   }
 
+  function numberWithCommas(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+  }
+  
+  
+  function addDecimal(x) {
+    return x.substring(0, x.length - 2) + '.' + x.substring(x.length - 2);
+  }
+
+  function trimPrice(x) {
+    return x.substring(0, x.length - 6)
+  }
+
+  async function refreshCurrentPrice() {
+    let tokenPrice = await getTokenPrice('0x5741306c21795FdCBb9b265Ea0255F499DFe515C');
+      var tokPrice = addDecimal(trimPrice(tokenPrice));
+      setCurrentPrice(numberWithCommas(tokPrice));
+      setTimeout(refreshCurrentPrice, 20000);
+  }
+
   async function getMarketData() {
       let data = await getSpotBattleData('0x5741306c21795FdCBb9b265Ea0255F499DFe515C');
-      console.log(data);
+      await refreshCurrentPrice();
+      
       // currentInfo['longBNB'] = Number(data[0][0]);
       // currentInfo['shortBNB'] = Number(data[0][1]);
       // currentInfo['roundEnd'] = Number(data[0][2]);
       // currentInfo['round'] = Number(data[0][3]);
       
-      console.log(currentInfo['targetPrice']);
+      var tarPrice = addDecimal(trimPrice(data[0][4]));
       
-      setTargetPrice(Number(data[0][4]));
+      setTargetPrice(numberWithCommas(tarPrice));
       setLongBNB(Number(data[0][0]));
       setShortBNB(Number(data[0][1]));
       // setIsEntered(await getEntryStatus());
@@ -47,12 +70,12 @@ const LiveCard = () => {
   function determinePayout(isLong) {
     if (isLong) {
       if (!longBNB || !shortBNB) {
-        return 0;
-      } else {return (shortBNB/longBNB) || 0;}
+        return 1;
+      } else {return (shortBNB/longBNB).toFixed(2) || 1;}
     } else {
       if (!longBNB || !shortBNB) {
-        return 0;
-      } else {return (longBNB/shortBNB) || 0;}
+        return 1;
+      } else {return (longBNB/shortBNB).toFixed(2) || 1;}
     }
   }
 
@@ -72,11 +95,11 @@ const LiveCard = () => {
           LIVE
         </Typography>
       </div>
-      <div className={classes.divUp} style={{ background: "#40CFAA" }}>
-        <Typography className={classes.cardTitle} style={{ color: "white" }}>
+      <div className={classes.divUp} >
+        <Typography className={classes.cardTitle} style={{ color: "#40CFAA" }}>
           UP
         </Typography>
-        <Typography className={classes.payoutText} style={{ color: "white" }}>
+        <Typography className={classes.payoutText} style={{ color: "#828282" }} >
           {determinePayout(true)}x payout
         </Typography>
       </div>
@@ -141,7 +164,7 @@ const LiveCard = () => {
         </Container>
       </div>
       <div className={classes.divDown}>
-        <Typography className={classes.payoutText}>{determinePayout(true)}x payout</Typography>
+        <Typography className={classes.payoutText} style={{ color: "#828282" }}>{determinePayout(true)}x payout</Typography>
         <Typography className={classes.cardTitle} style={{ color: "#F8574C" }}>
           DOWN
         </Typography>

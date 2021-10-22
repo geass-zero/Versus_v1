@@ -70,7 +70,7 @@ const SpotBattle = ({openHistory, setOpenHistory}) => {
               <div className={classes.divSubHeader}>
                 <div className={classes.divPrediction}>
                   <Typography className={classes.titlePrediction}>
-                    Free Prediction
+                    Free Prediction Off
                   </Typography>
                 </div>
                 <div

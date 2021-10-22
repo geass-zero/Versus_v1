@@ -13,7 +13,7 @@ import SpotBattle from "../ABIs/SpotBattle.json";
 let myWeb3;
 const Web3Utils = require('web3-utils');
 const tokenAddress = '0x9348D1d35b7DFd940cDD224ae97cBb018d509470';
-const NFTAddress = '';
+const NFTAddress = '0xF3b4A419173Fb6F39a12CD3266B76a395303bCE0';
 const spotBattleAddress = '0x87C42F812b9134d046Aa02cEed5B7dBb272850BD';
 const tokenBattleAddress = '';
 
@@ -121,7 +121,6 @@ async function getUserData() {
     if (myWeb3) {
         let userAddress = await myWeb3.eth.getAccounts();
         const versusContract = new myWeb3.eth.Contract(VersusToken.abi, tokenAddress);
-        console.log(versusContract);
         let data = await versusContract.methods.userData(userAddress[0]).call();
         return data;
     }
@@ -192,9 +191,13 @@ async function getUserSpotBattleHistory() {
         let data = await spotContract.methods.getUserMarketHistory(
             userAddress[0],
             userIndex,
-            5
+            userIndex
         ).call();
-        console.log(data);
+        let dataObj = {...data};
+        dataObj = JSON.parse(JSON.stringify(dataObj));
+        for (let i = 0; i < dataObj[2].length; i++) {
+            dataObj[2][i] = myWeb3.utils.fromWei(dataObj[2][i]);
+        }
         // data[] = current round,
         // data[] = current targetPrice,
         // data[] = currentInfo[longBNB, shortBNB, roundEnd(unix timestamp)],
@@ -202,8 +205,8 @@ async function getUserSpotBattleHistory() {
         // data[] = pastInfo[longBNB, shortBNB, closingPrice],
         // data[] = userInfo,
         // data[] = userPosition
-        data['userIndex'] = userIndex;
-        return data;
+        dataObj['userIndex'] = userIndex;
+        return dataObj;
     } else {
         return {}
     }
@@ -220,6 +223,13 @@ async function enterSpotBattle(token, index, isLonging, isFreePrediction) {
         });
         return data;
     }
+}
+
+async function getTokenPrice(token) {
+    const web3 = new Web3("https://data-seed-prebsc-1-s1.binance.org:8545/");
+    const spotContract = new web3.eth.Contract(SpotBattle.abi, spotBattleAddress);
+    let data = await spotContract.methods.getLatestPrice(token).call();
+    return data;
 }
 
 //expire spot battle round
@@ -252,6 +262,15 @@ async function claimWin(index) {
     }
 }
 
+async function getEquippedInfo(id) {
+    if (myWeb3) {
+        let userAddress = await myWeb3.eth.getAccounts();
+        const nftContract = new myWeb3.eth.Contract(VersusNFT.abi, NFTAddress);
+        let data = await nftContract.methods.getNFTDetails(id).call();
+        return data;
+    }
+}
+
 
 
 //  Export each function
@@ -265,5 +284,7 @@ async function claimWin(index) {
     expireSpotBattle,
     getSpotBattleData,
     getUserSpotBattleHistory,
-    claimWin
+    claimWin,
+    getEquippedInfo,
+    getTokenPrice
  };

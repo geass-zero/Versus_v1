@@ -9,7 +9,7 @@ import TokenBattle from "../TokenBattle/TokenBattle";
 import Leaderboard from "../Leaderboard/Leaderboard";
 import MyNFTs from "../MyNFTs/MyNFTs";
 import StarterClaim from "../../Components/StarterClaim/StarterClaim";
-import { getUserData } from "../../utils/Contracts";
+import { getUserData, getEquippedInfo } from "../../utils/Contracts";
 
 const classStyle = makeStyles((theme) => ({
   cardTitle: {
@@ -82,6 +82,9 @@ const classStyle = makeStyles((theme) => ({
 const HomePage = () => {
   const { typeId } = useParams();
   const [openHistory, setOpenHistory] = useState(false);
+  const [equippedNFT, setEquippedNFT] = useState({});
+  const [equippedImage, setEquippedImage] = useState('');
+  const [refreshTimer, setRefreshTimer] = useState('');
   const classes = classStyle();
   const NFTbox = {
     color: "black",
@@ -89,12 +92,13 @@ const HomePage = () => {
     padding: "10px",
     fontFamily: "Arial",
     position: "fixed",
-    bottom: "-310px",
+    bottom: "-410px",
     width: "100%",
-    height: "350px",
+    height: "450px",
     zIndex: "100",
+    boxShadow: "0px -20px 15px rgba(0, 0, 0, 0.16)",
     borderTopRightRadius: "54px",
-    transition: "1s ease-in-out"
+    transition: ".4s ease-out"
   };
 
   const NFTImage = {
@@ -102,7 +106,7 @@ const HomePage = () => {
     padding: "10px",
     fontFamily: "Arial",
     position: "absolute",
-    bottom: "50px",
+    top: "50px",
     left: "20px",
     width: "200px",
     height: "260px",
@@ -131,9 +135,52 @@ const HomePage = () => {
     zIndex: "100"
   };
 
+  const ATK = {
+    color: "white",
+    top: 10,
+    position: 'absolute'
+  }
+
+  const DEF = {
+    color: "white",
+    top: 35,
+    position: 'absolute'
+  }
+
+  const SPD = {
+    color: "white",
+    top: 60,
+    position: 'absolute'
+  }
+
+  const SPATK = {
+    color: "white",
+    top: 10,
+    left: 180,
+    position: 'absolute'
+  }
+
+  const SPDEF = {
+    color: "white",
+    top: 35,
+    left: 180,
+    position: 'absolute'
+  }
+
   const StakedTitle = {
     position: "absolute",
     top: "225px",
+    left: "280px",
+    zIndex: "100",
+    fontFamily: "Montserrat",
+    fontWeight: 700,
+    fontSize: 18,
+    color: "#828282",
+  };
+
+  const AccruedTitle = {
+    position: "absolute",
+    top: "255px",
     left: "280px",
     zIndex: "100",
     fontFamily: "Montserrat",
@@ -150,7 +197,7 @@ const HomePage = () => {
     paddingBottom: "8px",
     paddingLeft: "35px",
     paddingRight: "35px",
-    top: "255px",
+    top: "285px",
     left: "280px",
     zIndex: "100",
     fontFamily: "Montserrat",
@@ -167,7 +214,7 @@ const HomePage = () => {
     paddingBottom: "8px",
     paddingLeft: "35px",
     paddingRight: "35px",
-    top: "255px",
+    top: "285px",
     left: "450px",
     zIndex: "100",
     fontFamily: "Montserrat",
@@ -184,7 +231,7 @@ const HomePage = () => {
     paddingBottom: "8px",
     paddingLeft: "35px",
     paddingRight: "35px",
-    top: "255px",
+    top: "285px",
     left: "648px",
     zIndex: "100",
     fontFamily: "Montserrat",
@@ -206,20 +253,49 @@ const HomePage = () => {
   }
 
   function toggleBox() {
-    if (document.getElementById('NFT-B').style.bottom == '-310px') {
+    if (document.getElementById('NFT-B').style.bottom == '-410px') {
       document.getElementById('NFT-B').style.bottom = '0px';
     } else {
-      document.getElementById('NFT-B').style.bottom = '-310px';
+      document.getElementById('NFT-B').style.bottom = '-410px';
     }
     
   }
 
+  function getJSON(url) {
+    var resp ;
+    var xmlHttp ;
 
+    resp  = '' ;
+    xmlHttp = new XMLHttpRequest();
+
+    if(xmlHttp != null)
+    {
+        xmlHttp.open( "GET", url, false );
+        xmlHttp.send( null );
+        resp = xmlHttp.responseText;
+    }
+
+    return resp ;
+}
+
+  async function refreshEquipped() {
+    let userData = await getUserData();
+    if (userData && userData['NFTID']) {
+      setRefreshTimer(10000)
+      let NFTData = await getEquippedInfo(userData['NFTID']);
+
+      let json = JSON.parse(getJSON(NFTData[4]));
+      setEquippedImage(json.image);
+      setEquippedNFT(NFTData);
+    }
+    setTimeout(refreshEquipped, refreshTimer);
+  }
 
   useEffect(() => {
           
     async function load() {
-      
+      setRefreshTimer(1000);
+      await refreshEquipped();
     }
     
     load()
@@ -230,10 +306,19 @@ const HomePage = () => {
       
       <div id="NFT-B" style={NFTbox}>
         <Typography className={classes.cardTitle}>My Equipped Monster</Typography>
-        <div style={NFTImage}></div>
-        <Typography style={NFTName}>NFT Name</Typography>
-        <div style={NFTStatBox}></div>
-        <Typography style={StakedTitle}>Versus Staked: 0</Typography>
+        <div style={NFTImage}>
+          <img style={{height: '100%'}} src={equippedImage}></img>
+        </div>
+        <Typography style={NFTName}>{equippedNFT[1]}</Typography>
+        <div style={NFTStatBox}>
+          <div style={ATK}><div style={{display:'inline-block'}}>ATK:</div> {equippedNFT[3] ? <div style={{display:'inline-block'}}>{equippedNFT[3][0]}</div> : null}</div>
+          <div style={DEF}><div style={{display:'inline-block'}}>DEF:</div> {equippedNFT[3] ? <div style={{display:'inline-block'}}>{equippedNFT[3][1]}</div> : null}</div>
+          <div style={SPD}><div style={{display:'inline-block'}}>SPD:</div> {equippedNFT[3] ? <div style={{display:'inline-block'}}>{equippedNFT[3][2]}</div> : null}</div>
+          <div style={SPATK}><div style={{display:'inline-block'}}>SP.ATK:</div> {equippedNFT[3] ? <div style={{display:'inline-block'}}>{equippedNFT[3][3]}</div> : null}</div>
+          <div style={SPDEF}><div style={{display:'inline-block'}}>SP.DEF:</div> {equippedNFT[3] ? <div style={{display:'inline-block'}}>{equippedNFT[3][4]}</div> : null}</div>
+        </div>
+        <Typography style={StakedTitle}>Versus Staked: {equippedNFT[2]}</Typography>
+        <Typography style={AccruedTitle}>Versus Accrued: {equippedNFT[2]}</Typography>
         <Typography style={Stake}>Stake</Typography>
         <Typography style={UnStake}>UnStake</Typography>
         <Typography style={Claim}>Claim</Typography>

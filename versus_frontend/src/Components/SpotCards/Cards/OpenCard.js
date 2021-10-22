@@ -29,41 +29,48 @@ const OpenCard = () => {
 
   async function enterBattle(isLonging) {
     let entry = await enterSpotBattle(btcMarket,0,isLonging,false);
+    await getMarketData();
+  }
 
+  function setPoolData(data) {
+    setTargetPrice(Number(data[0][4]));
+    setLongBNB(Number(data[1][0]));
+    setShortBNB(Number(data[1][1]));
+    setCurrentPool(Number(data[1][0]) + Number(data[1][1]));
   }
 
   async function getMarketData() {
       let data = await getSpotBattleData(btcMarket);
-      console.log(data);
+     
       // currentInfo['longBNB'] = Number(data[0][0]);
       // currentInfo['shortBNB'] = Number(data[0][1]);
       // currentInfo['roundEnd'] = Number(data[0][2]);
       // currentInfo['round'] = Number(data[0][3]);
       
-      console.log(currentInfo['targetPrice']);
-      setTargetPrice(Number(data[0][4]));
-      setLongBNB(Number(data[1][0]));
-      setShortBNB(Number(data[1][1]));
-      setCurrentPool(Number(data[1][0]) + Number(data[1][1]));
+      setPoolData(data);
       // setIsEntered(await getEntryStatus());
   }   
 
   function determinePayout(isLong) {
     if (isLong) {
       if (!longBNB || !shortBNB) {
-        return 0;
-      } else {return (shortBNB/longBNB) || 0;}
+        return 1;
+      } else {return (shortBNB/longBNB).toFixed(2) || 1;}
     } else {
       if (!longBNB || !shortBNB) {
-        return 0;
-      } else {return (longBNB/shortBNB) || 0;}
+        return 1;
+      } else {return (longBNB/shortBNB).toFixed(2) || 1;}
     }
+  }
+  async function refreshData() {
+    await getMarketData();
+    setTimeout(refreshData, 5000);
   }
 
   useEffect(() => {
           
       async function load() {
-        await getMarketData();
+        refreshData();
       }
       
       load()
@@ -111,7 +118,7 @@ const OpenCard = () => {
           >
             <Typography
               className={classes.cardTitle}
-              style={{ fontSize: 16, color: "white", marginTop: 5 }}
+              style={{ cursor: 'pointer', fontSize: 16, color: "white", marginTop: 5 }}
             >
               Enter UP
             </Typography>
@@ -160,7 +167,7 @@ const OpenCard = () => {
           >
             <Typography
               className={classes.cardTitle}
-              style={{ fontSize: 16, color: "white", marginBottom: 4 }}
+              style={{ cursor: 'pointer', fontSize: 16, color: "white", marginBottom: 4 }}
             >
               Enter Down
             </Typography>
