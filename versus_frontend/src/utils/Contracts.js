@@ -12,9 +12,9 @@ import SpotBattle from "../ABIs/SpotBattle.json";
 // formatter
 let myWeb3;
 const Web3Utils = require('web3-utils');
-const tokenAddress = '0x9348D1d35b7DFd940cDD224ae97cBb018d509470';
-const NFTAddress = '0xF3b4A419173Fb6F39a12CD3266B76a395303bCE0';
-const spotBattleAddress = '0x87C42F812b9134d046Aa02cEed5B7dBb272850BD';
+const tokenAddress = '0xf53B9b954235df1E24A19e2C6900711e352A5539';
+const NFTAddress = '0x0406A9Dce193e8F9F55a8122c8369E1650CBFF23';
+const spotBattleAddress = '0x9709f58Bf26dD41eCBE7cB3124CFCee59e93bFF6';
 const tokenBattleAddress = '';
 
 const loadWeb3 = async() => 
@@ -144,6 +144,19 @@ async function claimStarter(index) {
         let data = await versusContract.methods.claimFirstMonster(index).send({
             from: userAddress[0]
         });
+        return data;
+    }
+}
+
+async function getRewardsAccrued(id) {
+    if (myWeb3) {
+        console.log('wooooolie');
+        console.log(id);
+        let userAddress = await myWeb3.eth.getAccounts();
+        const versusNFT = new myWeb3.eth.Contract(VersusNFT.abi, NFTAddress);
+        console.log(versusNFT.methods)
+        let data = await versusNFT.methods.getStakingReward(id).call();
+        console.log(data);
         return data;
     }
 }
@@ -285,6 +298,7 @@ async function getEquippedInfo(id) {
     getSpotBattleData,
     getUserSpotBattleHistory,
     claimWin,
+    getRewardsAccrued,
     getEquippedInfo,
     getTokenPrice
  };

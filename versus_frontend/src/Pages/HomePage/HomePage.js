@@ -9,7 +9,7 @@ import TokenBattle from "../TokenBattle/TokenBattle";
 import Leaderboard from "../Leaderboard/Leaderboard";
 import MyNFTs from "../MyNFTs/MyNFTs";
 import StarterClaim from "../../Components/StarterClaim/StarterClaim";
-import { getUserData, getEquippedInfo } from "../../utils/Contracts";
+import { getUserData, getEquippedInfo, getRewardsAccrued } from "../../utils/Contracts";
 
 const classStyle = makeStyles((theme) => ({
   cardTitle: {
@@ -84,7 +84,8 @@ const HomePage = () => {
   const [openHistory, setOpenHistory] = useState(false);
   const [equippedNFT, setEquippedNFT] = useState({});
   const [equippedImage, setEquippedImage] = useState('');
-  const [refreshTimer, setRefreshTimer] = useState('');
+  const [equippedRewards, setEquippedRewards] = useState(1);
+  const [refreshTimer, setRefreshTimer] = useState(10000);
   const classes = classStyle();
   const NFTbox = {
     color: "black",
@@ -281,21 +282,27 @@ const HomePage = () => {
   async function refreshEquipped() {
     let userData = await getUserData();
     if (userData && userData['NFTID']) {
-      setRefreshTimer(10000)
+      
       let NFTData = await getEquippedInfo(userData['NFTID']);
-
+      console.log(NFTData);
+      let rewardsAccrued = await getRewardsAccrued(userData['NFTID']);
+      console.log(rewardsAccrued);
       let json = JSON.parse(getJSON(NFTData[4]));
       setEquippedImage(json.image);
       setEquippedNFT(NFTData);
+      setEquippedRewards(rewardsAccrued)
     }
-    setTimeout(refreshEquipped, refreshTimer);
+    // setTimeout(refreshEquipped(), refreshTimer);
   }
 
   useEffect(() => {
           
     async function load() {
-      setRefreshTimer(1000);
       await refreshEquipped();
+      
+      let interval = setInterval(function () {
+        refreshEquipped();
+      }, refreshTimer)
     }
     
     load()

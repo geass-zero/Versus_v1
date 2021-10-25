@@ -6,5 +6,6 @@ const MonsterList = artifacts.require("./contract/MonsterList.sol");
 // const VersusNFTProxy = 
 
 module.exports = function (deployer) {
-  deployer.deploy(SpotBattle);
+  deployer.deploy(MonsterList);
+  // await deployer.deploy(VersusNFT);
 };

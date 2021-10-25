@@ -441,9 +441,9 @@ contract BEP20 is Ownable, IBEP20 {
     //     _decimals = 18;
     // }
     
-    function constructor1 (string memory name, string memory symbol) internal {
-        _name = name;
-        _symbol = symbol;
+    function constructor1 (string memory setName, string memory setSymbol) internal {
+        _name = setName;
+        _symbol = setSymbol;
         _decimals = 18;
     }
 

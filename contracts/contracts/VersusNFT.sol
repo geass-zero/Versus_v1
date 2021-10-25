@@ -1719,7 +1719,7 @@ contract DataLayout is LibraryLock {
     address public owner;
     address public versusToken;
     address public monsterList;
-    uint256 _tokenIds;
+    uint256 public _tokenIds;
     
     struct details {
         uint32 monsterID;
@@ -1733,9 +1733,8 @@ contract DataLayout is LibraryLock {
     }
     mapping(uint256 => details) public NFTDetails;
     mapping(uint256 => mapping(uint32 => uint32[])) public NFTStatsHistory;
-    mapping(address => bool) whitelistedContracts; 
+    mapping(address => bool) public whitelistedContracts; 
     
-    uint256 public stakingAPY; //10 == 1%
     uint256 public secondsPerYear = 86400 * 365;
 } 
 
@@ -1747,24 +1746,26 @@ contract VersusNFT is ERC721Enumerable, DataLayout, Proxiable {
         _;
     }
     
-    modifier updateRewards(id) {
+    modifier updateRewards(uint256 id) {
         address idOwner = ownerOf(id);
         require(msg.sender == idOwner, "Invalid holder");
         uint256 timeElapsed = block.timestamp.sub(NFTDetails[id].timeChecked);
         if (timeElapsed > 0) {
-            uint256 yearly = NFTDetails[id].versusStaked.mul(stakingAPY).div(1000);
+            uint32 APY = MonsterList(monsterList).getYieldBoost(NFTDetails[id].monsterID);
+            uint256 yearly = NFTDetails[id].versusStaked.mul(uint256(APY)).div(1000);
             uint256 perSecond = yearly.div(secondsPerYear);
             uint256 rewards = perSecond.mul(timeElapsed);
             NFTDetails[id].versusRewards = NFTDetails[id].versusRewards.add(rewards); 
             NFTDetails[id].timeChecked = block.timestamp;
         }
-        
+        _;
     }
 
     constructor() ERC721("Versus Creature", "VMON") {
         
     }
-
+    
+    
     function NFTConstructor(address _versusToken) public payable {
         require(!initialized);
         owner = msg.sender;
@@ -1815,7 +1816,7 @@ contract VersusNFT is ERC721Enumerable, DataLayout, Proxiable {
         // NFTDetails[newItemId].stats = //get base stats from monsterList
         for (uint32 i; i<ranges.length; i++) {
             //random roll each stat(atk,def,spd,sp.atk,sp.def)
-            NFTDetails[newItemId].stats[i] = statGen(ranges[i]);
+            NFTDetails[newItemId].stats.push(statGen(ranges[i]));
         }
         
         return newItemId;
@@ -1872,6 +1873,8 @@ contract VersusNFT is ERC721Enumerable, DataLayout, Proxiable {
     }
 
     function stakeVersus(uint256 id, uint256 amount) public updateRewards(id) {
+        address idOwner = ownerOf(id);
+        require(msg.sender == idOwner, "Invalid holder");
         IBEP20(versusToken).transferFrom(msg.sender, address(this), amount);
         NFTDetails[id].versusStaked = NFTDetails[id].versusStaked.add(amount);
     
@@ -1886,10 +1889,26 @@ contract VersusNFT is ERC721Enumerable, DataLayout, Proxiable {
         
     }
     
-    function claim(uint256 id) public updateRewards(id) {
-        //mint amount with call to Versus
+    function getStakingReward(uint256 id) public view returns(uint256) {
+        uint256 rewardsAccrued = NFTDetails[id].versusRewards;
+        uint256 timeElapsed = block.timestamp.sub(NFTDetails[id].timeChecked);
+        if (timeElapsed > 0) {
+            uint32 APY = MonsterList(monsterList).getYieldBoost(NFTDetails[id].monsterID);
+            uint256 yearly = NFTDetails[id].versusStaked.mul(uint256(APY)).div(1000);
+            uint256 perSecond = yearly.div(secondsPerYear);
+            uint256 rewards = perSecond.mul(timeElapsed);
+            rewardsAccrued = rewardsAccrued.add(rewards);
+        }
+        return rewardsAccrued;
         
-        NFTDetails[id].rewards = 0;
+    }
+    
+    function claim(uint256 id) public updateRewards(id) {
+        address idOwner = ownerOf(id);
+        require(msg.sender == idOwner, "Invalid holder");
+        //mint amount with call to Versus
+        VersusToken(versusToken).stakingReward(msg.sender, NFTDetails[id].versusRewards);
+        NFTDetails[id].versusRewards = 0;
         
     }
     
@@ -1900,6 +1919,11 @@ contract VersusNFT is ERC721Enumerable, DataLayout, Proxiable {
 interface MonsterList {
     function getLevelRequirements(uint32 index) external view returns(uint[] memory);
     function getName(uint32 index) external view returns(string memory);
-    function getStatRanges(uint32 index) external returns(uint32[] memory);
+    function getStatRanges(uint32 index) external view returns(uint32[] memory);
     function getImageLink(uint32 index) external view returns(string memory);
+    function getYieldBoost(uint32 index) external view returns(uint32);
 } 
+
+interface VersusToken {
+    function stakingReward(address _staker, uint256 _amount) external;
+}

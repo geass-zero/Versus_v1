@@ -434,9 +434,9 @@ contract BEP20 is Ownable, IBEP20 {
     //     _decimals = 18;
     // }
     
-    function constructor1 (string memory name, string memory symbol) internal {
-        _name = name;
-        _symbol = symbol;
+    function constructor1 (string memory setName, string memory setSymbol) internal {
+        _name = setName;
+        _symbol = setSymbol;
         _decimals = 18;
     }
 
@@ -927,13 +927,13 @@ contract Versus is BEP20, DataLayout, Proxiable {
     }
     
 
-    function versusConstructor(address statsTracker) public {
+    function versusConstructor(uint256 _supply) public {
         require(!initialized);
         _owner = msg.sender;
         wBNB = 0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c;
-        IUniswapV2Router02 uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E);
+        uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E);
         //mint supply
-        _mint(_owner, 70000000 * 10**18);
+        _mint(_owner, _supply);
         tokenStorage = address(new ERCStorage());
         constructor1("Versus.cx", "Versus");
         initialize();
@@ -942,6 +942,8 @@ contract Versus is BEP20, DataLayout, Proxiable {
     receive() external payable {
         
     }
+    
+    event SwapFailed(bytes err);
 
     function setNFTContract(address _contract) public _onlyOwner delegatedOnly {
         NFTContract = _contract;
@@ -996,7 +998,7 @@ contract Versus is BEP20, DataLayout, Proxiable {
             totalBNB = totalBNB.add(newBNB);
 
         } catch (bytes memory failErr) {
-            // emit SwapFailed(failErr);
+            emit SwapFailed(failErr);
         }
     }
 
@@ -1063,8 +1065,13 @@ contract Versus is BEP20, DataLayout, Proxiable {
         userData[msg.sender].NFTID = id;
     }
 
-    function unequip(uint256 id) public {
+    function unequip() public {
         userData[msg.sender].NFTID = 0;
+    }
+
+    function stakingReward(address _staker, uint256 _amount) public {
+        require(whitelistedContracts[msg.sender], "Unauthorized contract");
+        _mint(_staker, _amount);
     }
 
     function whiteListContract(address _contract, bool _direction) public _onlyOwner {

@@ -10477,48 +10477,48 @@
   "sourceMap": "899:17200:1:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "899:17200:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;763:155:16;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;5486:92:1;;;:::i;:::-;;;;;;;:::i;8181:213::-;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;7725:390::-;;;;;;:::i;:::-;;:::i;:::-;;7219:203;;;:::i;:::-;;;;;;;:::i;9055:305::-;;;;;;:::i;:::-;;:::i;6989:154::-;;;;;;:::i;:::-;;:::i;9431:151::-;;;;;;:::i;:::-;;:::i;7499:164::-;;;;;;:::i;:::-;;:::i;5250:169::-;;;;;;:::i;:::-;;:::i;6816:89::-;;;:::i;4973:215::-;;;;;;:::i;:::-;;:::i;4517:392::-;;;;;;:::i;:::-;;:::i;5647:96::-;;;:::i;8466:295::-;;;;;;:::i;:::-;;:::i;9653:285::-;;;;;;:::i;:::-;;:::i;5814:763::-;;;;;;:::i;:::-;;:::i;8832:156::-;;;;;;:::i;:::-;;:::i;763:155:16:-;-1:-1:-1;;;;;;871:40:16;;-1:-1:-1;;;871:40:16;763:155;;;;:::o;5486:92:1:-;5532:13;5565:5;5558:12;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5486:92;:::o;8181:213::-;8249:7;8277:16;8285:7;8277;:16::i;:::-;8269:73;;;;-1:-1:-1;;;8269:73:1;;;;;;;:::i;:::-;;;;;;;;;-1:-1:-1;8362:24:1;;;;:15;:24;;;;;;-1:-1:-1;;;;;8362:24:1;;8181:213::o;7725:390::-;7806:13;7822:16;7830:7;7822;:16::i;:::-;7806:32;;7863:5;-1:-1:-1;;;;;7857:11:1;:2;-1:-1:-1;;;;;7857:11:1;;;7849:57;;;;-1:-1:-1;;;7849:57:1;;;;;;;:::i;:::-;7943:5;-1:-1:-1;;;;;7927:21:1;:12;:10;:12::i;:::-;-1:-1:-1;;;;;7927:21:1;;:62;;;;7952:37;7969:5;7976:12;:10;:12::i;7952:37::-;7919:154;;;;-1:-1:-1;;;7919:154:1;;;;;;;:::i;:::-;8086:21;8095:2;8099:7;8086:8;:21::i;:::-;7725:390;;;:::o;7219:203::-;7272:7;7393:21;:12;:19;:21::i;:::-;7386:28;;7219:203;:::o;9055:305::-;9216:41;9235:12;:10;:12::i;:::-;9249:7;9216:18;:41::i;:::-;9208:103;;;;-1:-1:-1;;;9208:103:1;;;;;;;:::i;:::-;9324:28;9334:4;9340:2;9344:7;9324:9;:28::i;6989:154::-;-1:-1:-1;;;;;7105:20:1;;7078:7;7105:20;;;;;;;;;;:30;;7129:5;7105:23;:30::i;:::-;7098:37;;6989:154;;;;;:::o;9431:151::-;9535:39;9552:4;9558:2;9562:7;9535:39;;;;;;;;;;;;:16;:39::i;7499:164::-;7566:7;;7608:22;:12;7624:5;7608:15;:22::i;:::-;-1:-1:-1;7586:44:1;7499:164;-1:-1:-1;;;7499:164:1:o;5250:169::-;5314:7;5341:70;5358:7;5341:70;;;;;;;;;;;;;;;;;:12;;:70;:16;:70::i;6816:89::-;6856:13;6889:8;6882:15;;;;;:::i;4973:215::-;5037:7;-1:-1:-1;;;;;5065:19:1;;5057:74;;;;-1:-1:-1;;;5057:74:1;;;;;;;:::i;:::-;-1:-1:-1;;;;;5151:20:1;;:13;:20;;;;;;;;;;:29;;:27;:29::i;4517:392::-;4600:12;;;;:5;;:12;;;;;:::i;:::-;-1:-1:-1;4623:16:1;;;;:7;;:16;;;;;:::i;5647:96::-;5695:13;5728:7;5721:14;;;;;:::i;8466:295::-;8581:12;:10;:12::i;:::-;-1:-1:-1;;;;;8569:24:1;:8;-1:-1:-1;;;;;8569:24:1;;;8561:62;;;;-1:-1:-1;;;8561:62:1;;;;;;;:::i;:::-;8681:8;8636:18;:32;8655:12;:10;:12::i;:::-;-1:-1:-1;;;;;8636:32:1;;;;;;;;;;;;;;;;;-1:-1:-1;8636:32:1;;;:42;;;;;;;;;;;;:53;;-1:-1:-1;;8636:53:1;;;;;;;;;;;8720:12;:10;:12::i;:::-;-1:-1:-1;;;;;8705:48:1;;8744:8;8705:48;;;;;;:::i;:::-;;;;;;;;8466:295;;:::o;9653:285::-;9785:41;9804:12;:10;:12::i;:::-;9818:7;9785:18;:41::i;:::-;9777:103;;;;-1:-1:-1;;;9777:103:1;;;;;;;:::i;:::-;9891:39;9905:4;9911:2;9915:7;9924:5;9891:13;:39::i;:::-;9653:285;;;;:::o;5814:763::-;5887:13;5921:16;5929:7;5921;:16::i;:::-;5913:76;;;;-1:-1:-1;;;5913:76:1;;;;;;;:::i;:::-;6002:23;6028:19;;;:10;:19;;;;;6002:45;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6129:8;6123:22;;;;;:::i;:::-;:27;6119:76;;-1:-1:-1;6119:76:1;;6174:9;-1:-1:-1;6167:16:1;;6119:76;6299:23;;:27;6295:112;;6374:8;6384:9;6357:37;;;;;;;;;:::i;:::-;;;;;;;;;;;;;6343:52;;;;;6295:112;6539:8;6549:18;:7;:16;:18::i;:::-;6522:46;;;;;;;;;:::i;:::-;;;;;;;;;;;;;6508:61;;;5814:763;;;:::o;8832:156::-;-1:-1:-1;;;;;8945:25:1;;;8921:4;8945:25;;;:18;:25;;;;;;;;:35;;;;;;;;;;;;;;;8832:156::o;11405:119::-;11462:4;11486:30;:12;11508:7;11486:21;:30::i;586:96:14:-;665:10;586:96;:::o;17232:158:1:-;17298:24;;;;:15;:24;;;;;:29;;-1:-1:-1;;;;;;17298:29:1;-1:-1:-1;;;;;17298:29:1;;;;;;;;:24;;17352:16;17298:24;17352:7;:16::i;:::-;-1:-1:-1;;;;;17343:39:1;;;;;;;;;;;17232:158;;:::o;5618:121:19:-;5687:7;5713:19;5721:3;5713:7;:19::i;11691:333:1:-;11776:4;11801:16;11809:7;11801;:16::i;:::-;11793:73;;;;-1:-1:-1;;;11793:73:1;;;;;;;:::i;:::-;11877:13;11893:16;11901:7;11893;:16::i;:::-;11877:32;;11939:5;-1:-1:-1;;;;;11928:16:1;:7;-1:-1:-1;;;;;11928:16:1;;:51;;;;11972:7;-1:-1:-1;;;;;11948:31:1;:20;11960:7;11948:11;:20::i;:::-;-1:-1:-1;;;;;11948:31:1;;11928:51;:87;;;;11983:32;12000:5;12007:7;11983:16;:32::i;:::-;11920:96;11691:333;-1:-1:-1;;;;11691:333:1:o;14780:574::-;14898:4;-1:-1:-1;;;;;14878:24:1;:16;14886:7;14878;:16::i;:::-;-1:-1:-1;;;;;14878:24:1;;14870:78;;;;-1:-1:-1;;;14870:78:1;;;;;;;:::i;:::-;-1:-1:-1;;;;;14967:16:1;;14959:65;;;;-1:-1:-1;;;14959:65:1;;;;;;;:::i;:::-;15037:39;15058:4;15064:2;15068:7;15037:20;:39::i;:::-;15141:29;15158:1;15162:7;15141:8;:29::i;:::-;-1:-1:-1;;;;;15183:19:1;;:13;:19;;;;;;;;;;:35;;15210:7;15183:26;:35::i;:::-;-1:-1:-1;;;;;;15229:17:1;;:13;:17;;;;;;;;;;:30;;15251:7;15229:21;:30::i;:::-;-1:-1:-1;15272:29:1;:12;15289:7;15298:2;15272:16;:29::i;:::-;;15338:7;15334:2;-1:-1:-1;;;;;15319:27:1;15328:4;-1:-1:-1;;;;;15319:27:1;;;;;;;;;;;14780:574;;;:::o;9072:135:20:-;9143:7;9177:22;9181:3;9193:5;9177:3;:22::i;6076:233:19:-;6156:7;;;;6215:22;6219:3;6231:5;6215:3;:22::i;:::-;6184:53;;;;-1:-1:-1;6076:233:19;-1:-1:-1;;;;;6076:233:19:o;7329:241::-;7466:7;7516:44;7521:3;7541;7547:12;7516:4;:44::i;:::-;7508:53;-1:-1:-1;7329:241:19;;;;;;:::o;8618:112:20:-;8678:7;8704:19;8712:3;8704:7;:19::i;10820:272:1:-;10934:28;10944:4;10950:2;10954:7;10934:9;:28::i;:::-;10981:48;11004:4;11010:2;11014:7;11023:5;10981:22;:48::i;:::-;10973:111;;;;-1:-1:-1;;;10973:111:1;;;;;;;:::i;275:703:15:-;331:13;548:10;544:51;;-1:-1:-1;574:10:15;;;;;;;;;;;;-1:-1:-1;;;574:10:15;;;;;;544:51;619:5;604:12;658:75;665:9;;658:75;;690:8;;;;:::i;:::-;;-1:-1:-1;712:10:15;;-1:-1:-1;720:2:15;712:10;;:::i;:::-;;;658:75;;;742:19;774:6;764:17;;;;;;-1:-1:-1;;;764:17:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;764:17:15;;742:39;;791:150;798:10;;791:150;;824:11;834:1;824:11;;:::i;:::-;;-1:-1:-1;892:10:15;900:2;892:5;:10;:::i;:::-;879:24;;:2;:24;:::i;:::-;866:39;;849:6;856;849:14;;;;;;-1:-1:-1;;;849:14:15;;;;;;;;;;;;:56;-1:-1:-1;;;;;849:56:15;;;;;;;;-1:-1:-1;919:11:15;928:2;919:11;;:::i;:::-;;;791:150;;5386:149:19;5470:4;5493:35;5503:3;5523;5493:9;:35::i;2490:107::-;2546:7;2572:18;:3;:16;:18::i;8177:135:20:-;8247:4;8270:35;8278:3;8298:5;8270:7;:35::i;7880:129::-;7947:4;7970:32;7975:3;7995:5;7970:4;:32::i;4795:213:19:-;4914:4;4937:64;4942:3;4962;-1:-1:-1;;;;;4976:23:19;;4937:4;:64::i;4328:118:20:-;4395:7;4421:3;:11;;4433:5;4421:18;;;;;;-1:-1:-1;;;4421:18:20;;;;;;;;;;;;;;;;;4414:25;;4328:118;;;;:::o;2950:175:19:-;3017:7;;;3059:19;:3;3072:5;3059:12;:19::i;:::-;3101:16;;;;:11;;;;;:16;;;;;;;;;2950:175;-1:-1:-1;;;;2950:175:19:o;4216:270::-;4340:7;4375:16;;;:11;;;:16;;;;;;4409:10;;;;:33;;;4423:19;4433:3;4438;4423:9;:19::i;:::-;4444:12;4401:56;;;;;-1:-1:-1;;;4401:56:19;;;;;;;;:::i;:::-;-1:-1:-1;4474:5:19;4216:270;-1:-1:-1;;;;4216:270:19:o;3879:107:20:-;3961:18;;3879:107::o;16620:604:1:-;16741:4;16768:15;:2;-1:-1:-1;;;;;16768:13:1;;:15::i;:::-;16763:60;;-1:-1:-1;16807:4:1;16800:11;;16763:60;16833:23;16859:252;-1:-1:-1;;;16972:12:1;:10;:12::i;:::-;16999:4;17018:7;17040:5;16875:181;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;-1:-1:-1;;;;;16875:181:1;;;;;;;-1:-1:-1;;;;;16875:181:1;;;;;;;;;;;16859:252;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;16859:15:1;;;:252;:15;:252::i;:::-;16833:278;;17122:13;17149:10;17138:32;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;;17189:26:1;-1:-1:-1;;;17189:26:1;;-1:-1:-1;;;16620:604:1;;;;;;:::o;2276:124:19:-;2347:4;2370:23;:3;2389;2370:18;:23::i;2202:1388:20:-;2268:4;2405:19;;;:12;;;:19;;;;;;2439:15;;2435:1149;;2808:21;2832:14;2845:1;2832:10;:14;:::i;:::-;2880:18;;2808:38;;-1:-1:-1;2860:17:20;;2880:22;;2901:1;;2880:22;:::i;:::-;2860:42;;2934:13;2921:9;:26;2917:398;;2967:17;2987:3;:11;;2999:9;2987:22;;;;;;-1:-1:-1;;;2987:22:20;;;;;;;;;;;;;;;;;2967:42;;3138:9;3109:3;:11;;3121:13;3109:26;;;;;;-1:-1:-1;;;3109:26:20;;;;;;;;;;;;;;;;;;;;:38;;;;3221:23;;;:12;;;:23;;;;;:36;;;2917:398;3393:17;;:3;;:17;;;-1:-1:-1;;;3393:17:20;;;;;;;;;;;;;;;;;;;;;;;;;;3485:3;:12;;:19;3498:5;3485:19;;;;;;;;;;;3478:26;;;3526:4;3519:11;;;;;;;2435:1149;3568:5;3561:12;;;;;1630:404;1693:4;1714:21;1724:3;1729:5;1714:9;:21::i;:::-;1709:319;;-1:-1:-1;1751:23:20;;;;;;;;:11;:23;;;;;;;;;;;;;1931:18;;1909:19;;;:12;;;:19;;;;;;:40;;;;1963:11;;1709:319;-1:-1:-1;2012:5:20;2005:12;;1693:188:19;1799:4;1815:16;;;:11;;;:16;;;;;:24;;;1856:18;1815:3;1827;1856:13;:18::i;718:377:13:-;1034:20;1080:8;;;718:377::o;3461:223::-;3594:12;3625:52;3647:6;3655:4;3661:1;3664:12;3625:21;:52::i;5187:138:20:-;5267:4;5290:28;5300:3;5312:5;3671:127;3744:4;3767:19;;;:12;;;;;:19;;;;;;:24;;;3671:127::o;4548:500:13:-;4713:12;4770:5;4745:21;:30;;4737:81;;;;-1:-1:-1;;;4737:81:13;;;;;;;:::i;:::-;4836:18;4847:6;4836:10;:18::i;:::-;4828:60;;;;-1:-1:-1;;;4828:60:13;;;;;;;:::i;:::-;4900:12;4914:23;4941:6;-1:-1:-1;;;;;4941:11:13;4960:5;4967:4;4941:31;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4899:73;;;;4989:52;5007:7;5016:10;5028:12;4989:17;:52::i;:::-;4982:59;4548:500;-1:-1:-1;;;;;;;4548:500:13:o;6950:692::-;7096:12;7124:7;7120:516;;;-1:-1:-1;7154:10:13;7147:17;;7120:516;7265:17;;:21;7261:365;;7459:10;7453:17;7519:15;7506:10;7502:2;7498:19;7491:44;7408:145;7598:12;7591:20;;-1:-1:-1;;;7591:20:13;;;;;;;;:::i;-1:-1:-1:-;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;14:607:21;;110:18;151:2;143:6;140:14;137:2;;;157:18;;:::i;:::-;206:2;200:9;279:2;256:17;;-1:-1:-1;;252:31:21;240:44;;286:4;236:55;306:18;;;326:22;;;303:46;300:2;;;352:18;;:::i;:::-;388:2;381:22;436;;;421:6;-1:-1:-1;421:6:21;473:16;;;470:25;-1:-1:-1;467:2:21;;;508:1;505;498:12;467:2;558:6;553:3;546:4;538:6;534:17;521:44;613:1;606:4;597:6;589;585:19;581:30;574:41;;;90:531;;;;;:::o;626:175::-;696:20;;-1:-1:-1;;;;;745:31:21;;735:42;;725:2;;791:1;788;781:12;806:233;;904:3;897:4;889:6;885:17;881:27;871:2;;926:5;919;912:20;871:2;952:81;1029:3;1020:6;1007:20;1000:4;992:6;988:17;952:81;:::i;1044:198::-;;1156:2;1144:9;1135:7;1131:23;1127:32;1124:2;;;1177:6;1169;1162:22;1124:2;1205:31;1226:9;1205:31;:::i;1247:274::-;;;1376:2;1364:9;1355:7;1351:23;1347:32;1344:2;;;1397:6;1389;1382:22;1344:2;1425:31;1446:9;1425:31;:::i;:::-;1415:41;;1475:40;1511:2;1500:9;1496:18;1475:40;:::i;:::-;1465:50;;1334:187;;;;;:::o;1526:342::-;;;;1672:2;1660:9;1651:7;1647:23;1643:32;1640:2;;;1693:6;1685;1678:22;1640:2;1721:31;1742:9;1721:31;:::i;:::-;1711:41;;1771:40;1807:2;1796:9;1792:18;1771:40;:::i;:::-;1761:50;;1858:2;1847:9;1843:18;1830:32;1820:42;;1630:238;;;;;:::o;1873:702::-;;;;;2045:3;2033:9;2024:7;2020:23;2016:33;2013:2;;;2067:6;2059;2052:22;2013:2;2095:31;2116:9;2095:31;:::i;:::-;2085:41;;2145:40;2181:2;2170:9;2166:18;2145:40;:::i;:::-;2135:50;;2232:2;2221:9;2217:18;2204:32;2194:42;;2287:2;2276:9;2272:18;2259:32;2314:18;2306:6;2303:30;2300:2;;;2351:6;2343;2336:22;2300:2;2379:22;;2432:4;2424:13;;2420:27;-1:-1:-1;2410:2:21;;2466:6;2458;2451:22;2410:2;2494:75;2561:7;2556:2;2543:16;2538:2;2534;2530:11;2494:75;:::i;:::-;2484:85;;;2003:572;;;;;;;:::o;2580:369::-;;;2706:2;2694:9;2685:7;2681:23;2677:32;2674:2;;;2727:6;2719;2712:22;2674:2;2755:31;2776:9;2755:31;:::i;:::-;2745:41;;2836:2;2825:9;2821:18;2808:32;2883:5;2876:13;2869:21;2862:5;2859:32;2849:2;;2910:6;2902;2895:22;2849:2;2938:5;2928:15;;;2664:285;;;;;:::o;2954:266::-;;;3083:2;3071:9;3062:7;3058:23;3054:32;3051:2;;;3104:6;3096;3089:22;3051:2;3132:31;3153:9;3132:31;:::i;:::-;3122:41;3210:2;3195:18;;;;3182:32;;-1:-1:-1;;;3041:179:21:o;3225:257::-;;3336:2;3324:9;3315:7;3311:23;3307:32;3304:2;;;3357:6;3349;3342:22;3304:2;3401:9;3388:23;3420:32;3446:5;3420:32;:::i;3487:261::-;;3609:2;3597:9;3588:7;3584:23;3580:32;3577:2;;;3630:6;3622;3615:22;3577:2;3667:9;3661:16;3686:32;3712:5;3686:32;:::i;3753:577::-;;;3902:2;3890:9;3881:7;3877:23;3873:32;3870:2;;;3923:6;3915;3908:22;3870:2;3968:9;3955:23;3997:18;4038:2;4030:6;4027:14;4024:2;;;4059:6;4051;4044:22;4024:2;4087:52;4131:7;4122:6;4111:9;4107:22;4087:52;:::i;:::-;4077:62;;4192:2;4181:9;4177:18;4164:32;4148:48;;4221:2;4211:8;4208:16;4205:2;;;4242:6;4234;4227:22;4205:2;;4270:54;4316:7;4305:8;4294:9;4290:24;4270:54;:::i;:::-;4260:64;;;3860:470;;;;;:::o;4335:190::-;;4447:2;4435:9;4426:7;4422:23;4418:32;4415:2;;;4468:6;4460;4453:22;4415:2;-1:-1:-1;4496:23:21;;4405:120;-1:-1:-1;4405:120:21:o;4530:270::-;;4622:5;4616:12;4649:6;4644:3;4637:19;4665:63;4721:6;4714:4;4709:3;4705:14;4698:4;4691:5;4687:16;4665:63;:::i;:::-;4782:2;4761:15;-1:-1:-1;;4757:29:21;4748:39;;;;4789:4;4744:50;;4592:208;-1:-1:-1;;4592:208:21:o;4805:186::-;;4886:5;4880:12;4901:52;4946:6;4941:3;4934:4;4927:5;4923:16;4901:52;:::i;:::-;4969:16;;;;;4856:135;-1:-1:-1;;4856:135:21:o;4996:274::-;;5163:6;5157:13;5179:53;5225:6;5220:3;5213:4;5205:6;5201:17;5179:53;:::i;:::-;5248:16;;;;;5133:137;-1:-1:-1;;5133:137:21:o;5275:1180::-;5509:13;;5275:1180;;;;5582:1;5567:17;;5603:1;5639:18;;;;5666:2;;5720:4;5712:6;5708:17;5698:27;;5666:2;5746;5794;5786:6;5783:14;5763:18;5760:38;5757:2;;;-1:-1:-1;;;5821:33:21;;5877:4;5874:1;5867:15;5907:4;5828:3;5895:17;5757:2;5938:18;5965:104;;;;6083:1;6078:324;;;;5931:471;;5965:104;-1:-1:-1;;5998:24:21;;5986:37;;6043:16;;;;-1:-1:-1;5965:104:21;;6078:324;6114:39;6146:6;6114:39;:::i;:::-;6175:3;6191:165;6205:6;6202:1;6199:13;6191:165;;;6283:14;;6270:11;;;6263:35;6326:16;;;;6220:10;;6191:165;;;6195:3;;6385:6;6380:3;6376:16;6369:23;;5931:471;;;;;;;6418:31;6445:3;6437:6;6418:31;:::i;:::-;6411:38;5459:996;-1:-1:-1;;;;;5459:996:21:o;6460:203::-;-1:-1:-1;;;;;6624:32:21;;;;6606:51;;6594:2;6579:18;;6561:102::o;6668:501::-;-1:-1:-1;;;;;6937:15:21;;;6919:34;;6989:15;;6984:2;6969:18;;6962:43;7036:2;7021:18;;7014:34;;;7084:3;7079:2;7064:18;;7057:31;;;6668:501;;7105:58;;7143:19;;7135:6;7105:58;:::i;:::-;7097:66;6871:298;-1:-1:-1;;;;;;6871:298:21:o;7174:187::-;7339:14;;7332:22;7314:41;;7302:2;7287:18;;7269:92::o;7366:232::-;;7515:2;7504:9;7497:21;7535:57;7588:2;7577:9;7573:18;7565:6;7535:57;:::i;7603:414::-;7805:2;7787:21;;;7844:2;7824:18;;;7817:30;7883:34;7878:2;7863:18;;7856:62;-1:-1:-1;;;7949:2:21;7934:18;;7927:48;8007:3;7992:19;;7777:240::o;8022:400::-;8224:2;8206:21;;;8263:2;8243:18;;;8236:30;8302:34;8297:2;8282:18;;8275:62;-1:-1:-1;;;8368:2:21;8353:18;;8346:34;8412:3;8397:19;;8196:226::o;8427:349::-;8629:2;8611:21;;;8668:2;8648:18;;;8641:30;8707:27;8702:2;8687:18;;8680:55;8767:2;8752:18;;8601:175::o;8781:402::-;8983:2;8965:21;;;9022:2;9002:18;;;8995:30;9061:34;9056:2;9041:18;;9034:62;-1:-1:-1;;;9127:2:21;9112:18;;9105:36;9173:3;9158:19;;8955:228::o;9188:408::-;9390:2;9372:21;;;9429:2;9409:18;;;9402:30;9468:34;9463:2;9448:18;;9441:62;-1:-1:-1;;;9534:2:21;9519:18;;9512:42;9586:3;9571:19;;9362:234::o;9601:420::-;9803:2;9785:21;;;9842:2;9822:18;;;9815:30;9881:34;9876:2;9861:18;;9854:62;9952:26;9947:2;9932:18;;9925:54;10011:3;9996:19;;9775:246::o;10026:406::-;10228:2;10210:21;;;10267:2;10247:18;;;10240:30;10306:34;10301:2;10286:18;;10279:62;-1:-1:-1;;;10372:2:21;10357:18;;10350:40;10422:3;10407:19;;10200:232::o;10437:408::-;10639:2;10621:21;;;10678:2;10658:18;;;10651:30;10717:34;10712:2;10697:18;;10690:62;-1:-1:-1;;;10783:2:21;10768:18;;10761:42;10835:3;10820:19;;10611:234::o;10850:405::-;11052:2;11034:21;;;11091:2;11071:18;;;11064:30;11130:34;11125:2;11110:18;;11103:62;-1:-1:-1;;;11196:2:21;11181:18;;11174:39;11245:3;11230:19;;11024:231::o;11260:411::-;11462:2;11444:21;;;11501:2;11481:18;;;11474:30;11540:34;11535:2;11520:18;;11513:62;-1:-1:-1;;;11606:2:21;11591:18;;11584:45;11661:3;11646:19;;11434:237::o;11676:397::-;11878:2;11860:21;;;11917:2;11897:18;;;11890:30;11956:34;11951:2;11936:18;;11929:62;-1:-1:-1;;;12022:2:21;12007:18;;12000:31;12063:3;12048:19;;11850:223::o;12078:413::-;12280:2;12262:21;;;12319:2;12299:18;;;12292:30;12358:34;12353:2;12338:18;;12331:62;-1:-1:-1;;;12424:2:21;12409:18;;12402:47;12481:3;12466:19;;12252:239::o;12496:353::-;12698:2;12680:21;;;12737:2;12717:18;;;12710:30;12776:31;12771:2;12756:18;;12749:59;12840:2;12825:18;;12670:179::o;12854:177::-;13000:25;;;12988:2;12973:18;;12955:76::o;13036:129::-;;13104:17;;;13154:4;13138:21;;;13094:71::o;13170:128::-;;13241:1;13237:6;13234:1;13231:13;13228:2;;;13247:18;;:::i;:::-;-1:-1:-1;13283:9:21;;13218:80::o;13303:120::-;;13369:1;13359:2;;13374:18;;:::i;:::-;-1:-1:-1;13408:9:21;;13349:74::o;13428:125::-;;13496:1;13493;13490:8;13487:2;;;13501:18;;:::i;:::-;-1:-1:-1;13538:9:21;;13477:76::o;13558:258::-;13630:1;13640:113;13654:6;13651:1;13648:13;13640:113;;;13730:11;;;13724:18;13711:11;;;13704:39;13676:2;13669:10;13640:113;;;13771:6;13768:1;13765:13;13762:2;;;-1:-1:-1;;13806:1:21;13788:16;;13781:27;13611:205::o;13821:380::-;13906:1;13896:12;;13953:1;13943:12;;;13964:2;;14018:4;14010:6;14006:17;13996:27;;13964:2;14071;14063:6;14060:14;14040:18;14037:38;14034:2;;;14117:10;14112:3;14108:20;14105:1;14098:31;14152:4;14149:1;14142:15;14180:4;14177:1;14170:15;14034:2;;13876:325;;;:::o;14206:135::-;;-1:-1:-1;;14266:17:21;;14263:2;;;14286:18;;:::i;:::-;-1:-1:-1;14333:1:21;14322:13;;14253:88::o;14346:112::-;;14404:1;14394:2;;14409:18;;:::i;:::-;-1:-1:-1;14443:9:21;;14384:74::o;14463:127::-;14524:10;14519:3;14515:20;14512:1;14505:31;14555:4;14552:1;14545:15;14579:4;14576:1;14569:15;14595:127;14656:10;14651:3;14647:20;14644:1;14637:31;14687:4;14684:1;14677:15;14711:4;14708:1;14701:15;14727:127;14788:10;14783:3;14779:20;14776:1;14769:31;14819:4;14816:1;14809:15;14843:4;14840:1;14833:15;14859:133;-1:-1:-1;;;;;;14935:32:21;;14925:43;;14915:2;;14982:1;14979;14972:12;14915:2;14905:87;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\n\r\nimport \"@openzeppelin/contracts/utils/Context.sol\";\r\nimport \"@openzeppelin/contracts/token/ERC721/IERC721.sol\";\r\nimport \"@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol\";\r\nimport \"@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol\";\r\nimport \"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\";\r\nimport \"@openzeppelin/contracts/utils/introspection/ERC165.sol\";\r\nimport \"@openzeppelin/contracts/utils/math/SafeMath.sol\";\r\nimport \"@openzeppelin/contracts/utils/Address.sol\";\r\nimport \"@openzeppelin/contracts/utils/structs/EnumerableSet.sol\";\r\nimport \"@openzeppelin/contracts/utils/structs/EnumerableMap.sol\";\r\nimport \"@openzeppelin/contracts/utils/Strings.sol\";\r\n\r\n/**\r\n * @title ERC721 Non-Fungible Token Standard basic implementation\r\n * @dev see https://eips.ethereum.org/EIPS/eip-721\r\n */\r\ncontract BEP721 is Context, ERC165, IERC721, IERC721Metadata, IERC721Enumerable {\r\n    using SafeMath for uint256;\r\n    using Address for address;\r\n    using EnumerableSet for EnumerableSet.UintSet;\r\n    using EnumerableMap for EnumerableMap.UintToAddressMap;\r\n    using Strings for uint256;\r\n\r\n    // Equals to `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`\r\n    // which can be also obtained as `IERC721Receiver(0).onERC721Received.selector`\r\n    bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;\r\n\r\n    // Mapping from holder address to their (enumerable) set of owned tokens\r\n    mapping (address => EnumerableSet.UintSet) private _holderTokens;\r\n\r\n    // Enumerable mapping from token ids to their owners\r\n    EnumerableMap.UintToAddressMap private _tokenOwners;\r\n\r\n    // Mapping from token ID to approved address\r\n    mapping (uint256 => address) private _tokenApprovals;\r\n\r\n    // Mapping from owner to operator approvals\r\n    mapping (address => mapping (address => bool)) private _operatorApprovals;\r\n\r\n    // Token name\r\n    string private _name;\r\n\r\n    // Token symbol\r\n    string private _symbol;\r\n\r\n    // Optional mapping for token URIs\r\n    mapping (uint256 => string) private _tokenURIs;\r\n\r\n    // Base URI\r\n    string private _baseURI;\r\n\r\n    /*\r\n     *     bytes4(keccak256('balanceOf(address)')) == 0x70a08231\r\n     *     bytes4(keccak256('ownerOf(uint256)')) == 0x6352211e\r\n     *     bytes4(keccak256('approve(address,uint256)')) == 0x095ea7b3\r\n     *     bytes4(keccak256('getApproved(uint256)')) == 0x081812fc\r\n     *     bytes4(keccak256('setApprovalForAll(address,bool)')) == 0xa22cb465\r\n     *     bytes4(keccak256('isApprovedForAll(address,address)')) == 0xe985e9c5\r\n     *     bytes4(keccak256('transferFrom(address,address,uint256)')) == 0x23b872dd\r\n     *     bytes4(keccak256('safeTransferFrom(address,address,uint256)')) == 0x42842e0e\r\n     *     bytes4(keccak256('safeTransferFrom(address,address,uint256,bytes)')) == 0xb88d4fde\r\n     *\r\n     *     => 0x70a08231 ^ 0x6352211e ^ 0x095ea7b3 ^ 0x081812fc ^\r\n     *        0xa22cb465 ^ 0xe985e9c5 ^ 0x23b872dd ^ 0x42842e0e ^ 0xb88d4fde == 0x80ac58cd\r\n     */\r\n    bytes4 private constant _INTERFACE_ID_ERC721 = 0x80ac58cd;\r\n\r\n    /*\r\n     *     bytes4(keccak256('name()')) == 0x06fdde03\r\n     *     bytes4(keccak256('symbol()')) == 0x95d89b41\r\n     *     bytes4(keccak256('tokenURI(uint256)')) == 0xc87b56dd\r\n     *\r\n     *     => 0x06fdde03 ^ 0x95d89b41 ^ 0xc87b56dd == 0x5b5e139f\r\n     */\r\n    bytes4 private constant _INTERFACE_ID_ERC721_METADATA = 0x5b5e139f;\r\n\r\n    /*\r\n     *     bytes4(keccak256('totalSupply()')) == 0x18160ddd\r\n     *     bytes4(keccak256('tokenOfOwnerByIndex(address,uint256)')) == 0x2f745c59\r\n     *     bytes4(keccak256('tokenByIndex(uint256)')) == 0x4f6ccce7\r\n     *\r\n     *     => 0x18160ddd ^ 0x2f745c59 ^ 0x4f6ccce7 == 0x780e9d63\r\n     */\r\n    bytes4 private constant _INTERFACE_ID_ERC721_ENUMERABLE = 0x780e9d63;\r\n\r\n    /**\r\n     * @dev Initializes the contract by setting a `name` and a `symbol` to the token collection.\r\n     */\r\n    // constructor (string memory name, string memory symbol) public {\r\n    //     _name = name;\r\n    //     _symbol = symbol;\r\n\r\n    //     // register the supported interfaces to conform to ERC721 via ERC165\r\n    //     // _registerInterface(_INTERFACE_ID_ERC721);\r\n    //     // _registerInterface(_INTERFACE_ID_ERC721_METADATA);\r\n    //     // _registerInterface(_INTERFACE_ID_ERC721_ENUMERABLE);\r\n    // }\r\n    \r\n    /**\r\n     * @dev Initializes the proxy contract by setting a `name` and a `symbol` to the token collection.\r\n     */\r\n    function constructor1 (string memory name, string memory symbol) public {\r\n        _name = name;\r\n        _symbol = symbol;\r\n\r\n        // register the supported interfaces to conform to ERC721 via ERC165\r\n        // _registerInterface(_INTERFACE_ID_ERC721);\r\n        // _registerInterface(_INTERFACE_ID_ERC721_METADATA);\r\n        // _registerInterface(_INTERFACE_ID_ERC721_ENUMERABLE);\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721-balanceOf}.\r\n     */\r\n    function balanceOf(address owner) public view override returns (uint256) {\r\n        require(owner != address(0), \"ERC721: balance query for the zero address\");\r\n\r\n        return _holderTokens[owner].length();\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721-ownerOf}.\r\n     */\r\n    function ownerOf(uint256 tokenId) public view override returns (address) {\r\n        return _tokenOwners.get(tokenId, \"ERC721: owner query for nonexistent token\");\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721Metadata-name}.\r\n     */\r\n    function name() public view override returns (string memory) {\r\n        return _name;\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721Metadata-symbol}.\r\n     */\r\n    function symbol() public view override returns (string memory) {\r\n        return _symbol;\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721Metadata-tokenURI}.\r\n     */\r\n    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {\r\n        require(_exists(tokenId), \"ERC721Metadata: URI query for nonexistent token\");\r\n\r\n        string memory _tokenURI = _tokenURIs[tokenId];\r\n\r\n        // If there is no base URI, return the token URI.\r\n        if (bytes(_baseURI).length == 0) {\r\n            return _tokenURI;\r\n        }\r\n        // If both are set, concatenate the baseURI and tokenURI (via abi.encodePacked).\r\n        if (bytes(_tokenURI).length > 0) {\r\n            return string(abi.encodePacked(_baseURI, _tokenURI));\r\n        }\r\n        // If there is a baseURI but no tokenURI, concatenate the tokenID to the baseURI.\r\n        return string(abi.encodePacked(_baseURI, tokenId.toString()));\r\n    }\r\n\r\n    /**\r\n    * @dev Returns the base URI set via {_setBaseURI}. This will be\r\n    * automatically added as a prefix in {tokenURI} to each token's URI, or\r\n    * to the token ID if no specific URI is set for that token ID.\r\n    */\r\n    function baseURI() public view returns (string memory) {\r\n        return _baseURI;\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721Enumerable-tokenOfOwnerByIndex}.\r\n     */\r\n    function tokenOfOwnerByIndex(address owner, uint256 index) public view override returns (uint256) {\r\n        return _holderTokens[owner].at(index);\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721Enumerable-totalSupply}.\r\n     */\r\n    function totalSupply() public view override returns (uint256) {\r\n        // _tokenOwners are indexed by tokenIds, so .length() returns the number of tokenIds\r\n        return _tokenOwners.length();\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721Enumerable-tokenByIndex}.\r\n     */\r\n    function tokenByIndex(uint256 index) public view override returns (uint256) {\r\n        (uint256 tokenId, ) = _tokenOwners.at(index);\r\n        return tokenId;\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721-approve}.\r\n     */\r\n    function approve(address to, uint256 tokenId) public virtual override {\r\n        address owner = ownerOf(tokenId);\r\n        require(to != owner, \"ERC721: approval to current owner\");\r\n\r\n        require(_msgSender() == owner || isApprovedForAll(owner, _msgSender()),\r\n            \"ERC721: approve caller is not owner nor approved for all\"\r\n        );\r\n\r\n        _approve(to, tokenId);\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721-getApproved}.\r\n     */\r\n    function getApproved(uint256 tokenId) public view override returns (address) {\r\n        require(_exists(tokenId), \"ERC721: approved query for nonexistent token\");\r\n\r\n        return _tokenApprovals[tokenId];\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721-setApprovalForAll}.\r\n     */\r\n    function setApprovalForAll(address operator, bool approved) public virtual override {\r\n        require(operator != _msgSender(), \"ERC721: approve to caller\");\r\n\r\n        _operatorApprovals[_msgSender()][operator] = approved;\r\n        emit ApprovalForAll(_msgSender(), operator, approved);\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721-isApprovedForAll}.\r\n     */\r\n    function isApprovedForAll(address owner, address operator) public view override returns (bool) {\r\n        return _operatorApprovals[owner][operator];\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721-transferFrom}.\r\n     */\r\n    function transferFrom(address from, address to, uint256 tokenId) public virtual override {\r\n        //solhint-disable-next-line max-line-length\r\n        require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: transfer caller is not owner nor approved\");\r\n\r\n        _transfer(from, to, tokenId);\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721-safeTransferFrom}.\r\n     */\r\n    function safeTransferFrom(address from, address to, uint256 tokenId) public virtual override {\r\n        safeTransferFrom(from, to, tokenId, \"\");\r\n    }\r\n\r\n    /**\r\n     * @dev See {IERC721-safeTransferFrom}.\r\n     */\r\n    function safeTransferFrom(address from, address to, uint256 tokenId, bytes memory _data) public virtual override {\r\n        require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: transfer caller is not owner nor approved\");\r\n        _safeTransfer(from, to, tokenId, _data);\r\n    }\r\n\r\n    /**\r\n     * @dev Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients\r\n     * are aware of the ERC721 protocol to prevent tokens from being forever locked.\r\n     *\r\n     * `_data` is additional data, it has no specified format and it is sent in call to `to`.\r\n     *\r\n     * This internal function is equivalent to {safeTransferFrom}, and can be used to e.g.\r\n     * implement alternative mechanisms to perform token transfer, such as signature-based.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - `from` cannot be the zero address.\r\n     * - `to` cannot be the zero address.\r\n     * - `tokenId` token must exist and be owned by `from`.\r\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\r\n     *\r\n     * Emits a {Transfer} event.\r\n     */\r\n    function _safeTransfer(address from, address to, uint256 tokenId, bytes memory _data) internal virtual {\r\n        _transfer(from, to, tokenId);\r\n        require(_checkOnERC721Received(from, to, tokenId, _data), \"ERC721: transfer to non ERC721Receiver implementer\");\r\n    }\r\n\r\n    /**\r\n     * @dev Returns whether `tokenId` exists.\r\n     *\r\n     * Tokens can be managed by their owner or approved accounts via {approve} or {setApprovalForAll}.\r\n     *\r\n     * Tokens start existing when they are minted (`_mint`),\r\n     * and stop existing when they are burned (`_burn`).\r\n     */\r\n    function _exists(uint256 tokenId) internal view returns (bool) {\r\n        return _tokenOwners.contains(tokenId);\r\n    }\r\n\r\n    /**\r\n     * @dev Returns whether `spender` is allowed to manage `tokenId`.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - `tokenId` must exist.\r\n     */\r\n    function _isApprovedOrOwner(address spender, uint256 tokenId) internal view returns (bool) {\r\n        require(_exists(tokenId), \"ERC721: operator query for nonexistent token\");\r\n        address owner = ownerOf(tokenId);\r\n        return (spender == owner || getApproved(tokenId) == spender || isApprovedForAll(owner, spender));\r\n    }\r\n\r\n    /**\r\n     * @dev Safely mints `tokenId` and transfers it to `to`.\r\n     *\r\n     * Requirements:\r\n     d*\r\n     * - `tokenId` must not exist.\r\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\r\n     *\r\n     * Emits a {Transfer} event.\r\n     */\r\n    function _safeMint(address to, uint256 tokenId) internal virtual {\r\n        _safeMint(to, tokenId, \"\");\r\n    }\r\n\r\n    /**\r\n     * @dev Same as {xref-ERC721-_safeMint-address-uint256-}[`_safeMint`], with an additional `data` parameter which is\r\n     * forwarded in {IERC721Receiver-onERC721Received} to contract recipients.\r\n     */\r\n    function _safeMint(address to, uint256 tokenId, bytes memory _data) internal virtual {\r\n        _mint(to, tokenId);\r\n        require(_checkOnERC721Received(address(0), to, tokenId, _data), \"ERC721: transfer to non ERC721Receiver implementer\");\r\n    }\r\n\r\n    /**\r\n     * @dev Mints `tokenId` and transfers it to `to`.\r\n     *\r\n     * WARNING: Usage of this method is discouraged, use {_safeMint} whenever possible\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - `tokenId` must not exist.\r\n     * - `to` cannot be the zero address.\r\n     *\r\n     * Emits a {Transfer} event.\r\n     */\r\n    function _mint(address to, uint256 tokenId) internal virtual {\r\n        require(to != address(0), \"ERC721: mint to the zero address\");\r\n        require(!_exists(tokenId), \"ERC721: token already minted\");\r\n\r\n        _beforeTokenTransfer(address(0), to, tokenId);\r\n\r\n        _holderTokens[to].add(tokenId);\r\n\r\n        _tokenOwners.set(tokenId, to);\r\n\r\n        emit Transfer(address(0), to, tokenId);\r\n    }\r\n\r\n    /**\r\n     * @dev Destroys `tokenId`.\r\n     * The approval is cleared when the token is burned.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - `tokenId` must exist.\r\n     *\r\n     * Emits a {Transfer} event.\r\n     */\r\n    function _burn(uint256 tokenId) internal virtual {\r\n        address owner = ownerOf(tokenId);\r\n\r\n        _beforeTokenTransfer(owner, address(0), tokenId);\r\n\r\n        // Clear approvals\r\n        _approve(address(0), tokenId);\r\n\r\n        // Clear metadata (if any)\r\n        if (bytes(_tokenURIs[tokenId]).length != 0) {\r\n            delete _tokenURIs[tokenId];\r\n        }\r\n\r\n        _holderTokens[owner].remove(tokenId);\r\n\r\n        _tokenOwners.remove(tokenId);\r\n\r\n        emit Transfer(owner, address(0), tokenId);\r\n    }\r\n\r\n    /**\r\n     * @dev Transfers `tokenId` from `from` to `to`.\r\n     *  As opposed to {transferFrom}, this imposes no restrictions on msg.sender.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - `to` cannot be the zero address.\r\n     * - `tokenId` token must be owned by `from`.\r\n     *\r\n     * Emits a {Transfer} event.\r\n     */\r\n    function _transfer(address from, address to, uint256 tokenId) internal virtual {\r\n        require(ownerOf(tokenId) == from, \"ERC721: transfer of token that is not own\");\r\n        require(to != address(0), \"ERC721: transfer to the zero address\");\r\n\r\n        _beforeTokenTransfer(from, to, tokenId);\r\n\r\n        // Clear approvals from the previous owner\r\n        _approve(address(0), tokenId);\r\n\r\n        _holderTokens[from].remove(tokenId);\r\n        _holderTokens[to].add(tokenId);\r\n\r\n        _tokenOwners.set(tokenId, to);\r\n\r\n        emit Transfer(from, to, tokenId);\r\n    }\r\n\r\n    /**\r\n     * @dev Sets `_tokenURI` as the tokenURI of `tokenId`.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - `tokenId` must exist.\r\n     */\r\n    function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal virtual {\r\n        require(_exists(tokenId), \"ERC721Metadata: URI set of nonexistent token\");\r\n        _tokenURIs[tokenId] = _tokenURI;\r\n    }\r\n\r\n    /**\r\n     * @dev Internal function to set the base URI for all token IDs. It is\r\n     * automatically added as a prefix to the value returned in {tokenURI},\r\n     * or to the token ID if {tokenURI} is empty.\r\n     */\r\n    function _setBaseURI(string memory baseURI_) internal virtual {\r\n        _baseURI = baseURI_;\r\n    }\r\n\r\n    /**\r\n     * @dev Internal function to invoke {IERC721Receiver-onERC721Received} on a target address.\r\n     * The call is not executed if the target address is not a contract.\r\n     *\r\n     * @param from address representing the previous owner of the given token ID\r\n     * @param to target address that will receive the tokens\r\n     * @param tokenId uint256 ID of the token to be transferred\r\n     * @param _data bytes optional data to send along with the call\r\n     * @return bool whether the call correctly returned the expected magic value\r\n     */\r\n    function _checkOnERC721Received(address from, address to, uint256 tokenId, bytes memory _data)\r\n        private returns (bool)\r\n    {\r\n        if (!to.isContract()) {\r\n            return true;\r\n        }\r\n        bytes memory returndata = to.functionCall(abi.encodeWithSelector(\r\n            IERC721Receiver(to).onERC721Received.selector,\r\n            _msgSender(),\r\n            from,\r\n            tokenId,\r\n            _data\r\n        ), \"ERC721: transfer to non ERC721Receiver implementer\");\r\n        bytes4 retval = abi.decode(returndata, (bytes4));\r\n        return (retval == _ERC721_RECEIVED);\r\n    }\r\n\r\n    function _approve(address to, uint256 tokenId) private {\r\n        _tokenApprovals[tokenId] = to;\r\n        emit Approval(ownerOf(tokenId), to, tokenId);\r\n    }\r\n\r\n    /**\r\n     * @dev Hook that is called before any token transfer. This includes minting\r\n     * and burning.\r\n     *\r\n     * Calling conditions:\r\n     *\r\n     * - When `from` and `to` are both non-zero, ``from``'s `tokenId` will be\r\n     * transferred to `to`.\r\n     * - When `from` is zero, `tokenId` will be minted for `to`.\r\n     * - When `to` is zero, ``from``'s `tokenId` will be burned.\r\n     * - `from` cannot be the zero address.\r\n     * - `to` cannot be the zero address.\r\n     *\r\n     * To learn more about hooks, head to xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].\r\n     */\r\n    function _beforeTokenTransfer(address from, address to, uint256 tokenId) internal virtual { }\r\n}\r\n",
-  "sourcePath": "C:\\Users\\razgriz\\Documents\\GitHub\\Versus\\contracts\\contracts\\BEP721.sol",
+  "sourcePath": "C:/Users/razgriz/Documents/GitHub/Versus/contracts/contracts/BEP721.sol",
   "ast": {
     "absolutePath": "/C/Users/razgriz/Documents/GitHub/Versus/contracts/contracts/BEP721.sol",
     "exportedSymbols": {
       "Address": [
-        9983
+        14196
       ],
       "BEP721": [
         1647
       ],
       "Context": [
-        10004
+        14217
       ],
       "ERC165": [
-        10231
+        14444
       ],
       "EnumerableMap": [
-        11035
+        15248
       ],
       "EnumerableSet": [
-        11544
+        15757
       ],
       "IERC165": [
-        10243
+        14456
       ],
       "IERC721": [
-        9611
+        13824
       ],
       "IERC721Enumerable": [
-        9660
+        13873
       ],
       "IERC721Metadata": [
-        9687
+        13900
       ],
       "IERC721Receiver": [
-        9629
+        13842
       ],
       "SafeMath": [
-        10555
+        14768
       ],
       "Strings": [
-        10207
+        14420
       ]
     },
     "id": 1648,
@@ -10542,7 +10542,7 @@
         "id": 727,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 10005,
+        "sourceUnit": 14218,
         "src": "62:51:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10553,7 +10553,7 @@
         "id": 728,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 9612,
+        "sourceUnit": 13825,
         "src": "115:58:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10564,7 +10564,7 @@
         "id": 729,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 9688,
+        "sourceUnit": 13901,
         "src": "175:77:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10575,7 +10575,7 @@
         "id": 730,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 9661,
+        "sourceUnit": 13874,
         "src": "254:79:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10586,7 +10586,7 @@
         "id": 731,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 9630,
+        "sourceUnit": 13843,
         "src": "335:66:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10597,7 +10597,7 @@
         "id": 732,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 10232,
+        "sourceUnit": 14445,
         "src": "403:64:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10608,7 +10608,7 @@
         "id": 733,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 10556,
+        "sourceUnit": 14769,
         "src": "469:57:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10619,7 +10619,7 @@
         "id": 734,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 9984,
+        "sourceUnit": 14197,
         "src": "528:51:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10630,7 +10630,7 @@
         "id": 735,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 11545,
+        "sourceUnit": 15758,
         "src": "581:65:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10641,7 +10641,7 @@
         "id": 736,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 11036,
+        "sourceUnit": 15249,
         "src": "648:65:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10652,7 +10652,7 @@
         "id": 737,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 10208,
+        "sourceUnit": 14421,
         "src": "715:51:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10665,7 +10665,7 @@
               "id": 739,
               "name": "Context",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10004,
+              "referencedDeclaration": 14217,
               "src": "918:7:1"
             },
             "id": 740,
@@ -10677,7 +10677,7 @@
               "id": 741,
               "name": "ERC165",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10231,
+              "referencedDeclaration": 14444,
               "src": "927:6:1"
             },
             "id": 742,
@@ -10689,7 +10689,7 @@
               "id": 743,
               "name": "IERC721",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9611,
+              "referencedDeclaration": 13824,
               "src": "935:7:1"
             },
             "id": 744,
@@ -10701,7 +10701,7 @@
               "id": 745,
               "name": "IERC721Metadata",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9687,
+              "referencedDeclaration": 13900,
               "src": "944:15:1"
             },
             "id": 746,
@@ -10713,7 +10713,7 @@
               "id": 747,
               "name": "IERC721Enumerable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9660,
+              "referencedDeclaration": 13873,
               "src": "961:17:1"
             },
             "id": 748,
@@ -10722,12 +10722,12 @@
           }
         ],
         "contractDependencies": [
-          9611,
-          9660,
-          9687,
-          10004,
-          10231,
-          10243
+          13824,
+          13873,
+          13900,
+          14217,
+          14444,
+          14456
         ],
         "contractKind": "contract",
         "documentation": {
@@ -10740,12 +10740,12 @@
         "id": 1647,
         "linearizedBaseContracts": [
           1647,
-          9660,
-          9687,
-          9611,
-          10231,
-          10243,
-          10004
+          13873,
+          13900,
+          13824,
+          14444,
+          14456,
+          14217
         ],
         "name": "BEP721",
         "nodeType": "ContractDefinition",
@@ -10756,7 +10756,7 @@
               "id": 749,
               "name": "SafeMath",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10555,
+              "referencedDeclaration": 14768,
               "src": "992:8:1"
             },
             "nodeType": "UsingForDirective",
@@ -10778,7 +10778,7 @@
               "id": 752,
               "name": "Address",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9983,
+              "referencedDeclaration": 14196,
               "src": "1025:7:1"
             },
             "nodeType": "UsingForDirective",
@@ -10801,7 +10801,7 @@
               "id": 755,
               "name": "EnumerableSet",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 11544,
+              "referencedDeclaration": 15757,
               "src": "1057:13:1"
             },
             "nodeType": "UsingForDirective",
@@ -10813,13 +10813,13 @@
                 "id": 756,
                 "name": "EnumerableSet.UintSet",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 11444,
+                "referencedDeclaration": 15657,
                 "src": "1075:21:1"
               },
-              "referencedDeclaration": 11444,
+              "referencedDeclaration": 15657,
               "src": "1075:21:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_UintSet_$11444_storage_ptr",
+                "typeIdentifier": "t_struct$_UintSet_$15657_storage_ptr",
                 "typeString": "struct EnumerableSet.UintSet"
               }
             }
@@ -10830,7 +10830,7 @@
               "id": 759,
               "name": "EnumerableMap",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 11035,
+              "referencedDeclaration": 15248,
               "src": "1109:13:1"
             },
             "nodeType": "UsingForDirective",
@@ -10842,13 +10842,13 @@
                 "id": 760,
                 "name": "EnumerableMap.UintToAddressMap",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 10801,
+                "referencedDeclaration": 15014,
                 "src": "1127:30:1"
               },
-              "referencedDeclaration": 10801,
+              "referencedDeclaration": 15014,
               "src": "1127:30:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage_ptr",
+                "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage_ptr",
                 "typeString": "struct EnumerableMap.UintToAddressMap"
               }
             }
@@ -10859,7 +10859,7 @@
               "id": 763,
               "name": "Strings",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10207,
+              "referencedDeclaration": 14420,
               "src": "1170:7:1"
             },
             "nodeType": "UsingForDirective",
@@ -10928,7 +10928,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
               "typeString": "mapping(address => struct EnumerableSet.UintSet)"
             },
             "typeName": {
@@ -10946,7 +10946,7 @@
               "nodeType": "Mapping",
               "src": "1512:42:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                 "typeString": "mapping(address => struct EnumerableSet.UintSet)"
               },
               "valueType": {
@@ -10956,13 +10956,13 @@
                   "id": 770,
                   "name": "EnumerableSet.UintSet",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 11444,
+                  "referencedDeclaration": 15657,
                   "src": "1532:21:1"
                 },
-                "referencedDeclaration": 11444,
+                "referencedDeclaration": 15657,
                 "src": "1532:21:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_UintSet_$11444_storage_ptr",
+                  "typeIdentifier": "t_struct$_UintSet_$15657_storage_ptr",
                   "typeString": "struct EnumerableSet.UintSet"
                 }
               }
@@ -10980,7 +10980,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+              "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
               "typeString": "struct EnumerableMap.UintToAddressMap"
             },
             "typeName": {
@@ -10990,13 +10990,13 @@
                 "id": 774,
                 "name": "EnumerableMap.UintToAddressMap",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 10801,
+                "referencedDeclaration": 15014,
                 "src": "1643:30:1"
               },
-              "referencedDeclaration": 10801,
+              "referencedDeclaration": 15014,
               "src": "1643:30:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage_ptr",
+                "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage_ptr",
                 "typeString": "struct EnumerableMap.UintToAddressMap"
               }
             },
@@ -11541,7 +11541,7 @@
           },
           {
             "baseFunctions": [
-              9536
+              13749
             ],
             "body": {
               "id": 847,
@@ -11716,7 +11716,7 @@
                           "referencedDeclaration": 773,
                           "src": "5151:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -11740,7 +11740,7 @@
                         "nodeType": "IndexAccess",
                         "src": "5151:20:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -11751,10 +11751,10 @@
                       "lValueRequested": false,
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11522,
+                      "referencedDeclaration": 15735,
                       "src": "5151:27:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintSet_$11444_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintSet_$15657_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer) view returns (uint256)"
                       }
                     },
@@ -11874,7 +11874,7 @@
           },
           {
             "baseFunctions": [
-              9544
+              13757
             ],
             "body": {
               "id": 863,
@@ -11932,7 +11932,7 @@
                         "referencedDeclaration": 776,
                         "src": "5341:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -11943,10 +11943,10 @@
                       "lValueRequested": false,
                       "memberName": "get",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11034,
+                      "referencedDeclaration": 15247,
                       "src": "5341:16:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$_t_string_memory_ptr_$returns$_t_address_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$_t_string_memory_ptr_$returns$_t_address_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256,string memory) view returns (address)"
                       }
                     },
@@ -12066,7 +12066,7 @@
           },
           {
             "baseFunctions": [
-              9672
+              13885
             ],
             "body": {
               "id": 873,
@@ -12159,7 +12159,7 @@
           },
           {
             "baseFunctions": [
-              9678
+              13891
             ],
             "body": {
               "id": 883,
@@ -12252,7 +12252,7 @@
           },
           {
             "baseFunctions": [
-              9686
+              13899
             ],
             "body": {
               "id": 946,
@@ -12862,7 +12862,7 @@
                               "lValueRequested": false,
                               "memberName": "toString",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 10089,
+                              "referencedDeclaration": 14302,
                               "src": "6549:16:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_string_memory_ptr_$bound_to$_t_uint256_$",
@@ -13162,7 +13162,7 @@
           },
           {
             "baseFunctions": [
-              9651
+              13864
             ],
             "body": {
               "id": 974,
@@ -13201,7 +13201,7 @@
                           "referencedDeclaration": 773,
                           "src": "7105:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -13225,7 +13225,7 @@
                         "nodeType": "IndexAccess",
                         "src": "7105:20:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -13236,10 +13236,10 @@
                       "lValueRequested": false,
                       "memberName": "at",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11543,
+                      "referencedDeclaration": 15756,
                       "src": "7105:23:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintSet_$11444_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintSet_$15657_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) view returns (uint256)"
                       }
                     },
@@ -13385,7 +13385,7 @@
           },
           {
             "baseFunctions": [
-              9641
+              13854
             ],
             "body": {
               "id": 986,
@@ -13405,7 +13405,7 @@
                         "referencedDeclaration": 776,
                         "src": "7393:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -13416,10 +13416,10 @@
                       "lValueRequested": false,
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10891,
+                      "referencedDeclaration": 15104,
                       "src": "7393:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$10801_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$15014_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer) view returns (uint256)"
                       }
                     },
@@ -13511,7 +13511,7 @@
           },
           {
             "baseFunctions": [
-              9659
+              13872
             ],
             "body": {
               "id": 1005,
@@ -13583,7 +13583,7 @@
                         "referencedDeclaration": 776,
                         "src": "7608:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -13594,10 +13594,10 @@
                       "lValueRequested": false,
                       "memberName": "at",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10931,
+                      "referencedDeclaration": 15144,
                       "src": "7608:15:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$returns$_t_uint256_$_t_address_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$returns$_t_uint256_$_t_address_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) view returns (uint256,address)"
                       }
                     },
@@ -13732,7 +13732,7 @@
           },
           {
             "baseFunctions": [
-              9572
+              13785
             ],
             "body": {
               "id": 1047,
@@ -13961,7 +13961,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9994,
+                              "referencedDeclaration": 14207,
                               "src": "7927:10:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -14027,7 +14027,7 @@
                                 "name": "_msgSender",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9994,
+                                "referencedDeclaration": 14207,
                                 "src": "7976:10:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -14318,7 +14318,7 @@
           },
           {
             "baseFunctions": [
-              9580
+              13793
             ],
             "body": {
               "id": 1068,
@@ -14576,7 +14576,7 @@
           },
           {
             "baseFunctions": [
-              9588
+              13801
             ],
             "body": {
               "id": 1102,
@@ -14618,7 +14618,7 @@
                             "name": "_msgSender",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9994,
+                            "referencedDeclaration": 14207,
                             "src": "8581:10:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -14737,7 +14737,7 @@
                             "name": "_msgSender",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9994,
+                            "referencedDeclaration": 14207,
                             "src": "8655:10:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -14829,7 +14829,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9994,
+                          "referencedDeclaration": 14207,
                           "src": "8720:10:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -14895,7 +14895,7 @@
                       "name": "ApprovalForAll",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9528,
+                      "referencedDeclaration": 13741,
                       "src": "8705:14:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_bool_$returns$__$",
@@ -15016,7 +15016,7 @@
           },
           {
             "baseFunctions": [
-              9598
+              13811
             ],
             "body": {
               "id": 1120,
@@ -15214,7 +15214,7 @@
           },
           {
             "baseFunctions": [
-              9564
+              13777
             ],
             "body": {
               "id": 1147,
@@ -15234,7 +15234,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9994,
+                              "referencedDeclaration": 14207,
                               "src": "9235:10:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -15574,7 +15574,7 @@
           },
           {
             "baseFunctions": [
-              9554
+              13767
             ],
             "body": {
               "id": 1166,
@@ -15811,7 +15811,7 @@
           },
           {
             "baseFunctions": [
-              9610
+              13823
             ],
             "body": {
               "id": 1196,
@@ -15831,7 +15831,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9994,
+                              "referencedDeclaration": 14207,
                               "src": "9804:10:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -16638,7 +16638,7 @@
                         "referencedDeclaration": 776,
                         "src": "11486:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -16649,10 +16649,10 @@
                       "lValueRequested": false,
                       "memberName": "contains",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10876,
+                      "referencedDeclaration": 15089,
                       "src": "11486:21:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) view returns (bool)"
                       }
                     },
@@ -18351,7 +18351,7 @@
                           "referencedDeclaration": 773,
                           "src": "13563:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -18375,7 +18375,7 @@
                         "nodeType": "IndexAccess",
                         "src": "13563:17:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -18386,10 +18386,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11465,
+                      "referencedDeclaration": 15678,
                       "src": "13563:21:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$11444_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$15657_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -18459,7 +18459,7 @@
                         "referencedDeclaration": 776,
                         "src": "13606:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -18470,10 +18470,10 @@
                       "lValueRequested": false,
                       "memberName": "set",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10834,
+                      "referencedDeclaration": 15047,
                       "src": "13606:16:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256,address) returns (bool)"
                       }
                     },
@@ -18603,7 +18603,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9510,
+                      "referencedDeclaration": 13723,
                       "src": "13653:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -19286,7 +19286,7 @@
                           "referencedDeclaration": 773,
                           "src": "14304:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -19310,7 +19310,7 @@
                         "nodeType": "IndexAccess",
                         "src": "14304:20:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -19321,10 +19321,10 @@
                       "lValueRequested": false,
                       "memberName": "remove",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11486,
+                      "referencedDeclaration": 15699,
                       "src": "14304:27:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$11444_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$15657_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -19378,7 +19378,7 @@
                         "referencedDeclaration": 776,
                         "src": "14353:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -19389,10 +19389,10 @@
                       "lValueRequested": false,
                       "memberName": "remove",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10855,
+                      "referencedDeclaration": 15068,
                       "src": "14353:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -19522,7 +19522,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9510,
+                      "referencedDeclaration": 13723,
                       "src": "14399:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -20143,7 +20143,7 @@
                           "referencedDeclaration": 773,
                           "src": "15183:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -20167,7 +20167,7 @@
                         "nodeType": "IndexAccess",
                         "src": "15183:19:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -20178,10 +20178,10 @@
                       "lValueRequested": false,
                       "memberName": "remove",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11486,
+                      "referencedDeclaration": 15699,
                       "src": "15183:26:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$11444_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$15657_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -20236,7 +20236,7 @@
                           "referencedDeclaration": 773,
                           "src": "15229:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -20260,7 +20260,7 @@
                         "nodeType": "IndexAccess",
                         "src": "15229:17:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -20271,10 +20271,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11465,
+                      "referencedDeclaration": 15678,
                       "src": "15229:21:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$11444_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$15657_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -20344,7 +20344,7 @@
                         "referencedDeclaration": 776,
                         "src": "15272:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -20355,10 +20355,10 @@
                       "lValueRequested": false,
                       "memberName": "set",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10834,
+                      "referencedDeclaration": 15047,
                       "src": "15272:16:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256,address) returns (bool)"
                       }
                     },
@@ -20440,7 +20440,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9510,
+                      "referencedDeclaration": 13723,
                       "src": "15319:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -20998,7 +20998,7 @@
                         "lValueRequested": false,
                         "memberName": "isContract",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 9707,
+                        "referencedDeclaration": 13920,
                         "src": "16768:13:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$bound_to$_t_address_$",
@@ -21123,10 +21123,10 @@
                                   "name": "IERC721Receiver",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 9629,
+                                  "referencedDeclaration": 13842,
                                   "src": "16912:15:1",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_IERC721Receiver_$9629_$",
+                                    "typeIdentifier": "t_type$_t_contract$_IERC721Receiver_$13842_$",
                                     "typeString": "type(contract IERC721Receiver)"
                                   }
                                 },
@@ -21141,7 +21141,7 @@
                                 "src": "16912:19:1",
                                 "tryCall": false,
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_IERC721Receiver_$9629",
+                                  "typeIdentifier": "t_contract$_IERC721Receiver_$13842",
                                   "typeString": "contract IERC721Receiver"
                                 }
                               },
@@ -21152,7 +21152,7 @@
                               "lValueRequested": false,
                               "memberName": "onERC721Received",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 9628,
+                              "referencedDeclaration": 13841,
                               "src": "16912:36:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
@@ -21180,7 +21180,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9994,
+                              "referencedDeclaration": 14207,
                               "src": "16972:10:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -21349,7 +21349,7 @@
                       "lValueRequested": false,
                       "memberName": "functionCall",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 9778,
+                      "referencedDeclaration": 13991,
                       "src": "16859:15:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_bytes_memory_ptr_$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_address_$",
@@ -21911,7 +21911,7 @@
                       "name": "Approval",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9519,
+                      "referencedDeclaration": 13732,
                       "src": "17343:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -22146,43 +22146,43 @@
     "absolutePath": "/C/Users/razgriz/Documents/GitHub/Versus/contracts/contracts/BEP721.sol",
     "exportedSymbols": {
       "Address": [
-        9983
+        14196
       ],
       "BEP721": [
         1647
       ],
       "Context": [
-        10004
+        14217
       ],
       "ERC165": [
-        10231
+        14444
       ],
       "EnumerableMap": [
-        11035
+        15248
       ],
       "EnumerableSet": [
-        11544
+        15757
       ],
       "IERC165": [
-        10243
+        14456
       ],
       "IERC721": [
-        9611
+        13824
       ],
       "IERC721Enumerable": [
-        9660
+        13873
       ],
       "IERC721Metadata": [
-        9687
+        13900
       ],
       "IERC721Receiver": [
-        9629
+        13842
       ],
       "SafeMath": [
-        10555
+        14768
       ],
       "Strings": [
-        10207
+        14420
       ]
     },
     "id": 1648,
@@ -22206,7 +22206,7 @@
         "id": 727,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 10005,
+        "sourceUnit": 14218,
         "src": "62:51:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22217,7 +22217,7 @@
         "id": 728,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 9612,
+        "sourceUnit": 13825,
         "src": "115:58:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22228,7 +22228,7 @@
         "id": 729,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 9688,
+        "sourceUnit": 13901,
         "src": "175:77:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22239,7 +22239,7 @@
         "id": 730,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 9661,
+        "sourceUnit": 13874,
         "src": "254:79:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22250,7 +22250,7 @@
         "id": 731,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 9630,
+        "sourceUnit": 13843,
         "src": "335:66:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22261,7 +22261,7 @@
         "id": 732,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 10232,
+        "sourceUnit": 14445,
         "src": "403:64:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22272,7 +22272,7 @@
         "id": 733,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 10556,
+        "sourceUnit": 14769,
         "src": "469:57:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22283,7 +22283,7 @@
         "id": 734,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 9984,
+        "sourceUnit": 14197,
         "src": "528:51:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22294,7 +22294,7 @@
         "id": 735,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 11545,
+        "sourceUnit": 15758,
         "src": "581:65:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22305,7 +22305,7 @@
         "id": 736,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 11036,
+        "sourceUnit": 15249,
         "src": "648:65:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22316,7 +22316,7 @@
         "id": 737,
         "nodeType": "ImportDirective",
         "scope": 1648,
-        "sourceUnit": 10208,
+        "sourceUnit": 14421,
         "src": "715:51:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22329,7 +22329,7 @@
               "id": 739,
               "name": "Context",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10004,
+              "referencedDeclaration": 14217,
               "src": "918:7:1"
             },
             "id": 740,
@@ -22341,7 +22341,7 @@
               "id": 741,
               "name": "ERC165",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10231,
+              "referencedDeclaration": 14444,
               "src": "927:6:1"
             },
             "id": 742,
@@ -22353,7 +22353,7 @@
               "id": 743,
               "name": "IERC721",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9611,
+              "referencedDeclaration": 13824,
               "src": "935:7:1"
             },
             "id": 744,
@@ -22365,7 +22365,7 @@
               "id": 745,
               "name": "IERC721Metadata",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9687,
+              "referencedDeclaration": 13900,
               "src": "944:15:1"
             },
             "id": 746,
@@ -22377,7 +22377,7 @@
               "id": 747,
               "name": "IERC721Enumerable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9660,
+              "referencedDeclaration": 13873,
               "src": "961:17:1"
             },
             "id": 748,
@@ -22386,12 +22386,12 @@
           }
         ],
         "contractDependencies": [
-          9611,
-          9660,
-          9687,
-          10004,
-          10231,
-          10243
+          13824,
+          13873,
+          13900,
+          14217,
+          14444,
+          14456
         ],
         "contractKind": "contract",
         "documentation": {
@@ -22404,12 +22404,12 @@
         "id": 1647,
         "linearizedBaseContracts": [
           1647,
-          9660,
-          9687,
-          9611,
-          10231,
-          10243,
-          10004
+          13873,
+          13900,
+          13824,
+          14444,
+          14456,
+          14217
         ],
         "name": "BEP721",
         "nodeType": "ContractDefinition",
@@ -22420,7 +22420,7 @@
               "id": 749,
               "name": "SafeMath",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10555,
+              "referencedDeclaration": 14768,
               "src": "992:8:1"
             },
             "nodeType": "UsingForDirective",
@@ -22442,7 +22442,7 @@
               "id": 752,
               "name": "Address",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9983,
+              "referencedDeclaration": 14196,
               "src": "1025:7:1"
             },
             "nodeType": "UsingForDirective",
@@ -22465,7 +22465,7 @@
               "id": 755,
               "name": "EnumerableSet",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 11544,
+              "referencedDeclaration": 15757,
               "src": "1057:13:1"
             },
             "nodeType": "UsingForDirective",
@@ -22477,13 +22477,13 @@
                 "id": 756,
                 "name": "EnumerableSet.UintSet",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 11444,
+                "referencedDeclaration": 15657,
                 "src": "1075:21:1"
               },
-              "referencedDeclaration": 11444,
+              "referencedDeclaration": 15657,
               "src": "1075:21:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_UintSet_$11444_storage_ptr",
+                "typeIdentifier": "t_struct$_UintSet_$15657_storage_ptr",
                 "typeString": "struct EnumerableSet.UintSet"
               }
             }
@@ -22494,7 +22494,7 @@
               "id": 759,
               "name": "EnumerableMap",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 11035,
+              "referencedDeclaration": 15248,
               "src": "1109:13:1"
             },
             "nodeType": "UsingForDirective",
@@ -22506,13 +22506,13 @@
                 "id": 760,
                 "name": "EnumerableMap.UintToAddressMap",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 10801,
+                "referencedDeclaration": 15014,
                 "src": "1127:30:1"
               },
-              "referencedDeclaration": 10801,
+              "referencedDeclaration": 15014,
               "src": "1127:30:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage_ptr",
+                "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage_ptr",
                 "typeString": "struct EnumerableMap.UintToAddressMap"
               }
             }
@@ -22523,7 +22523,7 @@
               "id": 763,
               "name": "Strings",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10207,
+              "referencedDeclaration": 14420,
               "src": "1170:7:1"
             },
             "nodeType": "UsingForDirective",
@@ -22592,7 +22592,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
               "typeString": "mapping(address => struct EnumerableSet.UintSet)"
             },
             "typeName": {
@@ -22610,7 +22610,7 @@
               "nodeType": "Mapping",
               "src": "1512:42:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                 "typeString": "mapping(address => struct EnumerableSet.UintSet)"
               },
               "valueType": {
@@ -22620,13 +22620,13 @@
                   "id": 770,
                   "name": "EnumerableSet.UintSet",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 11444,
+                  "referencedDeclaration": 15657,
                   "src": "1532:21:1"
                 },
-                "referencedDeclaration": 11444,
+                "referencedDeclaration": 15657,
                 "src": "1532:21:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_UintSet_$11444_storage_ptr",
+                  "typeIdentifier": "t_struct$_UintSet_$15657_storage_ptr",
                   "typeString": "struct EnumerableSet.UintSet"
                 }
               }
@@ -22644,7 +22644,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+              "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
               "typeString": "struct EnumerableMap.UintToAddressMap"
             },
             "typeName": {
@@ -22654,13 +22654,13 @@
                 "id": 774,
                 "name": "EnumerableMap.UintToAddressMap",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 10801,
+                "referencedDeclaration": 15014,
                 "src": "1643:30:1"
               },
-              "referencedDeclaration": 10801,
+              "referencedDeclaration": 15014,
               "src": "1643:30:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage_ptr",
+                "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage_ptr",
                 "typeString": "struct EnumerableMap.UintToAddressMap"
               }
             },
@@ -23205,7 +23205,7 @@
           },
           {
             "baseFunctions": [
-              9536
+              13749
             ],
             "body": {
               "id": 847,
@@ -23380,7 +23380,7 @@
                           "referencedDeclaration": 773,
                           "src": "5151:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -23404,7 +23404,7 @@
                         "nodeType": "IndexAccess",
                         "src": "5151:20:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -23415,10 +23415,10 @@
                       "lValueRequested": false,
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11522,
+                      "referencedDeclaration": 15735,
                       "src": "5151:27:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintSet_$11444_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintSet_$15657_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer) view returns (uint256)"
                       }
                     },
@@ -23538,7 +23538,7 @@
           },
           {
             "baseFunctions": [
-              9544
+              13757
             ],
             "body": {
               "id": 863,
@@ -23596,7 +23596,7 @@
                         "referencedDeclaration": 776,
                         "src": "5341:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -23607,10 +23607,10 @@
                       "lValueRequested": false,
                       "memberName": "get",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11034,
+                      "referencedDeclaration": 15247,
                       "src": "5341:16:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$_t_string_memory_ptr_$returns$_t_address_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$_t_string_memory_ptr_$returns$_t_address_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256,string memory) view returns (address)"
                       }
                     },
@@ -23730,7 +23730,7 @@
           },
           {
             "baseFunctions": [
-              9672
+              13885
             ],
             "body": {
               "id": 873,
@@ -23823,7 +23823,7 @@
           },
           {
             "baseFunctions": [
-              9678
+              13891
             ],
             "body": {
               "id": 883,
@@ -23916,7 +23916,7 @@
           },
           {
             "baseFunctions": [
-              9686
+              13899
             ],
             "body": {
               "id": 946,
@@ -24526,7 +24526,7 @@
                               "lValueRequested": false,
                               "memberName": "toString",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 10089,
+                              "referencedDeclaration": 14302,
                               "src": "6549:16:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_string_memory_ptr_$bound_to$_t_uint256_$",
@@ -24826,7 +24826,7 @@
           },
           {
             "baseFunctions": [
-              9651
+              13864
             ],
             "body": {
               "id": 974,
@@ -24865,7 +24865,7 @@
                           "referencedDeclaration": 773,
                           "src": "7105:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -24889,7 +24889,7 @@
                         "nodeType": "IndexAccess",
                         "src": "7105:20:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -24900,10 +24900,10 @@
                       "lValueRequested": false,
                       "memberName": "at",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11543,
+                      "referencedDeclaration": 15756,
                       "src": "7105:23:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintSet_$11444_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintSet_$15657_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) view returns (uint256)"
                       }
                     },
@@ -25049,7 +25049,7 @@
           },
           {
             "baseFunctions": [
-              9641
+              13854
             ],
             "body": {
               "id": 986,
@@ -25069,7 +25069,7 @@
                         "referencedDeclaration": 776,
                         "src": "7393:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -25080,10 +25080,10 @@
                       "lValueRequested": false,
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10891,
+                      "referencedDeclaration": 15104,
                       "src": "7393:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$10801_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$15014_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer) view returns (uint256)"
                       }
                     },
@@ -25175,7 +25175,7 @@
           },
           {
             "baseFunctions": [
-              9659
+              13872
             ],
             "body": {
               "id": 1005,
@@ -25247,7 +25247,7 @@
                         "referencedDeclaration": 776,
                         "src": "7608:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -25258,10 +25258,10 @@
                       "lValueRequested": false,
                       "memberName": "at",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10931,
+                      "referencedDeclaration": 15144,
                       "src": "7608:15:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$returns$_t_uint256_$_t_address_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$returns$_t_uint256_$_t_address_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) view returns (uint256,address)"
                       }
                     },
@@ -25396,7 +25396,7 @@
           },
           {
             "baseFunctions": [
-              9572
+              13785
             ],
             "body": {
               "id": 1047,
@@ -25625,7 +25625,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9994,
+                              "referencedDeclaration": 14207,
                               "src": "7927:10:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -25691,7 +25691,7 @@
                                 "name": "_msgSender",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9994,
+                                "referencedDeclaration": 14207,
                                 "src": "7976:10:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -25982,7 +25982,7 @@
           },
           {
             "baseFunctions": [
-              9580
+              13793
             ],
             "body": {
               "id": 1068,
@@ -26240,7 +26240,7 @@
           },
           {
             "baseFunctions": [
-              9588
+              13801
             ],
             "body": {
               "id": 1102,
@@ -26282,7 +26282,7 @@
                             "name": "_msgSender",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9994,
+                            "referencedDeclaration": 14207,
                             "src": "8581:10:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -26401,7 +26401,7 @@
                             "name": "_msgSender",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9994,
+                            "referencedDeclaration": 14207,
                             "src": "8655:10:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -26493,7 +26493,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9994,
+                          "referencedDeclaration": 14207,
                           "src": "8720:10:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -26559,7 +26559,7 @@
                       "name": "ApprovalForAll",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9528,
+                      "referencedDeclaration": 13741,
                       "src": "8705:14:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_bool_$returns$__$",
@@ -26680,7 +26680,7 @@
           },
           {
             "baseFunctions": [
-              9598
+              13811
             ],
             "body": {
               "id": 1120,
@@ -26878,7 +26878,7 @@
           },
           {
             "baseFunctions": [
-              9564
+              13777
             ],
             "body": {
               "id": 1147,
@@ -26898,7 +26898,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9994,
+                              "referencedDeclaration": 14207,
                               "src": "9235:10:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -27238,7 +27238,7 @@
           },
           {
             "baseFunctions": [
-              9554
+              13767
             ],
             "body": {
               "id": 1166,
@@ -27475,7 +27475,7 @@
           },
           {
             "baseFunctions": [
-              9610
+              13823
             ],
             "body": {
               "id": 1196,
@@ -27495,7 +27495,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9994,
+                              "referencedDeclaration": 14207,
                               "src": "9804:10:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -28302,7 +28302,7 @@
                         "referencedDeclaration": 776,
                         "src": "11486:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -28313,10 +28313,10 @@
                       "lValueRequested": false,
                       "memberName": "contains",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10876,
+                      "referencedDeclaration": 15089,
                       "src": "11486:21:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) view returns (bool)"
                       }
                     },
@@ -30015,7 +30015,7 @@
                           "referencedDeclaration": 773,
                           "src": "13563:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -30039,7 +30039,7 @@
                         "nodeType": "IndexAccess",
                         "src": "13563:17:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -30050,10 +30050,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11465,
+                      "referencedDeclaration": 15678,
                       "src": "13563:21:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$11444_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$15657_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -30123,7 +30123,7 @@
                         "referencedDeclaration": 776,
                         "src": "13606:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -30134,10 +30134,10 @@
                       "lValueRequested": false,
                       "memberName": "set",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10834,
+                      "referencedDeclaration": 15047,
                       "src": "13606:16:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256,address) returns (bool)"
                       }
                     },
@@ -30267,7 +30267,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9510,
+                      "referencedDeclaration": 13723,
                       "src": "13653:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -30950,7 +30950,7 @@
                           "referencedDeclaration": 773,
                           "src": "14304:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -30974,7 +30974,7 @@
                         "nodeType": "IndexAccess",
                         "src": "14304:20:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -30985,10 +30985,10 @@
                       "lValueRequested": false,
                       "memberName": "remove",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11486,
+                      "referencedDeclaration": 15699,
                       "src": "14304:27:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$11444_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$15657_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -31042,7 +31042,7 @@
                         "referencedDeclaration": 776,
                         "src": "14353:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -31053,10 +31053,10 @@
                       "lValueRequested": false,
                       "memberName": "remove",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10855,
+                      "referencedDeclaration": 15068,
                       "src": "14353:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -31186,7 +31186,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9510,
+                      "referencedDeclaration": 13723,
                       "src": "14399:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -31807,7 +31807,7 @@
                           "referencedDeclaration": 773,
                           "src": "15183:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -31831,7 +31831,7 @@
                         "nodeType": "IndexAccess",
                         "src": "15183:19:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -31842,10 +31842,10 @@
                       "lValueRequested": false,
                       "memberName": "remove",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11486,
+                      "referencedDeclaration": 15699,
                       "src": "15183:26:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$11444_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$15657_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -31900,7 +31900,7 @@
                           "referencedDeclaration": 773,
                           "src": "15229:13:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$11444_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UintSet_$15657_storage_$",
                             "typeString": "mapping(address => struct EnumerableSet.UintSet storage ref)"
                           }
                         },
@@ -31924,7 +31924,7 @@
                         "nodeType": "IndexAccess",
                         "src": "15229:17:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintSet_$11444_storage",
+                          "typeIdentifier": "t_struct$_UintSet_$15657_storage",
                           "typeString": "struct EnumerableSet.UintSet storage ref"
                         }
                       },
@@ -31935,10 +31935,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11465,
+                      "referencedDeclaration": 15678,
                       "src": "15229:21:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$11444_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$11444_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintSet_$15657_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_UintSet_$15657_storage_ptr_$",
                         "typeString": "function (struct EnumerableSet.UintSet storage pointer,uint256) returns (bool)"
                       }
                     },
@@ -32008,7 +32008,7 @@
                         "referencedDeclaration": 776,
                         "src": "15272:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_UintToAddressMap_$10801_storage",
+                          "typeIdentifier": "t_struct$_UintToAddressMap_$15014_storage",
                           "typeString": "struct EnumerableMap.UintToAddressMap storage ref"
                         }
                       },
@@ -32019,10 +32019,10 @@
                       "lValueRequested": false,
                       "memberName": "set",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10834,
+                      "referencedDeclaration": 15047,
                       "src": "15272:16:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$10801_storage_ptr_$_t_uint256_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$10801_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_UintToAddressMap_$15014_storage_ptr_$_t_uint256_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_UintToAddressMap_$15014_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.UintToAddressMap storage pointer,uint256,address) returns (bool)"
                       }
                     },
@@ -32104,7 +32104,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9510,
+                      "referencedDeclaration": 13723,
                       "src": "15319:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -32662,7 +32662,7 @@
                         "lValueRequested": false,
                         "memberName": "isContract",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 9707,
+                        "referencedDeclaration": 13920,
                         "src": "16768:13:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$bound_to$_t_address_$",
@@ -32787,10 +32787,10 @@
                                   "name": "IERC721Receiver",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 9629,
+                                  "referencedDeclaration": 13842,
                                   "src": "16912:15:1",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_IERC721Receiver_$9629_$",
+                                    "typeIdentifier": "t_type$_t_contract$_IERC721Receiver_$13842_$",
                                     "typeString": "type(contract IERC721Receiver)"
                                   }
                                 },
@@ -32805,7 +32805,7 @@
                                 "src": "16912:19:1",
                                 "tryCall": false,
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_IERC721Receiver_$9629",
+                                  "typeIdentifier": "t_contract$_IERC721Receiver_$13842",
                                   "typeString": "contract IERC721Receiver"
                                 }
                               },
@@ -32816,7 +32816,7 @@
                               "lValueRequested": false,
                               "memberName": "onERC721Received",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 9628,
+                              "referencedDeclaration": 13841,
                               "src": "16912:36:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
@@ -32844,7 +32844,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9994,
+                              "referencedDeclaration": 14207,
                               "src": "16972:10:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -33013,7 +33013,7 @@
                       "lValueRequested": false,
                       "memberName": "functionCall",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 9778,
+                      "referencedDeclaration": 13991,
                       "src": "16859:15:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_bytes_memory_ptr_$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_address_$",
@@ -33575,7 +33575,7 @@
                       "name": "Approval",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9519,
+                      "referencedDeclaration": 13732,
                       "src": "17343:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -33812,7 +33812,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-09-01T22:52:14.841Z",
+  "updatedAt": "2021-10-24T22:41:29.808Z",
   "devdoc": {
     "details": "see https://eips.ethereum.org/EIPS/eip-721",
     "kind": "dev",

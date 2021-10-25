@@ -80,6 +80,10 @@ contract MonsterList is DataLayout, Proxiable {
     function setOwner(address _owner) public _onlyOwner delegatedOnly {
         owner = _owner;
     }
+    
+    function setVersusNFT(address _versusNFT) public _onlyOwner delegatedOnly {
+        versusNFT = _versusNFT;
+    }
 
     function createMonster(
         string memory name,
@@ -171,35 +175,35 @@ contract MonsterList is DataLayout, Proxiable {
         return monster[index].name;
     }
 
-    function getMonsterType(uint32 index) public returns(string memory) {
+    function getMonsterType(uint32 index) public view returns(string memory) {
         return monster[index].monsterType;
     }
 
-    function getLevelRequirements(uint32 index) public returns(uint[] memory) {
+    function getLevelRequirements(uint32 index) public view returns(uint[] memory) {
         return monster[index].levelUpRequirements;
     }
     
-    function getStatRanges(uint32 index) public returns(uint32[] memory) {
+    function getStatRanges(uint32 index) public view returns(uint32[] memory) {
         return monster[index].statRanges;
     }
 
-    function getEvolutionLevel(uint32 index) public returns(uint32) {
+    function getEvolutionLevel(uint32 index) public view returns(uint32) {
         return monster[index].evolutionLevel;
     }
 
-    function getEvolution(uint32 index) public returns(uint32) {
+    function getEvolution(uint32 index) public view returns(uint32) {
         return monster[index].evolvesInto;
     }
 
-    function getRarity(uint32 index) public returns(string memory) {
+    function getRarity(uint32 index) public view returns(string memory) {
         return monster[index].rarity;
     }
 
-    function getImageLink(uint32 index) public returns(string memory) {
+    function getImageLink(uint32 index) public view returns(string memory) {
         return monster[index].imageLink;
     }
 
-    function getYieldBoost(uint32 index) public returns(uint32) {
+    function getYieldBoost(uint32 index) public view returns(uint32) {
         return monster[index].yieldBoost;
     }
     
